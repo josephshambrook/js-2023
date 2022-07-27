@@ -1,0 +1,28 @@
+---
+// Component Imports
+import BaseHead from '../components/BaseHead.astro';
+import Header from '../components/Header.svelte';
+
+let title = 'Example Blog';
+let description = 'The perfect starter for your perfect blog.';
+let permalink = 'https://example.com/';
+---
+
+<html lang="en">
+	<head>
+		<BaseHead {title} {description} {permalink} />
+	</head>
+
+	<body>
+		<div class="wrapper">
+      <Header />
+      
+			<main class="content">
+				<section class="intro">
+					<h1 class="latest">{title}</h1>
+					<p>{description}</p>
+				</section>
+			</main>
+		</div>
+	</body>
+</html>
