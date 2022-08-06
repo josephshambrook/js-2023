@@ -1,71 +1,54 @@
-:root {
-  // fonts
-  --font-fallback: -apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, Arial,
-    sans-serif, Apple Color Emoji, Segoe UI Emoji;
-  --font-body: "IBM Plex Sans", var(--font-fallback);
-  --font-mono: "IBM Plex Mono", Consolas, "Andale Mono WT", "Andale Mono",
-    "Lucida Console", "Lucida Sans Typewriter", "DejaVu Sans Mono",
-    "Bitstream Vera Sans Mono", "Liberation Mono", "Nimbus Mono L", Monaco,
-    "Courier New", Courier, monospace;
+/*
+ * Explanation of style variable strategy is available in the README
+ */
 
-  // colors
-  --color-white: #fff;
-  --color-black: #000014;
-  --color-gray-50: #f9fafb;
-  --color-gray-100: #f3f4f6;
-  --color-gray-200: #e5e7eb;
-  --color-gray-300: #d1d5db;
-  --color-gray-400: #9ca3af;
-  --color-gray-500: #6b7280;
-  --color-gray-600: #4b5563;
-  --color-gray-700: #374151;
-  --color-gray-800: #1f2937;
-  --color-gray-900: #111827;
-  --color-orange: #de524c;
-  --color-orange-rgb: 223, 82, 76;
-  --color-yellow: #f1d14a;
-  --color-yellow-rgb: 241, 209, 74;
-  --color-navy: #272f55;
-  --color-navy-rgb: 39, 47, 85;
+// standard colours
+$color-white: #fff;
+$color-black: #000014;
+$color-gray-50: #f9fafb;
+$color-gray-100: #f3f4f6;
+$color-gray-200: #e5e7eb;
+$color-gray-300: #d1d5db;
+$color-gray-400: #9ca3af;
+$color-gray-500: #6b7280;
+$color-gray-600: #4b5563;
+$color-gray-700: #374151;
+$color-gray-800: #1f2937;
+$color-gray-900: #111827;
 
-  // sizing
-  --user-font-scale: 1rem - 16px;
-  --max-width: calc(100% - 2rem);
-  --max-wrapper-size: 70rem;
+// theme colors
+$theme-red: #f04444;
+$theme-orange: #e99035;
+$theme-yellow: #f6d117;
+$theme-dark-blue: #262f58;
 
-  @media (min-width: 50em) {
-    --max-width: 40em;
-  }
-}
+// gradient colors
+// generated using https://www.joshwcomeau.com/css/make-beautiful-gradients/
+// intentionally using hsl!
 
-// Theming
-:root {
-  color-scheme: light;
-  --theme-accent: var(--color-orange);
-  --theme-accent-rgb: var(--color-orange-rgb);
-  --theme-accent-opacity: 0.1;
-  --theme-divider: var(--color-gray-100);
-  --theme-text: var(--color-gray-800);
-  --theme-text-light: var(--color-gray-600);
-  --theme-text-lighter: var(--color-gray-400);
-  --theme-bg: var(--color-white);
-  --theme-bg-offset: var(--color-gray-100);
-  --theme-bg-accent: rgba(var(--theme-accent-rgb), var(--theme-accent-opacity));
-  --theme-code-inline-bg: var(--color-gray-100);
-  --theme-code-text: var(--color-gray-100);
-  --theme-code-bg: var(--color-gray-700);
-}
-
-:root.theme-dark {
-  color-scheme: dark;
-  --theme-accent-opacity: 0.3;
-  --theme-divider: var(--color-gray-900);
-  --theme-text: var(--color-gray-200);
-  --theme-text-light: var(--color-gray-400);
-  --theme-text-lighter: var(--color-gray-600);
-  --theme-bg: var(--color-black);
-  --theme-bg-offset: var(--color-gray-900);
-  --theme-code-inline-bg: var(--color-gray-800);
-  --theme-code-text: var(--color-gray-200);
-  --theme-code-bg: var(--color-gray-900);
-}
+$gradient-red-blue: linear-gradient(
+  90deg,
+  hsl(0deg 85% 60%) 0%,
+  hsl(349deg 75% 55%) 11%,
+  hsl(341deg 63% 50%) 22%,
+  hsl(333deg 61% 46%) 33%,
+  hsl(324deg 54% 41%) 44%,
+  hsl(313deg 45% 37%) 56%,
+  hsl(294deg 37% 33%) 67%,
+  hsl(272deg 35% 32%) 78%,
+  hsl(250deg 33% 30%) 89%,
+  hsl(229deg 40% 25%) 100%
+);
+$gradient-blue-black: linear-gradient(
+  90deg,
+  hsl(258deg 100% 50%) 0%,
+  rgb(75, 11, 224) 21%,
+  hsl(258deg 85% 41%) 30%,
+  hsl(258deg 80% 36%) 39%,
+  hsl(258deg 75% 30%) 46%,
+  hsl(259deg 69% 25%) 54%,
+  hsl(260deg 63% 19%) 61%,
+  hsl(262deg 55% 14%) 69%,
+  hsl(273deg 53% 8%) 79%,
+  hsl(0deg 0% 0%) 100%
+);

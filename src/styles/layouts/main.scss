@@ -1,0 +1,77 @@
+@import "../mixins";
+
+$column-gutter: minmax(20px, 1fr);
+$column-main: 3fr;
+$column-aside: 1fr;
+$row-header: minmax(100px, max-content);
+$row-footer: minmax(100px, max-content);
+$row-content: 1fr;
+
+$grid-columns: [full-start] $column-gutter [main-start] $column-main [main-end
+  aside-start] $column-aside [aside-end] $column-gutter [full-end];
+
+$grid-full-inner-columns: $column-gutter 4fr $column-gutter;
+
+$grid-rows: [header-start] min-content [header-end content-start] 1fr
+  [content-end footer-start] min-content [footer-end];
+
+@mixin full-column-with-inner-grid {
+  grid-column: full;
+
+  display: grid;
+  grid-template-columns: $grid-full-inner-columns;
+  grid-gap: 20px;
+
+  > * {
+    grid-column: 2;
+  }
+}
+
+.layout--main {
+  display: grid;
+  grid-template-rows:
+    [header-start] min-content [header-end content-start] 1fr [content-end aside-start] min-content
+    [aside-end footer-start] min-content [footer-end];
+  min-height: 100vh;
+
+  > .header {
+    grid-row: header;
+  }
+
+  > .footer {
+    grid-row: footer;
+  }
+
+  > .aside {
+    grid-row: aside;
+  }
+
+  > .main {
+    grid-row: content;
+  }
+
+  @include screen-md-up {
+    grid-template-columns: $grid-columns;
+    grid-gap: 20px;
+
+    > .header {
+      grid-row: header;
+      @include full-column-with-inner-grid;
+    }
+
+    > .footer {
+      grid-row: footer;
+      @include full-column-with-inner-grid;
+    }
+
+    > .main {
+      grid-column: main;
+      grid-row: content;
+    }
+
+    > .aside {
+      grid-column: aside;
+      grid-row: content;
+    }
+  }
+}
