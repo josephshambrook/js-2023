@@ -4,6 +4,7 @@
   footer {
     background-color: var(--theme-dark-blue);
     color: var(--color-white);
+    padding-block: calc(4 * 16px) calc(7 * 16px);
 
     // grid is partially inherited by main layout
     // to avoid overwriting that, I use a child element to contain its own grid
@@ -29,6 +30,7 @@
 
   .section-heading {
     color: var(--theme-yellow);
+    margin-top: 0;
     text-transform: uppercase;
   }
 </style>
@@ -45,14 +47,16 @@
         <li>Bio</li>
       </ul>
     </section>
-    <section><h4 class="section-heading">Tutorials</h4></section>
     <section>
+      <h4 class="section-heading">Tutorials</h4>
       <ul>
         <li>CSS3</li>
         <li>Animations</li>
         <li>React</li>
         <li>JavaScript</li>
       </ul>
+    </section>
+    <section>
       <h4 class="section-heading">Useful links</h4>
       <ul>
         <li>GitHub</li>
