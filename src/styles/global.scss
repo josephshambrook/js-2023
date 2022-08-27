@@ -14,6 +14,8 @@ body {
   color: var(--theme-text);
   font-family: var(--font-body);
   font-size: 1rem;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
   // font-size: clamp(
   //   0.875rem,
   //   0.4626rem + 1.0309vw + var(--theme-font-scale),

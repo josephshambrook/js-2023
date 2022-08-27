@@ -6,20 +6,28 @@
     "dev": "astro dev",
     "start": "astro dev",
     "build": "astro build",
-    "preview": "astro preview"
+    "preview": "astro preview",
+    "preinstall": "npx only-allow pnpm"
   },
   "devDependencies": {
-    "@astrojs/preact": "^0.3.1",
-    "@astrojs/svelte": "^0.2.0",
-    "astro": "^1.0.0-beta.59",
+    "@astrojs/image": "^0.3.4",
+    "@astrojs/mdx": "^0.9.0",
+    "@astrojs/preact": "^1.0.2",
+    "@astrojs/sitemap": "^1.0.0",
+    "@astrojs/svelte": "^1.0.0",
+    "astro": "^1.0.5",
     "prettier": "^2.7.1",
-    "prettier-plugin-astro": "^0.1.1",
-    "sass": "^1.53.0"
+    "prettier-plugin-astro": "^0.5.0",
+    "sass": "^1.54.4"
   },
   "dependencies": {
     "@vanilla-extract/css": "^1.7.2",
-    "@vanilla-extract/vite-plugin": "^3.2.1",
+    "@vanilla-extract/vite-plugin": "^3.3.0",
     "normalize.css": "^8.0.1",
-    "preact": "^10.7.3"
+    "preact": "^10.10.2",
+    "svelte": "^3.49.0"
+  },
+  "engines": {
+    "node": "^16.14.2"
   }
 }

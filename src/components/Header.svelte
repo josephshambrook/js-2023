@@ -1,6 +1,6 @@
 <script>
   import styles from "@styles/components/Header.module.scss";
-  import logo from "../../public/logos/svg/logo-on-dark.svg";
+  import logo from "../../logos/svg/logo-on-dark.svg";
 </script>
 
 <header class="header">

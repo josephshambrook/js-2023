@@ -28,23 +28,22 @@ const { content } = Astro.props;
       <!-- <header class="header">This is the header</header> -->
       <aside class="aside">
         <slot name="aside">
-          <p>This is the sidebar</p>
+          <p>This is the sidebar, with some extended content to make sure I account for full width stuff. No seriously, that's why. I could have looked up Lorem Ipsum or whatever but meh.</p>
         </slot>
       </aside>
       <main class="main">
-        <h1>H1 - Heading 1</h1>
-        <h2>H2 - Heading 2</h2>
-        <h3>H3 - Heading 3</h3>
-        <h4>H4 - Heading 4</h4>
-        <h5>H5 - Heading 5</h5>
-        <h6>H6 - Heading 6</h6>
-        <p>Body Regular</p>
-        <p class="text-em">Body emphasis</p>
-        <p><a href="https://josephshambrook.dev">Body link</a></p>
-        <small>Body small</small>
-
-        <!-- <slot name="main">
-        </slot> -->
+        <slot name="main">
+          <h1>H1 - Heading 1</h1>
+          <h2>H2 - Heading 2</h2>
+          <h3>H3 - Heading 3</h3>
+          <h4>H4 - Heading 4</h4>
+          <h5>H5 - Heading 5</h5>
+          <h6>H6 - Heading 6</h6>
+          <p>Body Regular, with some extended text to make sure I take up lots of room, try out a variety of characters and words, and do some f&*%!ng swearing to try out special characters.</p>
+          <p class="text-em">Body emphasis</p>
+          <p><a href="https://josephshambrook.dev">Body link</a></p>
+          <small>Body small</small>
+        </slot>
       </main>
       <Footer />
     </div>

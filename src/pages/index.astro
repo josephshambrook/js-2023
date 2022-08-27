@@ -4,17 +4,16 @@ import BaseHead from "../components/BaseHead.astro";
 import Header from "../components/Header.svelte";
 import MainLayout from "../layouts/Main.astro";
 
-let title = "Example Blog";
+let title = "Joseph Shambrook";
 let description = "The perfect starter for your perfect blog.";
 let permalink = "https://example.com/";
 ---
 
 <MainLayout>
-  <div slot="content">
+  <!-- <div slot="main">
     <section class="intro">
-      <h1 class="latest">{title}</h1>
-      <p>{description}</p>
+      <h1></h1>
     </section>
-  </div>
+  </div> -->
   <div slot="sidebar">The sidebar</div>
 </MainLayout>

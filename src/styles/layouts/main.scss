@@ -1,8 +1,10 @@
 @import "../mixins";
 
+// $column-gutter: 20px;
+// $column-gutter-desktop: minmax(20px, 1fr);
 $column-gutter: minmax(20px, 1fr);
-$column-main: 3fr;
-$column-aside: 1fr;
+$column-main: minmax(min-content, 740px);
+$column-aside: minmax(min-content, 265px);
 $row-header: minmax(100px, max-content);
 $row-footer: minmax(100px, max-content);
 $row-content: 1fr;
@@ -24,6 +26,10 @@ $grid-rows: [header-start] min-content [header-end content-start] 1fr
 
   > * {
     grid-column: 2;
+  }
+
+  > .full-width {
+    grid-column: 1;
   }
 }
 
