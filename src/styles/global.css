@@ -99,7 +99,7 @@
 
   /* spacing and sizing */
   --base-size: 24px;
-  --container-max-width: calc(100% - 2rem);
+  --container-max-width: 1120px;
   --gutter: 1rem;
   --grid-gap: 1.25rem;
 
@@ -126,13 +126,6 @@
 
   /* different header separators */
   --header-separator-spikes: url("data:image/svg+xml,%3Csvg width='100%25' height='32' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cdefs%3E%3Cpattern id='bg' patternUnits='userSpaceOnUse' width='90' height='32'%3E%3Cpath d='M0 0H45H90V20V32L45 0L0 32V0Z' fill='%23F04444' /%3E%3C/pattern%3E%3C/defs%3E%3Crect width='100%25' height='100%25' fill='url(%23bg)' /%3E%3C/svg%3E%0A");
-}
-
-/* property value changes based on screen size */
-@media (min-width: 500px) {
-  :root {
-    --container-max-width: 1120px;
-  }
 }
 
 /* property value changes based on theme */

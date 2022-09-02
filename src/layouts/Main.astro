@@ -3,7 +3,6 @@
 import cns from "classnames";
 
 // CSS
-import "normalize.css";
 import layoutStyles from "@styles/layout.module.scss";
 
 // Components
@@ -24,9 +23,7 @@ import Footer from "../components/Footer.svelte";
   <body>
     <div>
       <Header />
-      <div
-        class={cns(layoutStyles.container, layoutStyles["grid-columns--12"])}
-      >
+      <div class={cns(layoutStyles.container, layoutStyles["grid--12"])}>
         <main class={layoutStyles.main}>
           <slot name="main">
             <h1>H1 - Heading 1</h1>

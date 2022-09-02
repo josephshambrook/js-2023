@@ -1,12 +1,17 @@
 <script type="ts">
+  // dependencies
   import cns from "classnames";
-  import { FooterSection } from "../types";
 
+  // data
+  import { FooterSection } from "../types";
   import { socialLinks } from "src/constants";
+
+  // styles
   import layoutStyles from "@styles/layout.module.scss";
   import footerStyles from "@styles/components/Footer.module.scss";
 
-  import logo from "../../logos/svg/logo-on-dark.svg";
+  // assets
+  import logo from "/assets/logos/svg/logo-on-dark.svg";
 
   const sections: FooterSection[] = [
     {

@@ -9,6 +9,7 @@ specifiers:
   '@vanilla-extract/css': ^1.7.2
   '@vanilla-extract/vite-plugin': ^3.3.0
   astro: ^1.0.5
+  bootstrap-icons: ^1.9.1
   classnames: ^2.3.1
   normalize.css: ^8.0.1
   preact: ^10.10.2
@@ -19,6 +20,7 @@ specifiers:
 dependencies:
   '@vanilla-extract/css': 1.7.2
   '@vanilla-extract/vite-plugin': 3.3.0
+  bootstrap-icons: 1.9.1
   normalize.css: 8.0.1
   preact: 10.10.2
   svelte: 3.49.0
@@ -1027,6 +1029,10 @@ packages:
       inherits: 2.0.4
       readable-stream: 3.6.0
     dev: true
+
+  /bootstrap-icons/1.9.1:
+    resolution: {integrity: sha512-d4ZkO30MIkAhQ2nNRJqKXJVEQorALGbLWTuRxyCTJF96lRIV6imcgMehWGJUiJMJhglN0o2tqLIeDnMdiQEE9g==}
+    dev: false
 
   /boxen/6.2.1:
     resolution: {integrity: sha512-H4PEsJXfFI/Pt8sjDWbHlQPx4zL/bvSQjcilJmaulGt5mLDorHOHpmdXAJcBcmru7PhYSp/cDMWRko4ZUMFkSw==}

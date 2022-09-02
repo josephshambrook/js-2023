@@ -1,8 +1,16 @@
 <script>
+  // dependencies
   import cns from "classnames";
+
+  // styles
   import layoutStyles from "@styles/layout.module.scss";
   import headerStyles from "@styles/components/Header.module.scss";
-  import logo from "../../logos/svg/logo-on-dark.svg";
+
+  // assets
+  import logo from "/assets/logos/svg/logo-on-dark.svg";
+  // import github from "/assets/icons/github.svg";
+  // import linkedin from "/assets/icons/linkedin.svg";
+  // import twitter from "/assets/icons/twitter.svg";
 </script>
 
 <header class={cns(headerStyles.header)}>
@@ -22,6 +30,10 @@
         <a href="#">Posts</a>
         <a href="#">Snippets</a>
         <a href="#">Bio</a>
+
+        <!-- <img src={github} alt="GitHub" />
+        <img src={linkedin} alt="LinkedIn" />
+        <img src={twitter} alt="Twitter" /> -->
       </div>
     </nav>
   </div>
