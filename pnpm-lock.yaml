@@ -9,9 +9,9 @@ specifiers:
   '@vanilla-extract/css': ^1.7.2
   '@vanilla-extract/vite-plugin': ^3.3.0
   astro: ^1.0.5
+  classnames: ^2.3.1
   normalize.css: ^8.0.1
   preact: ^10.10.2
-  prettier: ^2.7.1
   prettier-plugin-astro: ^0.5.0
   sass: ^1.54.4
   svelte: ^3.49.0
@@ -30,7 +30,7 @@ devDependencies:
   '@astrojs/sitemap': 1.0.0
   '@astrojs/svelte': 1.0.0_sass@1.54.4+svelte@3.49.0
   astro: 1.0.5_sass@1.54.4
-  prettier: 2.7.1
+  classnames: 2.3.1
   prettier-plugin-astro: 0.5.0
   sass: 1.54.4
 
@@ -1156,6 +1156,10 @@ packages:
 
   /ci-info/3.3.2:
     resolution: {integrity: sha512-xmDt/QIAdeZ9+nfdPsaBCpMvHNLFiLdjj59qjqn+6iPe6YmHGQ35sBnQ8uslRBXFmXkiZQOJRjvQeoGppoTjjg==}
+    dev: true
+
+  /classnames/2.3.1:
+    resolution: {integrity: sha512-OlQdbZ7gLfGarSqxesMesDa5uz7KFbID8Kpq/SxIoNGDqY8lSYs0D+hhtBXhcdB3rcbXArFr7vlHheLk1voeNA==}
     dev: true
 
   /cli-boxes/3.0.0:
