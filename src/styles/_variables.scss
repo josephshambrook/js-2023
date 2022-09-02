@@ -1,54 +1,6 @@
-/*
- * Explanation of style variable strategy is available in the README
- */
-
-// standard colours
-$color-white: #fff;
-$color-black: #000014;
-$color-gray-50: #f9fafb;
-$color-gray-100: #f3f4f6;
-$color-gray-200: #e5e7eb;
-$color-gray-300: #d1d5db;
-$color-gray-400: #9ca3af;
-$color-gray-500: #6b7280;
-$color-gray-600: #4b5563;
-$color-gray-700: #374151;
-$color-gray-800: #1f2937;
-$color-gray-900: #111827;
-
-// theme colors
-$theme-red: #f04444;
-$theme-orange: #e99035;
-$theme-yellow: #f6d117;
-$theme-dark-blue: #262f58;
-
-// gradient colors
-// generated using https://www.joshwcomeau.com/css/make-beautiful-gradients/
-// intentionally using hsl!
-
-$gradient-red-blue: linear-gradient(
-  90deg,
-  hsl(0deg 85% 60%) 0%,
-  hsl(349deg 75% 55%) 11%,
-  hsl(341deg 63% 50%) 22%,
-  hsl(333deg 61% 46%) 33%,
-  hsl(324deg 54% 41%) 44%,
-  hsl(313deg 45% 37%) 56%,
-  hsl(294deg 37% 33%) 67%,
-  hsl(272deg 35% 32%) 78%,
-  hsl(250deg 33% 30%) 89%,
-  hsl(229deg 40% 25%) 100%
-);
-$gradient-blue-black: linear-gradient(
-  90deg,
-  hsl(258deg 100% 50%) 0%,
-  rgb(75, 11, 224) 21%,
-  hsl(258deg 85% 41%) 30%,
-  hsl(258deg 80% 36%) 39%,
-  hsl(258deg 75% 30%) 46%,
-  hsl(259deg 69% 25%) 54%,
-  hsl(260deg 63% 19%) 61%,
-  hsl(262deg 55% 14%) 69%,
-  hsl(273deg 53% 8%) 79%,
-  hsl(0deg 0% 0%) 100%
+$sizes: (
+  "xs": null,
+  "sm": 48rem,
+  "md": 62rem,
+  "lg": 75rem,
 );

@@ -1,0 +1,60 @@
+@import "./mixins";
+
+.container {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: var(--container-max-width);
+  padding-left: var(--gutter);
+  padding-right: var(--gutter);
+  width: 100%;
+}
+
+/*
+The designs use a 12 column grid, which isn't really
+that necessary now that CSS Grid is so flexible and
+widely supported, but does still help out with positioning
+
+I've also had to create subgrid versions of the same grid,
+as subgrid isn't widely supported enough at this time
+of writing. When it is, I'd rather use that!
+*/
+
+.grid--12 {
+  display: grid;
+  grid-template-columns: repeat(12, [col-start] 1fr);
+  gap: var(--grid-gap);
+}
+
+.grid--8 {
+  display: grid;
+  grid-template-columns: repeat(8, [col-start] 1fr);
+  gap: var(--grid-gap);
+}
+
+.grid--3 {
+  display: grid;
+  grid-template-columns: repeat(3, [col-start] 1fr);
+  gap: var(--grid-gap);
+}
+
+.grid-span-cols--3 {
+  grid-column: span 3;
+}
+
+// main layout
+
+.main {
+  grid-column: col-start 1 / span 12;
+
+  @include screen-md-up {
+    grid-column: col-start 1 / span 8;
+  }
+}
+
+.aside {
+  grid-column: col-start 1 / span 12;
+
+  @include screen-md-up {
+    grid-column: col-start 10 / span 3;
+  }
+}

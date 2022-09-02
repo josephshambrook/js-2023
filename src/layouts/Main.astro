@@ -1,50 +1,60 @@
 ---
+// dependencies
+import cns from "classnames";
+
 // CSS
 import "normalize.css";
-import "@styles/layouts/main.scss";
+import layoutStyles from "@styles/layout.module.scss";
 
 // Components
-import BaseHead from "../components/BaseHead.astro";
+import SiteHead from "../components/SiteHead.astro";
 import Header from "../components/Header.svelte";
 import Footer from "../components/Footer.svelte";
 
-const { content } = Astro.props;
+// const { content } = Astro.props;
 // const { title, description, publishDate, author, heroImage, permalink, alt } =
 //   content;
 ---
 
 <html lang="en">
   <head>
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/prism-themes@1.9.0/themes/prism-lucario.css"
-    />
-    <!-- <BaseHead {title} {description} {permalink} /> -->
+    <SiteHead />
   </head>
 
   <body>
-    <div class="layout--main">
+    <div>
       <Header />
-      <!-- <header class="header">This is the header</header> -->
-      <aside class="aside">
-        <slot name="aside">
-          <p>This is the sidebar, with some extended content to make sure I account for full width stuff. No seriously, that's why. I could have looked up Lorem Ipsum or whatever but meh.</p>
-        </slot>
-      </aside>
-      <main class="main">
-        <slot name="main">
-          <h1>H1 - Heading 1</h1>
-          <h2>H2 - Heading 2</h2>
-          <h3>H3 - Heading 3</h3>
-          <h4>H4 - Heading 4</h4>
-          <h5>H5 - Heading 5</h5>
-          <h6>H6 - Heading 6</h6>
-          <p>Body Regular, with some extended text to make sure I take up lots of room, try out a variety of characters and words, and do some f&*%!ng swearing to try out special characters.</p>
-          <p class="text-em">Body emphasis</p>
-          <p><a href="https://josephshambrook.dev">Body link</a></p>
-          <small>Body small</small>
-        </slot>
-      </main>
+      <div
+        class={cns(layoutStyles.container, layoutStyles["grid-columns--12"])}
+      >
+        <main class={layoutStyles.main}>
+          <slot name="main">
+            <h1>H1 - Heading 1</h1>
+            <h2>H2 - Heading 2</h2>
+            <h3>H3 - Heading 3</h3>
+            <h4>H4 - Heading 4</h4>
+            <h5>H5 - Heading 5</h5>
+            <h6>H6 - Heading 6</h6>
+            <p>
+              Body Regular, with some extended text to make sure I take up lots
+              of room, try out a variety of characters and words, and do some
+              f&*%!ng swearing to try out special characters.
+            </p>
+            <p class="text-em">Body emphasis</p>
+            <p><a href="https://josephshambrook.dev">Body link</a></p>
+            <small>Body small</small>
+          </slot>
+        </main>
+        <aside class={layoutStyles.aside}>
+          <slot name="aside">
+            <p>
+              This is the sidebar, with some extended content to make sure I
+              account for full width stuff. No seriously, that's why. I could
+              have looked up Lorem Ipsum or whatever but meh.
+            </p>
+          </slot>
+        </aside>
+      </div>
       <Footer />
     </div>
   </body>

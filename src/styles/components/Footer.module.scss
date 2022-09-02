@@ -1,0 +1,57 @@
+@import "../_mixins.scss";
+
+.footer {
+  background-color: var(--theme-dark-blue);
+  color: var(--theme-white);
+  font-family: var(--font-heading);
+  padding-bottom: 5rem;
+  padding-top: 2.58rem;
+}
+
+.logo {
+  max-width: 4rem;
+  width: 100%;
+}
+
+.intro {
+  font-size: var(--text-small-size);
+}
+
+.section {
+  grid-column: span 6;
+
+  @include screen-sm-up {
+    grid-column: span 4;
+  }
+
+  @include screen-lg-up {
+    grid-column: span 3;
+  }
+}
+
+.section--intro {
+  grid-column: span 12;
+
+  @include screen-lg-up {
+    grid-column: span 3;
+  }
+}
+
+.section-heading {
+  color: var(--theme-yellow);
+  margin-bottom: 1.3rem;
+  margin-top: 0;
+  text-transform: uppercase;
+}
+
+.section-list {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+.section-link {
+  color: var(--theme-white);
+  font-size: var(--text-small-size);
+  font-weight: normal;
+  text-decoration: none;
+}

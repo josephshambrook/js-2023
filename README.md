@@ -34,7 +34,9 @@ I use SCSS, because I still love some of its powerful features like mixins, vari
 
 SCSS has build-time variables, CSS has run-time custom properties. Both are useful in their own ways, and I combine them in a way that makes sense to me.
 
-I intentionally do not store **every** variable with SCSS variables - only the ones that make sense to store there. For me, this applies to colours, as SCSS has powerful colour functions I may want to use. I define them as CSS custom properties too, but has the SCSS variables as their values. For other variables though, I default to CSS custom properties.
+I have intentionally tried to store all variables as CSS custom properties, as these have useful features for changing values on-the-fly at run-time. I was especially inspired by this article by Maxime Heckel called ["The Power of Composition with CSS Variables"](https://blog.maximeheckel.com/posts/the-power-of-composition-with-css-variables/), which gives practical examples and explanations behind building a colour palette using CSS variables and HSL.
+
+However, SCSS variables are there for the areas where CSS properties can't be used yet - specifically, colour calculations and setting responsive breakpoints.
 
 [astro]: https://astro.build
 [pnpm]: https://pnpm.io/

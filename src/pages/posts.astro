@@ -1,6 +1,6 @@
 ---
 // Component Imports
-import BaseHead from "../components/BaseHead.astro";
+import SiteHead from "../components/SiteHead.astro";
 import BlogHeader from "../components/BlogHeader.astro";
 import BlogPostPreview from "../components/BlogPostPreview.astro";
 
@@ -27,7 +27,7 @@ allPosts = allPosts.sort(
 
 <html lang="en">
   <head>
-    <BaseHead {title} {description} {permalink} />
+    <SiteHead {title} {description} {permalink} />
 
     <style>
       header {

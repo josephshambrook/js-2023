@@ -1,5 +1,19 @@
+@import "./_variables";
+
+@mixin screen-sm-up {
+  @media (min-width: #{map-get($sizes, 'sm')}) {
+    @content;
+  }
+}
+
 @mixin screen-md-up {
-  @media (min-width: 500px) {
+  @media (min-width: #{map-get($sizes, 'md')}) {
+    @content;
+  }
+}
+
+@mixin screen-lg-up {
+  @media (min-width: #{map-get($sizes, 'lg')}) {
     @content;
   }
 }

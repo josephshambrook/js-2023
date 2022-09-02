@@ -1,0 +1,570 @@
+:root {
+  /* colour palette (dark to light) */
+  /* with help from https://colordesigner.io/ */
+  --base-red: 0, 85%;
+  --palette-red-10: hsl(var(--base-red), 12%);
+  --palette-red-20: hsl(var(--base-red), 24%);
+  --palette-red-30: hsl(var(--base-red), 36%);
+  --palette-red-40: hsl(var(--base-red), 48%);
+  --palette-red-50: hsl(var(--base-red), 60%);
+  --palette-red-60: hsl(var(--base-red), 67%);
+  --palette-red-70: hsl(var(--base-red), 74%);
+  --palette-red-80: hsl(var(--base-red), 80%);
+  --palette-red-90: hsl(var(--base-red), 87%);
+  --palette-red-100: hsl(var(--base-red), 94%);
+
+  --base-orange: 30, 80%;
+  --palette-orange-10: hsl(var(--base-orange), 11%);
+  --palette-orange-20: hsl(var(--base-orange), 22%);
+  --palette-orange-30: hsl(var(--base-orange), 34%);
+  --palette-orange-40: hsl(var(--base-orange), 45%);
+  --palette-orange-50: hsl(var(--base-orange), 56%);
+  --palette-orange-60: hsl(var(--base-orange), 63%);
+  --palette-orange-70: hsl(var(--base-orange), 70%);
+  --palette-orange-80: hsl(var(--base-orange), 78%);
+  --palette-orange-90: hsl(var(--base-orange), 85%);
+  --palette-orange-100: hsl(var(--base-orange), 92%);
+
+  --base-yellow: 50, 93%;
+  --palette-yellow-10: hsl(var(--base-yellow), 11%);
+  --palette-yellow-20: hsl(var(--base-yellow), 21%);
+  --palette-yellow-30: hsl(var(--base-yellow), 31%);
+  --palette-yellow-40: hsl(var(--base-yellow), 42%);
+  --palette-yellow-50: hsl(var(--base-yellow), 53%);
+  --palette-yellow-60: hsl(var(--base-yellow), 61%);
+  --palette-yellow-70: hsl(var(--base-yellow), 68%);
+  --palette-yellow-80: hsl(var(--base-yellow), 76%);
+  --palette-yellow-90: hsl(var(--base-yellow), 84%);
+  --palette-yellow-100: hsl(var(--base-yellow), 91%);
+
+  --base-dark-blue: 229, 40%;
+  --palette-dark-blue-10: hsl(var(--base-dark-blue), 5%);
+  --palette-dark-blue-20: hsl(var(--base-dark-blue), 10%);
+  --palette-dark-blue-30: hsl(var(--base-dark-blue), 15%);
+  --palette-dark-blue-40: hsl(var(--base-dark-blue), 20%);
+  --palette-dark-blue-50: hsl(var(--base-dark-blue), 25%);
+  --palette-dark-blue-60: hsl(var(--base-dark-blue), 37%);
+  --palette-dark-blue-70: hsl(var(--base-dark-blue), 49%);
+  --palette-dark-blue-80: hsl(var(--base-dark-blue), 62%);
+  --palette-dark-blue-90: hsl(var(--base-dark-blue), 74%);
+  --palette-dark-blue-100: hsl(var(--base-dark-blue), 87%);
+
+  --grey-base: 0, 0%;
+  --palette-grey-10: hsl(var(--base-grey), 10%);
+  --palette-grey-20: hsl(var(--base-grey), 20%);
+  --palette-grey-30: hsl(var(--base-grey), 30%);
+  --palette-grey-40: hsl(var(--base-grey), 40%);
+  --palette-grey-50: hsl(var(--base-grey), 50%);
+  --palette-grey-60: hsl(var(--base-grey), 60%);
+  --palette-grey-70: hsl(var(--base-grey), 70%);
+  --palette-grey-80: hsl(var(--base-grey), 80%);
+  --palette-grey-90: hsl(var(--base-grey), 90%);
+
+  /* theme colours */
+  --theme-red: var(--palette-red-50);
+  --theme-orange: var(--palette-orange-50);
+  --theme-yellow: var(--palette-yellow-50);
+  --theme-dark-blue: var(--palette-dark-blue-50);
+  --theme-black: hsl(0, 0%, 3%);
+  --theme-white: hsl(0, 0%, 100%);
+
+  /* gradient colors */
+  /* generated using https://www.joshwcomeau.com/css/make-beautiful-gradients/ */
+  --gradient-red-blue: linear-gradient(
+    90deg,
+    hsl(0deg 85% 60%) 0%,
+    hsl(349deg 75% 55%) 11%,
+    hsl(341deg 63% 50%) 22%,
+    hsl(333deg 61% 46%) 33%,
+    hsl(324deg 54% 41%) 44%,
+    hsl(313deg 45% 37%) 56%,
+    hsl(294deg 37% 33%) 67%,
+    hsl(272deg 35% 32%) 78%,
+    hsl(250deg 33% 30%) 89%,
+    hsl(229deg 40% 25%) 100%
+  );
+  --gradient-blue-black: linear-gradient(
+    90deg,
+    hsl(258deg 100% 50%) 0%,
+    rgb(75, 11, 224) 21%,
+    hsl(258deg 85% 41%) 30%,
+    hsl(258deg 80% 36%) 39%,
+    hsl(258deg 75% 30%) 46%,
+    hsl(259deg 69% 25%) 54%,
+    hsl(260deg 63% 19%) 61%,
+    hsl(262deg 55% 14%) 69%,
+    hsl(273deg 53% 8%) 79%,
+    hsl(0deg 0% 0%) 100%
+  );
+
+  /* spacing and sizing */
+  --base-size: 24px;
+  --container-max-width: calc(100% - 2rem);
+  --gutter: 1rem;
+  --grid-gap: 1.25rem;
+
+  /* type sizing */
+  --heading-1-size: 3.052rem;
+  --heading-2-size: 2.441rem;
+  --heading-3-size: 1.953rem;
+  --heading-4-size: 1.563rem;
+  --heading-5-size: 1.25rem;
+  --heading-6-size: 1rem;
+  --text-size: 1rem;
+  --text-small-size: 0.8rem;
+
+  /* fonts */
+  --font-fallback: -apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, Arial,
+    sans-serif, Apple Color Emoji, Segoe UI Emoji;
+  --font-body: "Josefin Slab", var(--font-fallback);
+  --font-heading: "Josefin Sans", var(--font-fallback);
+  /* TODO: change this to JetBrains Mono */
+  --font-mono: "IBM Plex Mono", Consolas, "Andale Mono WT", "Andale Mono",
+    "Lucida Console", "Lucida Sans Typewriter", "DejaVu Sans Mono",
+    "Bitstream Vera Sans Mono", "Liberation Mono", "Nimbus Mono L", Monaco,
+    "Courier New", Courier, monospace;
+
+  /* different header separators */
+  --header-separator-spikes: url("data:image/svg+xml,%3Csvg width='100%25' height='32' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cdefs%3E%3Cpattern id='bg' patternUnits='userSpaceOnUse' width='90' height='32'%3E%3Cpath d='M0 0H45H90V20V32L45 0L0 32V0Z' fill='%23F04444' /%3E%3C/pattern%3E%3C/defs%3E%3Crect width='100%25' height='100%25' fill='url(%23bg)' /%3E%3C/svg%3E%0A");
+}
+
+/* property value changes based on screen size */
+@media (min-width: 500px) {
+  :root {
+    --container-max-width: 1120px;
+  }
+}
+
+/* property value changes based on theme */
+/* commented out for MVP, will come back for future release */
+/* :root {
+  color-scheme: light;
+  --theme-accent: var(--color-orange);
+  --theme-accent-rgb: var(--color-orange-rgb);
+  --theme-accent-opacity: 0.1;
+  --theme-divider: var(--color-gray-100);
+  --theme-text: var(--color-gray-800);
+  --theme-text-light: var(--color-gray-600);
+  --theme-text-lighter: var(--color-gray-400);
+  --theme-bg: var(--color-white);
+  --theme-bg-offset: var(--color-gray-100);
+  --theme-bg-accent: rgba(var(--theme-accent-rgb), var(--theme-accent-opacity));
+  --theme-code-inline-bg: var(--color-gray-100);
+  --theme-code-text: var(--color-gray-100);
+  --theme-code-bg: var(--color-gray-700);
+}
+
+:root.theme-dark {
+  color-scheme: dark;
+  --theme-accent-opacity: 0.3;
+  --theme-divider: var(--color-gray-900);
+  --theme-text: var(--color-gray-200);
+  --theme-text-light: var(--color-gray-400);
+  --theme-text-lighter: var(--color-gray-600);
+  --theme-bg: var(--color-black);
+  --theme-bg-offset: var(--color-gray-900);
+  --theme-code-inline-bg: var(--color-gray-800);
+  --theme-code-text: var(--color-gray-200);
+  --theme-code-bg: var(--color-gray-900);
+} */
+
+/* loading fonts */
+@font-face {
+  font-family: "Josefin Slab";
+  src: url("/fonts/Josefin_Slab/static/woff/JosefinSlab-Medium.woff2")
+      format("woff2"),
+    url("/fonts/Josefin_Slab/static/woff/JosefinSlab-Medium.woff")
+      format("woff");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Josefin Slab";
+  src: url("/fonts/Josefin_Slab/static/woff/JosefinSlab-BoldItalic.woff2")
+      format("woff2"),
+    url("/fonts/Josefin_Slab/static/woff/JosefinSlab-BoldItalic.woff")
+      format("woff");
+  font-weight: bold;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Josefin Slab";
+  src: url("/fonts/Josefin_Slab/static/woff/JosefinSlab-Thin.woff2")
+      format("woff2"),
+    url("/fonts/Josefin_Slab/static/woff/JosefinSlab-Thin.woff") format("woff");
+  font-weight: 100;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Josefin Slab";
+  src: url("/fonts/Josefin_Slab/static/woff/JosefinSlab-SemiBoldItalic.woff2")
+      format("woff2"),
+    url("/fonts/Josefin_Slab/static/woff/JosefinSlab-SemiBoldItalic.woff")
+      format("woff");
+  font-weight: 600;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Josefin Slab";
+  src: url("/fonts/Josefin_Slab/static/woff/JosefinSlab-ThinItalic.woff2")
+      format("woff2"),
+    url("/fonts/Josefin_Slab/static/woff/JosefinSlab-ThinItalic.woff")
+      format("woff");
+  font-weight: 100;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Josefin Slab";
+  src: url("/fonts/Josefin_Slab/static/woff/JosefinSlab-Italic.woff2")
+      format("woff2"),
+    url("/fonts/Josefin_Slab/static/woff/JosefinSlab-Italic.woff")
+      format("woff");
+  font-weight: normal;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Josefin Slab";
+  src: url("/fonts/Josefin_Slab/static/woff/JosefinSlab-Regular.woff2")
+      format("woff2"),
+    url("/fonts/Josefin_Slab/static/woff/JosefinSlab-Regular.woff")
+      format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Josefin Slab";
+  src: url("/fonts/Josefin_Slab/static/woff/JosefinSlab-Light.woff2")
+      format("woff2"),
+    url("/fonts/Josefin_Slab/static/woff/JosefinSlab-Light.woff") format("woff");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Josefin Slab";
+  src: url("/fonts/Josefin_Slab/static/woff/JosefinSlab-SemiBold.woff2")
+      format("woff2"),
+    url("/fonts/Josefin_Slab/static/woff/JosefinSlab-SemiBold.woff")
+      format("woff");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Josefin Slab";
+  src: url("/fonts/Josefin_Slab/static/woff/JosefinSlab-ExtraLightItalic.woff2")
+      format("woff2"),
+    url("/fonts/Josefin_Slab/static/woff/JosefinSlab-ExtraLightItalic.woff")
+      format("woff");
+  font-weight: 200;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Josefin Slab";
+  src: url("/fonts/Josefin_Slab/static/woff/JosefinSlab-MediumItalic.woff2")
+      format("woff2"),
+    url("/fonts/Josefin_Slab/static/woff/JosefinSlab-MediumItalic.woff")
+      format("woff");
+  font-weight: 500;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Josefin Slab";
+  src: url("/fonts/Josefin_Slab/static/woff/JosefinSlab-Bold.woff2")
+      format("woff2"),
+    url("/fonts/Josefin_Slab/static/woff/JosefinSlab-Bold.woff") format("woff");
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Josefin Slab";
+  src: url("/fonts/Josefin_Slab/static/woff/JosefinSlab-LightItalic.woff2")
+      format("woff2"),
+    url("/fonts/Josefin_Slab/static/woff/JosefinSlab-LightItalic.woff")
+      format("woff");
+  font-weight: 300;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Josefin Slab";
+  src: url("/fonts/Josefin_Slab/static/woff/JosefinSlab-ExtraLight.woff2")
+      format("woff2"),
+    url("/fonts/Josefin_Slab/static/woff/JosefinSlab-ExtraLight.woff")
+      format("woff");
+  font-weight: 200;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Josefin Sans";
+  src: url("/fonts/Josefin_Sans/static/woff/JosefinSans-LightItalic.woff2")
+      format("woff2"),
+    url("/fonts/Josefin_Sans/static/woff/JosefinSans-LightItalic.woff")
+      format("woff");
+  font-weight: 300;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Josefin Sans";
+  src: url("/fonts/Josefin_Sans/static/woff/JosefinSans-BoldItalic.woff2")
+      format("woff2"),
+    url("/fonts/Josefin_Sans/static/woff/JosefinSans-BoldItalic.woff")
+      format("woff");
+  font-weight: bold;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Josefin Sans";
+  src: url("/fonts/Josefin_Sans/static/woff/JosefinSans-Light.woff2")
+      format("woff2"),
+    url("/fonts/Josefin_Sans/static/woff/JosefinSans-Light.woff") format("woff");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Josefin Sans";
+  src: url("/fonts/Josefin_Sans/static/woff/JosefinSans-ExtraLight.woff2")
+      format("woff2"),
+    url("/fonts/Josefin_Sans/static/woff/JosefinSans-ExtraLight.woff")
+      format("woff");
+  font-weight: 200;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Josefin Sans";
+  src: url("/fonts/Josefin_Sans/static/woff/JosefinSans-Bold.woff2")
+      format("woff2"),
+    url("/fonts/Josefin_Sans/static/woff/JosefinSans-Bold.woff") format("woff");
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Josefin Sans";
+  src: url("/fonts/Josefin_Sans/static/woff/JosefinSans-Italic.woff2")
+      format("woff2"),
+    url("/fonts/Josefin_Sans/static/woff/JosefinSans-Italic.woff")
+      format("woff");
+  font-weight: normal;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Josefin Sans";
+  src: url("/fonts/Josefin_Sans/static/woff/JosefinSans-ExtraLightItalic.woff2")
+      format("woff2"),
+    url("/fonts/Josefin_Sans/static/woff/JosefinSans-ExtraLightItalic.woff")
+      format("woff");
+  font-weight: 200;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Josefin Sans";
+  src: url("/fonts/Josefin_Sans/static/woff/JosefinSans-Medium.woff2")
+      format("woff2"),
+    url("/fonts/Josefin_Sans/static/woff/JosefinSans-Medium.woff")
+      format("woff");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Josefin Sans";
+  src: url("/fonts/Josefin_Sans/static/woff/JosefinSans-SemiBold.woff2")
+      format("woff2"),
+    url("/fonts/Josefin_Sans/static/woff/JosefinSans-SemiBold.woff")
+      format("woff");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Josefin Sans";
+  src: url("/fonts/Josefin_Sans/static/woff/JosefinSans-Regular.woff2")
+      format("woff2"),
+    url("/fonts/Josefin_Sans/static/woff/JosefinSans-Regular.woff")
+      format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Josefin Sans";
+  src: url("/fonts/Josefin_Sans/static/woff/JosefinSans-MediumItalic.woff2")
+      format("woff2"),
+    url("/fonts/Josefin_Sans/static/woff/JosefinSans-MediumItalic.woff")
+      format("woff");
+  font-weight: 500;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Josefin Sans";
+  src: url("/fonts/Josefin_Sans/static/woff/JosefinSans-SemiBoldItalic.woff2")
+      format("woff2"),
+    url("/fonts/Josefin_Sans/static/woff/JosefinSans-SemiBoldItalic.woff")
+      format("woff");
+  font-weight: 600;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Josefin Sans";
+  src: url("/fonts/Josefin_Sans/static/woff/JosefinSans-Thin.woff2")
+      format("woff2"),
+    url("/fonts/Josefin_Sans/static/woff/JosefinSans-Thin.woff") format("woff");
+  font-weight: 100;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Josefin Sans";
+  src: url("/fonts/Josefin_Sans/static/woff/JosefinSans-ThinItalic.woff2")
+      format("woff2"),
+    url("/fonts/Josefin_Sans/static/woff/JosefinSans-ThinItalic.woff")
+      format("woff");
+  font-weight: 100;
+  font-style: italic;
+  font-display: swap;
+}
+
+/* reset styles */
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: var(--base-size);
+}
+
+body {
+  background-color: var(--theme-bg);
+  color: var(--theme-text);
+  font-family: var(--font-body);
+  font-size: 1rem;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+::selection {
+  color: var(--theme-accent);
+  background-color: rgba(var(--theme-accent-rgb), var(--theme-accent-opacity));
+}
+
+body {
+  color: var(--theme-text);
+  font-family: var(--font-body);
+  font-weight: 500;
+  line-height: 1.75;
+}
+
+p {
+  margin-bottom: 1rem;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-heading);
+  font-weight: 500;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  line-height: 1.3;
+  margin: 3rem 0 1.38rem;
+}
+
+h1 {
+  font-size: var(--heading-1-size);
+  margin-top: 0;
+}
+
+h2 {
+  font-size: var(--heading-2-size);
+}
+
+h3 {
+  font-size: var(--heading-3-size);
+}
+
+h4 {
+  font-size: var(--heading-4-size);
+}
+
+h5 {
+  font-size: var(--heading-5-size);
+}
+
+h6 {
+  font-size: var(--heading-6-size);
+}
+
+small,
+.text-small {
+  font-size: var(--text-small-size);
+}
+
+code {
+  font-family: var(--font-mono);
+  font-size: 1rem;
+}
+
+.text-em {
+  font-style: italic;
+}
+
+a {
+  color: var(--palette-red-50);
+  font-weight: 700;
+  text-decoration: underline;
+}

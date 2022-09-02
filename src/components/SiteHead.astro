@@ -1,12 +1,20 @@
 ---
-import '@styles/global.scss';
+// dependencies
+import "@styles/global.css";
 
+//types
 export interface Props {
-	title: string;
-	description: string;
-	permalink: string;
+  title: string;
+  description: string;
+  permalink: string;
 }
-const { title, description, permalink } = Astro.props;
+
+// JS
+const {
+  title = "Joseph Shambrook",
+  description = "A front end developer based in Edinburgh.",
+  permalink = "https://josephshambrook.dev",
+} = Astro.props;
 ---
 
 <!-- Global Metadata -->
@@ -14,13 +22,13 @@ const { title, description, permalink } = Astro.props;
 <meta name="viewport" content="width=device-width" />
 
 <!-- Favicon -->
-<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
 <link rel="icon" type="image/x-icon" href="/favicon.ico" />
-<link rel="manifest" href="/site.webmanifest">
-<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#f04444">
-<meta name="theme-color" content="#f04444">
+<link rel="manifest" href="/site.webmanifest" />
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#f04444" />
+<meta name="theme-color" content="#f04444" />
 
 <!-- Primary Meta Tags -->
 <title>{title}</title>
@@ -42,5 +50,11 @@ const { title, description, permalink } = Astro.props;
 <meta property="twitter:image" content="https://astro.build/social.png?v=1" />
 
 <!-- Fonts -->
-<link rel="preconnect" href="https://fonts.gstatic.com" />
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono&family=IBM+Plex+Sans:wght@400;700&display=swap" />
+<link rel="preconnect" href="https://fonts.bunny.net" />
+<link href="https://fonts.bunny.net/css" rel="stylesheet" />
+
+<!-- Code theme -->
+<link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/prism-themes@1.9.0/themes/prism-lucario.css"
+/>

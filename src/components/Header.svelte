@@ -1,18 +1,24 @@
 <script>
-  import styles from "@styles/components/Header.module.scss";
+  import cns from "classnames";
+  import layoutStyles from "@styles/layout.module.scss";
+  import headerStyles from "@styles/components/Header.module.scss";
   import logo from "../../logos/svg/logo-on-dark.svg";
 </script>
 
-<header class="header">
-  <div class={styles.wrapper}>
-    <a class={styles["sr-only"]} href="#maincontent" target="_self"
+<header class={cns(headerStyles.header)}>
+  <div class={cns(headerStyles.wrapper, layoutStyles.container)}>
+    <a class={headerStyles["sr-only"]} href="#maincontent" target="_self"
       >Skip to main content</a
     >
-    <a class={styles["logo-link"]} href="/">
-      <img src={logo} class={styles["logo-img"]} alt="Joseph Shambrook logo" />
+    <a class={headerStyles["logo-link"]} href="/">
+      <img
+        src={logo}
+        class={headerStyles["logo-img"]}
+        alt="Joseph Shambrook logo"
+      />
     </a>
-    <nav class={styles.nav}>
-      <div class={styles["links-wrap"]}>
+    <nav class={headerStyles.nav}>
+      <div class={headerStyles["links-wrap"]}>
         <a href="#">Posts</a>
         <a href="#">Snippets</a>
         <a href="#">Bio</a>

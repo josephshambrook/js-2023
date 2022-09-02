@@ -1,68 +1,73 @@
-<style lang="scss">
-  @import "../styles/_mixins.scss";
+<script type="ts">
+  import cns from "classnames";
+  import { FooterSection } from "../types";
 
-  footer {
-    background-color: var(--theme-dark-blue);
-    color: var(--color-white);
-    padding-block: calc(4 * 16px) calc(7 * 16px);
+  import { socialLinks } from "src/constants";
+  import layoutStyles from "@styles/layout.module.scss";
+  import footerStyles from "@styles/components/Footer.module.scss";
 
-    // grid is partially inherited by main layout
-    // to avoid overwriting that, I use a child element to contain its own grid
-    // I'd use subgrid, but at time of writing, it's not very well supported. One day!
-  }
+  import logo from "../../logos/svg/logo-on-dark.svg";
 
-  .footer-content {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
+  const sections: FooterSection[] = [
+    {
+      heading: "Menu",
+      links: [
+        { text: "Home", href: "/" },
+        { text: "Posts", href: "/posts" },
+        { text: "Snippets", href: "/snippets" },
+        { text: "Bio", href: "/bio" },
+      ],
+    },
+    {
+      heading: "Tutorials",
+      links: [
+        { text: "CSS3", href: "/tags/css3" },
+        { text: "Animations", href: "/tags/animations" },
+        { text: "React", href: "/tags/react" },
+        { text: "JavaScript", href: "/tags/javascript" },
+      ],
+    },
+    {
+      heading: "Useful Links",
+      links: [
+        { text: "GitHub", href: socialLinks.github },
+        { text: "LinkedIn", href: socialLinks.linkedin },
+        { text: "Twitter", href: socialLinks.twitter },
+        { text: "CodePen", href: socialLinks.codepen },
+      ],
+    },
+  ];
+</script>
 
-    > section:first-child {
-      grid-column: span 2;
-    }
-
-    @include screen-md-up {
-      grid-template-columns: repeat(4, 1fr);
-
-      > section:first-child {
-        grid-column: initial;
-      }
-    }
-  }
-
-  .section-heading {
-    color: var(--theme-yellow);
-    margin-top: 0;
-    text-transform: uppercase;
-  }
-</style>
-
-<footer class="footer full-width">
-  <div class="footer-content">
-    <section>Section with logo and intro</section>
-    <section>
-      <h4 class="section-heading">Menu</h4>
-      <ul>
-        <li>Home</li>
-        <li>Posts</li>
-        <li>Snippets</li>
-        <li>Bio</li>
-      </ul>
+<footer class={footerStyles.footer}>
+  <div class={cns(layoutStyles.container, layoutStyles["grid--12"])}>
+    <section class={footerStyles["section--intro"]}>
+      <a href="/">
+        <img src={logo} class={footerStyles.logo} alt="Joseph Shambrook logo" />
+      </a>
+      <p class={footerStyles.intro}>
+        A Front End developer, living in Edinburgh, UK.
+      </p>
     </section>
-    <section>
-      <h4 class="section-heading">Tutorials</h4>
-      <ul>
-        <li>CSS3</li>
-        <li>Animations</li>
-        <li>React</li>
-        <li>JavaScript</li>
-      </ul>
-    </section>
-    <section>
-      <h4 class="section-heading">Useful links</h4>
-      <ul>
-        <li>GitHub</li>
-        <li>LinkedIn</li>
-        <li>Codepen</li>
-      </ul>
-    </section>
+    {#each sections as section}
+      <section class={footerStyles["section"]}>
+        <h6 class={footerStyles["section-heading"]}>{section.heading}</h6>
+        <ul class={footerStyles["section-list"]}>
+          {#each section.links as link}
+            <li>
+              <a
+                href={link.href}
+                class={footerStyles["section-link"]}
+                target="_blank"
+                rel="noopener noreferrer">{link.text}</a
+              >
+            </li>
+          {/each}
+        </ul>
+      </section>
+    {/each}
   </div>
 </footer>
+
+<style lang="scss">
+</style>
