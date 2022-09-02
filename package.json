@@ -1,14 +1,13 @@
 {
-  "name": "@example/blog",
-  "version": "0.0.1",
+  "name": "@josephshambrook/js-2023",
+  "version": "0.1.0",
   "private": true,
   "scripts": {
     "dev": "astro dev",
     "start": "astro dev",
     "build": "astro build",
     "build:ci": "npm install -g pnpm && pnpm i && pnpm build",
-    "preview": "astro preview",
-    "preinstall": "npx only-allow pnpm"
+    "preview": "astro preview"
   },
   "devDependencies": {
     "@astrojs/image": "^0.3.4",
