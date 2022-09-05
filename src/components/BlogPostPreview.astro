@@ -1,17 +1,20 @@
 ---
+import { formatDate } from "src/utils/dateFormat";
+
 export interface Props {
   post: any;
 }
 
 const { post } = Astro.props;
+const prettyPublishedDate = formatDate(post.frontmatter.publishDate);
 ---
 
 <article class="post-preview">
-  <header>
-    <p class="publish-date">{post.frontmatter.publishDate}</p>
-    <a href={post.url}><h1 class="title">{post.frontmatter.title}</h1></a>
-  </header>
+  <a href={post.url}>
+    <h2 class="title">{post.frontmatter.title}</h2>
+  </a>
   <p>{post.frontmatter.description}</p>
+  <p class="publish-date">Published on {prettyPublishedDate}</p>
   <a href={post.url}>Read more</a>
 </article>
 
@@ -24,15 +27,6 @@ const { post } = Astro.props;
     padding-bottom: 2rem;
     margin-bottom: 2rem;
     border-bottom: 4px solid var(--theme-divider);
-  }
-
-  header {
-    align-items: flex-start;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    padding-bottom: 2rem;
-    text-align: left;
   }
 
   .title,

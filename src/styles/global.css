@@ -49,7 +49,7 @@
   --palette-dark-blue-90: hsl(var(--base-dark-blue), 74%);
   --palette-dark-blue-100: hsl(var(--base-dark-blue), 87%);
 
-  --grey-base: 0, 0%;
+  --base-grey: 0, 0%;
   --palette-grey-10: hsl(var(--base-grey), 10%);
   --palette-grey-20: hsl(var(--base-grey), 20%);
   --palette-grey-30: hsl(var(--base-grey), 30%);
@@ -66,7 +66,7 @@
   --theme-yellow: var(--palette-yellow-50);
   --theme-dark-blue: var(--palette-dark-blue-50);
   --theme-black: hsl(0, 0%, 3%);
-  --theme-white: hsl(0, 0%, 100%);
+  --theme-white: hsl(0, 0%, 99%);
 
   /* gradient colors */
   /* generated using https://www.joshwcomeau.com/css/make-beautiful-gradients/ */
@@ -483,8 +483,8 @@ body {
 }
 
 ::selection {
-  color: var(--theme-accent);
-  background-color: rgba(var(--theme-accent-rgb), var(--theme-accent-opacity));
+  color: var(--theme-black);
+  background-color: var(--theme-yellow);
 }
 
 body {
@@ -557,7 +557,9 @@ code {
 }
 
 a {
-  color: var(--palette-red-50);
+  /* make this orange in dark mode */
+  /* color: var(--palette-red-50); */
+  color: var(--palette-orange-30);
   font-weight: 700;
   text-decoration: underline;
 }

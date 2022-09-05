@@ -19,6 +19,7 @@ The usual jazz, though with **[pnpm]** instead of npm.
   - A mix of frameworks wherever I like, but usually [Svelte]
 - [pnpm]
 - [SCSS]
+- [Bootstrap Icons]
 
 ### Why Astro?
 
@@ -42,3 +43,4 @@ However, SCSS variables are there for the areas where CSS properties can't be us
 [pnpm]: https://pnpm.io/
 [scss]: https://sass-lang.com/
 [svelte]: https://svelte.dev/
+[bootstrap icons]: https://icons.getbootstrap.com/

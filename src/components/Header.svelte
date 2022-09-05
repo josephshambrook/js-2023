@@ -27,7 +27,7 @@
     </a>
     <nav class={headerStyles.nav}>
       <div class={headerStyles["links-wrap"]}>
-        <a href="#">Posts</a>
+        <a href="/posts">Posts</a>
         <a href="#">Snippets</a>
         <a href="#">Bio</a>
 
