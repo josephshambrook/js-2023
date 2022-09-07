@@ -11,11 +11,12 @@
   --border-size: 0;
 
   background-color: var(--theme-red);
-  font-size: 1.125rem;
+  font-family: var(--font-heading);
+  font-size: 1rem;
   line-height: 1rem;
   margin-bottom: 2rem;
-  z-index: 50;
   position: relative;
+  z-index: 50;
 
   @include screen-md-up {
     --border-size: 31px;
@@ -44,7 +45,6 @@
 
   @include screen-md-up {
     flex-wrap: nowrap;
-    font-size: 1.2rem;
     justify-content: space-between;
     padding-bottom: 3rem;
     padding-top: 3rem;
@@ -72,7 +72,7 @@
   flex-wrap: wrap;
   align-items: center;
   justify-content: flex-end;
-  gap: 1.25rem;
+  gap: 2rem;
 
   @include screen-sm-up {
     align-items: center;
@@ -83,13 +83,21 @@
   }
 
   > a {
-    color: var(--color-white);
+    color: var(--theme-white);
     font-weight: 500;
-    margin-left: 1rem;
-    margin-right: 1rem;
+    text-decoration: none;
+    text-transform: uppercase;
+
+    &:hover {
+      text-decoration: underline;
+    }
 
     &.active {
-      color: var(--color-yellow);
+      color: var(--theme-yellow);
+    }
+
+    img {
+      width: 1.5rem;
     }
   }
 }

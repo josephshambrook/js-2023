@@ -1,0 +1,17 @@
+---
+// Component Imports
+import MainLayout from "../layouts/Main.astro";
+
+// javascript
+let title = "All about Joe";
+let description = "The perfect starter for your perfect blog.";
+let permalink = "https://josephshambrook.dev/bio";
+---
+
+<MainLayout>
+  <div slot="main">
+    <section class="intro">
+      <h1 class="latest">{title}</h1>
+    </section>
+  </div>
+</MainLayout>

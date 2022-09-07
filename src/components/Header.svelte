@@ -1,6 +1,9 @@
-<script>
+<script type="ts">
   // dependencies
   import cns from "classnames";
+
+  // components
+  // import Logo from "./Logo.astro";
 
   // styles
   import layoutStyles from "@styles/layout.module.scss";
@@ -8,9 +11,12 @@
 
   // assets
   import logo from "/assets/logos/svg/logo-on-dark.svg";
-  // import github from "/assets/icons/github.svg";
-  // import linkedin from "/assets/icons/linkedin.svg";
-  // import twitter from "/assets/icons/twitter.svg";
+  import github from "/assets/icons/github.svg";
+  import linkedin from "/assets/icons/linkedin.svg";
+  import twitter from "/assets/icons/twitter.svg";
+
+  // data
+  import { socialLinks } from "../constants";
 </script>
 
 <header class={cns(headerStyles.header)}>
@@ -28,12 +34,17 @@
     <nav class={headerStyles.nav}>
       <div class={headerStyles["links-wrap"]}>
         <a href="/posts">Posts</a>
-        <a href="#">Snippets</a>
-        <a href="#">Bio</a>
-
-        <!-- <img src={github} alt="GitHub" />
-        <img src={linkedin} alt="LinkedIn" />
-        <img src={twitter} alt="Twitter" /> -->
+        <!-- <a href="#">Snippets</a> -->
+        <a href="/bio">Bio</a>
+        <a href={socialLinks.github}>
+          <img src={github} alt="GitHub" />
+        </a>
+        <a href={socialLinks.linkedin}>
+          <img src={linkedin} alt="LinkedIn" />
+        </a>
+        <a href={socialLinks.twitter}>
+          <img src={twitter} alt="Twitter" />
+        </a>
       </div>
     </nav>
   </div>
