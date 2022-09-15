@@ -83,6 +83,19 @@
     hsl(250deg 33% 30%) 89%,
     hsl(229deg 40% 25%) 100%
   );
+  --gradient-blue-red: linear-gradient(
+    90deg,
+    hsl(229deg 40% 25%) 0%,
+    hsl(250deg 33% 30%) 11%,
+    hsl(272deg 35% 32%) 22%,
+    hsl(294deg 37% 33%) 33%,
+    hsl(313deg 45% 37%) 44%,
+    hsl(324deg 54% 41%) 56%,
+    hsl(333deg 61% 46%) 67%,
+    hsl(341deg 63% 50%) 78%,
+    hsl(349deg 75% 55%) 89%,
+    hsl(0deg 85% 60%) 100%
+  );
   --gradient-blue-black: linear-gradient(
     90deg,
     hsl(258deg 100% 50%) 0%,
@@ -477,7 +490,9 @@ body {
   background-color: var(--theme-bg);
   color: var(--theme-text);
   font-family: var(--font-body);
+  font-weight: 600;
   font-size: 1rem;
+  line-height: 1.75;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -485,13 +500,6 @@ body {
 ::selection {
   color: var(--theme-black);
   background-color: var(--theme-yellow);
-}
-
-body {
-  color: var(--theme-text);
-  font-family: var(--font-body);
-  font-weight: 500;
-  line-height: 1.75;
 }
 
 p {
@@ -506,6 +514,7 @@ h5,
 h6 {
   font-family: var(--font-heading);
   font-weight: 500;
+  text-transform: uppercase;
 }
 
 h1,

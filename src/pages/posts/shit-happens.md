@@ -5,6 +5,7 @@ publishDate: 2019-02-01 10:19:00 +0000
 lastEditDate: 2022-09-05 10:19:00 +0000
 categories: lessons
 description: "Mistakes happen"
+tags: ["mental-health"]
 ---
 
 I gave a talk this week about a big mistake I made once in my career. In a nutshell, I developed an AB test for a website that accidentally stopped transactions from being able to be completed, resulting in revenue taking a quite literal nose-dive for over an hour. It was a pretty trivial HTML mistake too that did the trick.
@@ -19,4 +20,4 @@ Also, it really helps to not highlight who the perpetrator of the mistake was. I
 
 So, to recap this slight ramble; mistakes happen. Learn from them. Find out what can be better, and highlight what can be done to prevent it from happening again.
 
-Want to see the slides? [Here you go](https://docs.google.com/presentation/d/1t5t0WVVI2owmHFhXauDSrEqbdmFDcb3esyTUft0wUOw/){:target="\_blank"}.
+Want to see the slides? [Here you go](https://docs.google.com/presentation/d/1t5t0WVVI2owmHFhXauDSrEqbdmFDcb3esyTUft0wUOw/).
