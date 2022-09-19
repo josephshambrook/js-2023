@@ -67,6 +67,8 @@
   --theme-dark-blue: var(--palette-dark-blue-50);
   --theme-black: hsl(0, 0%, 3%);
   --theme-white: hsl(0, 0%, 99%);
+  --theme-bg: #fff;
+  --theme-link: var(--palette-red-50);
 
   /* gradient colors */
   /* generated using https://www.joshwcomeau.com/css/make-beautiful-gradients/ */
@@ -123,6 +125,9 @@
   --heading-4-size: 1.563rem;
   --heading-5-size: 1.25rem;
   --heading-6-size: 1rem;
+  --heading-line-height: 1.3;
+  --heading-margin-bottom: 1rem;
+  --heading-weight: 500;
   --text-size: 1rem;
   --text-small-size: 0.8rem;
 
@@ -512,42 +517,42 @@ h3,
 h4,
 h5,
 h6 {
+  color: var(--theme-dark-blue);
   font-family: var(--font-heading);
   font-weight: 500;
+  line-height: var(--heading-line-height);
+  margin-bottom: var(--heading-margin-bottom);
+  margin-top: 0;
   text-transform: uppercase;
 }
 
 h1,
-h2,
-h3,
-h4,
-h5 {
-  line-height: 1.3;
-  margin: 3rem 0 1.38rem;
-}
-
-h1 {
+.h1 {
   font-size: var(--heading-1-size);
-  margin-top: 0;
 }
 
-h2 {
+h2,
+.h2 {
   font-size: var(--heading-2-size);
 }
 
-h3 {
+h3,
+.h3 {
   font-size: var(--heading-3-size);
 }
 
-h4 {
+h4,
+.h4 {
   font-size: var(--heading-4-size);
 }
 
-h5 {
+h5,
+.h5 {
   font-size: var(--heading-5-size);
 }
 
-h6 {
+h6,
+.h6 {
   font-size: var(--heading-6-size);
 }
 
@@ -566,9 +571,17 @@ code {
 }
 
 a {
-  /* make this orange in dark mode */
-  /* color: var(--palette-red-50); */
-  color: var(--palette-orange-30);
+  /* make this a lighter orange in dark mode */
+  color: var(--theme-link);
   font-weight: 700;
+  text-decoration: none;
+}
+
+a:hover {
   text-decoration: underline;
+  text-decoration-thickness: 5px;
+}
+
+a :where(h1, h2, h3, h4, h5, h6) {
+  color: var(--theme-link);
 }

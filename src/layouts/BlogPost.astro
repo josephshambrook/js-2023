@@ -2,45 +2,45 @@
 // dependencies
 import cns from "classnames";
 
-// CSS
-import layoutStyles from "@styles/layout.module.scss";
+// styles
+import layoutStyles from "@styles/layouts/layout.module.scss";
 
-// Components
-import SiteHead from "../components/SiteHead.astro";
+// components
 import Header from "../components/Header.svelte";
 import Footer from "../components/Footer.svelte";
 import BlogPost from "../components/BlogPost.astro";
 
+// content
+import { Content as ShortBio } from "@content/bio-short.md";
+
 // types
 import type { MarkdownLayoutProps } from "astro";
+import Base from "./Base.astro";
 type Props = MarkdownLayoutProps<{
   title: string;
   author: string;
   date: string;
 }>;
 
-// JS
-const { content, frontmatter } = Astro.props;
-// console.log("content", content);
-// console.log("frontmatter", frontmatter);
+// javascript
+const { content } = Astro.props;
 const { title, description, publishDate, heroImage, permalink, alt, tags } =
   content;
 ---
 
-<html lang={content.lang || "en"}>
-  <head>
-    <SiteHead {title} {description} {permalink} />
-  </head>
-
-  <body>
-    <Header />
-    <div class={cns(layoutStyles.container, layoutStyles["grid--12"])}>
-      <main class={layoutStyles.main}>
-        <BlogPost {title} {heroImage} {publishDate} {alt} {tags}>
-          <slot />
-        </BlogPost>
-      </main>
-    </div>
-    <Footer />
-  </body>
-</html>
+<Base {title} {description} {permalink}>
+  <Header />
+  <div class={cns(layoutStyles.container, layoutStyles["grid--12"])}>
+    <main class={layoutStyles.main}>
+      <BlogPost {title} {heroImage} {publishDate} {alt} {tags}>
+        <slot />
+      </BlogPost>
+    </main>
+    <aside class={layoutStyles.aside}>
+      <slot name="aside">
+        <ShortBio />
+      </slot>
+    </aside>
+  </div>
+  <Footer />
+</Base>

@@ -1,10 +1,9 @@
 ---
 // components
-import Tag from "@components/Tag.astro";
+import BlogPostMetadata from "@components/BlogPostMetadata.astro";
 
 // styles
 import BlogPostStyles from "@styles/components/BlogPost.module.scss";
-import { formatDate } from "@utils/dateFormat";
 
 export interface Props {
   title: string;
@@ -15,8 +14,6 @@ export interface Props {
 }
 
 const { title, publishDate, heroImage, alt, tags } = Astro.props;
-
-const prettyPublishDate = formatDate(publishDate);
 ---
 
 <article class="content">
@@ -24,23 +21,7 @@ const prettyPublishDate = formatDate(publishDate);
     <header class={BlogPostStyles.header}>
       <h1 class={BlogPostStyles.title}>{title}</h1>
 
-      <div class={BlogPostStyles["metadata-row"]}>
-        <small class={BlogPostStyles["publish-date"]}>
-          Posted on {prettyPublishDate}
-        </small>
-
-        {
-          tags?.length && (
-            <ul class={BlogPostStyles.tags}>
-              {tags.map((tag) => (
-                <>
-                  <Tag>#{tag}</Tag>
-                </>
-              ))}
-            </ul>
-          )
-        }
-      </div>
+      <BlogPostMetadata publishDate={publishDate} tags={tags} />
 
       {
         heroImage && (

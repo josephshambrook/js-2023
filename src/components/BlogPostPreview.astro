@@ -1,49 +1,27 @@
 ---
 import { formatDate } from "@utils/dateFormat";
+import BlogPostMetadata from "./BlogPostMetadata.astro";
 
 export interface Props {
   post: any;
 }
 
 const { post } = Astro.props;
-const prettyPublishedDate = formatDate(post.frontmatter.publishDate);
+const { publishDate, tags } = post.frontmatter;
 ---
 
 <article class="post-preview">
   <a href={post.url}>
     <h2 class="title">{post.frontmatter.title}</h2>
   </a>
+
   <p>{post.frontmatter.description}</p>
-  <p class="publish-date">Published on {prettyPublishedDate}</p>
-  <a href={post.url}>Read more</a>
+
+  <BlogPostMetadata publishDate={publishDate} tags={tags} />
 </article>
 
 <style>
-  .content :global(main > * + *) {
-    margin-top: 1rem;
-  }
-
   .post-preview {
-    padding-bottom: 2rem;
-    margin-bottom: 2rem;
-    border-bottom: 4px solid var(--theme-divider);
-  }
-
-  .title,
-  .author,
-  .publish-date {
-    margin: 0;
-  }
-
-  .publish-date,
-  .author {
-    font-size: 1.25rem;
-    color: var(--theme-text-lighter);
-  }
-
-  .title {
-    font-size: 2.25rem;
-    font-weight: 700;
-    color: var(--theme-text);
+    margin-bottom: 3rem;
   }
 </style>

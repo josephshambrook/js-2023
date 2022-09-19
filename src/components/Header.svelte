@@ -6,7 +6,7 @@
   // import Logo from "./Logo.astro";
 
   // styles
-  import layoutStyles from "@styles/layout.module.scss";
+  import layoutStyles from "@styles/layouts/layout.module.scss";
   import headerStyles from "@styles/components/Header.module.scss";
 
   // assets

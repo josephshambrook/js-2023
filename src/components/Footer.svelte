@@ -7,7 +7,7 @@
   import { socialLinks } from "src/constants";
 
   // styles
-  import layoutStyles from "@styles/layout.module.scss";
+  import layoutStyles from "@styles/layouts/layout.module.scss";
   import footerStyles from "@styles/components/Footer.module.scss";
 
   // assets

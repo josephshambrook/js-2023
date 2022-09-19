@@ -1,4 +1,4 @@
-@import "./mixins";
+@import "../mixins";
 
 .container {
   margin-left: auto;
@@ -39,6 +39,10 @@ of writing. When it is, I'd rather use that!
 
 .grid-span-cols--3 {
   grid-column: span 3;
+}
+
+.grid-span-cols--12 {
+  grid-column: span 12;
 }
 
 // main layout

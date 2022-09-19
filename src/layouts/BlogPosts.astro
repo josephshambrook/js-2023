@@ -6,17 +6,18 @@ import cns from "classnames";
 import layoutStyles from "@styles/layouts/layout.module.scss";
 
 // components
-import Header from "@components/Header.svelte";
-import Footer from "@components/Footer.svelte";
+import Base from "./Base.astro";
+import Header from "../components/Header.svelte";
+import Footer from "../components/Footer.svelte";
 
 // content
-import Base from "./Base.astro";
+import { Content as ShortBio } from "@content/bio-short.md";
 ---
 
 <Base>
   <Header />
   <div class={cns(layoutStyles.container, layoutStyles["grid--12"])}>
-    <main class={layoutStyles["grid-span-cols--12"]}>
+    <main class={layoutStyles.main}>
       <slot name="main">
         <h1>H1 - Heading 1</h1>
         <h2>H2 - Heading 2</h2>
@@ -34,6 +35,11 @@ import Base from "./Base.astro";
         <small>Body small</small>
       </slot>
     </main>
+    <aside class={layoutStyles.aside}>
+      <slot name="aside">
+        <ShortBio />
+      </slot>
+    </aside>
   </div>
   <Footer />
 </Base>
