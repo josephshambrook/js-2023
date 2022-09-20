@@ -3,6 +3,9 @@
 import { SiteMetadata } from "@src/types";
 import SiteHead from "../components/SiteHead.astro";
 
+// css
+import LayoutStyles from "@styles/layouts/layout.module.scss";
+
 // javascript
 const { title, subtitle, description, permalink, lang = "en" } = Astro.props;
 
@@ -22,7 +25,7 @@ export type Props = Partial<SiteMetadata> & {
     />
   </head>
 
-  <body>
+  <body class={LayoutStyles.body}>
     <slot />
   </body>
 </html>
