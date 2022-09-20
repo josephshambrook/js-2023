@@ -6,6 +6,7 @@ import cns from "classnames";
 import layoutStyles from "@styles/layouts/layout.module.scss";
 
 // components
+import Base from "./Base.astro";
 import Header from "../components/Header.svelte";
 import Footer from "../components/Footer.svelte";
 import BlogPost from "../components/BlogPost.astro";
@@ -15,7 +16,8 @@ import { Content as ShortBio } from "@content/bio-short.md";
 
 // types
 import type { MarkdownLayoutProps } from "astro";
-import Base from "./Base.astro";
+
+// TODO: fix these props
 type Props = MarkdownLayoutProps<{
   title: string;
   author: string;
@@ -28,7 +30,7 @@ const { title, description, publishDate, heroImage, permalink, alt, tags } =
   content;
 ---
 
-<Base {title} {description} {permalink}>
+<Base subtitle={title} {description} {permalink}>
   <Header />
   <div class={cns(layoutStyles.container, layoutStyles["grid--12"])}>
     <main class={layoutStyles.main}>

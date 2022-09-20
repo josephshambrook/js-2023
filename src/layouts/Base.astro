@@ -1,27 +1,25 @@
 ---
 // components
+import { SiteMetadata } from "@src/types";
 import SiteHead from "../components/SiteHead.astro";
 
 // javascript
-const {
-  title = null,
-  description = null,
-  permalink = null,
-  lang = "en",
-} = Astro.props;
+const { title, subtitle, description, permalink, lang = "en" } = Astro.props;
 
 // props
-export type Props = {
-  title?: string;
-  description?: string;
-  permalink?: string;
+export type Props = Partial<SiteMetadata> & {
   lang?: string;
 };
 ---
 
 <html lang={lang}>
   <head>
-    <SiteHead title={title} description={description} permalink={permalink} />
+    <SiteHead
+      title={title}
+      subtitle={subtitle}
+      description={description}
+      permalink={permalink}
+    />
   </head>
 
   <body>

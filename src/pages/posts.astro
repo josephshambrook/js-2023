@@ -2,11 +2,15 @@
 // Component Imports
 import BlogPostsLayout from "@layouts/BlogPosts.astro";
 import BlogPostPreview from "@components/BlogPostPreview.astro";
+import { SiteMetadata } from "@src/types";
 
 // javascript
-let title = "Recent posts";
-let description = "The perfect starter for your perfect blog.";
-let permalink = "https://josephshambrook.dev/posts";
+const pageMetadata: Partial<SiteMetadata> = {
+  subtitle: "Recent blog posts",
+  description:
+    "Blog posts by Joseph Shambrook, a Front End developer based in Edinburgh, UK",
+  permalink: "https://josephshambrook.dev/posts",
+};
 
 // lists all Markdown posts in the repo
 let allPosts = await Astro.glob("./posts/*.md");
@@ -17,9 +21,9 @@ allPosts = allPosts.sort(
 );
 ---
 
-<BlogPostsLayout>
+<BlogPostsLayout {...pageMetadata}>
   <div slot="main">
-    <h1 class="latest h6">{title}</h1>
+    <h1 class="latest h6">Recent posts</h1>
 
     <section aria-label="Blog post list">
       {allPosts.map((p) => <BlogPostPreview post={p} />)}

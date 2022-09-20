@@ -12,9 +12,21 @@ import Footer from "../components/Footer.svelte";
 
 // content
 import { Content as ShortBio } from "@content/bio-short.md";
+import { SiteMetadata } from "@src/types";
+
+// types
+export type Props = Partial<SiteMetadata>;
+
+// js
+const { title, subtitle, description, permalink } = Astro.props;
 ---
 
-<Base>
+<Base
+  title={title}
+  subtitle={subtitle}
+  description={description}
+  permalink={permalink}
+>
   <Header />
   <div class={cns(layoutStyles.container, layoutStyles["grid--12"])}>
     <main class={layoutStyles.main}>

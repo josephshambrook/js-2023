@@ -16,6 +16,7 @@
     "baseUrl": ".",
     // path aliases, to simplify imports
     "paths": {
+      "@src/*": ["src/*"],
       "@components/*": ["src/components/*"],
       "@content/*": ["src/content/*"],
       "@layouts/*": ["src/layouts/*"],
