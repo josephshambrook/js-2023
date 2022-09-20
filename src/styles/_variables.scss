@@ -1,6 +1,18 @@
 $sizes: (
-  "xs": null,
-  "sm": 48rem,
-  "md": 62rem,
-  "lg": 75rem,
+  // "xs": null,
+  // "sm": 48rem,
+  // "md": 62rem,
+  // "lg": 75rem,
+  //
+  // / 16px = 34rem
+  "xs": 544px,
+
+  // / 16px = 48rem
+  "sm": 768px,
+
+  // / 16px = 62rem
+  "md": 992px,
+
+  // / 16px = 75rem
+  "lg": 1200px
 );

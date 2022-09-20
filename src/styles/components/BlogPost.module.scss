@@ -15,8 +15,13 @@
   }
 }
 
-.content :global(h1, h2, h3, h4, h5, h6) {
-  margin-block-start: 4rem;
+.content {
+  --heading-margin-top: 4rem;
+
+  hr {
+    margin-bottom: 3rem;
+    margin-top: 3rem;
+  }
 }
 
 .header {
@@ -29,7 +34,8 @@
 
 .title {
   color: var(--theme-dark-blue);
-  font-size: var(--heading-3-size);
+  // font-size: var(--heading-3-size);
+  margin-top: 0;
 }
 
 .metadata-row {

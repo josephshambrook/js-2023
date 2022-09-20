@@ -37,6 +37,12 @@ of writing. When it is, I'd rather use that!
   gap: var(--grid-gap);
 }
 
+.grid--auto {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: var(--grid-gap);
+}
+
 .grid-span-cols--3 {
   grid-column: span 3;
 }

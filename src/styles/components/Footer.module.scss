@@ -18,23 +18,11 @@
   font-size: var(--text-small-size);
 }
 
-.section {
-  grid-column: span 6;
-
-  @include screen-sm-up {
-    grid-column: span 4;
-  }
-
-  @include screen-lg-up {
-    grid-column: span 3;
-  }
-}
-
 .section--intro {
-  grid-column: span 12;
+  grid-column: 1 / -1;
 
   @include screen-lg-up {
-    grid-column: span 3;
+    grid-column: initial;
   }
 }
 

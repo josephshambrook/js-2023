@@ -16,29 +16,27 @@ export interface Props {
 const { title, publishDate, heroImage, alt, tags } = Astro.props;
 ---
 
-<article class="content">
-  <div>
-    <header class={BlogPostStyles.header}>
-      <h1 class={BlogPostStyles.title}>{title}</h1>
+<article>
+  <header class={BlogPostStyles.header}>
+    <h1 class={BlogPostStyles.title}>{title}</h1>
 
-      <BlogPostMetadata publishDate={publishDate} tags={tags} />
+    <BlogPostMetadata publishDate={publishDate} tags={tags} />
 
-      {
-        heroImage && (
-          <img
-            width="720"
-            height="420"
-            class="hero-image"
-            loading="lazy"
-            src={heroImage}
-            alt={alt}
-          />
-        )
-      }
-    </header>
+    {
+      heroImage && (
+        <img
+          width="720"
+          height="420"
+          class="hero-image"
+          loading="lazy"
+          src={heroImage}
+          alt={alt}
+        />
+      )
+    }
+  </header>
 
-    <main>
-      <slot />
-    </main>
-  </div>
+  <main class={BlogPostStyles.content}>
+    <slot />
+  </main>
 </article>
