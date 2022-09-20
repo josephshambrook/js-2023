@@ -4,7 +4,7 @@
 
   // data
   import { FooterSection } from "../types";
-  import { socialLinks } from "src/constants";
+  import { SOCIAL_LINKS } from "src/constants";
 
   // styles
   import layoutStyles from "@styles/layouts/layout.module.scss";
@@ -19,26 +19,26 @@
       links: [
         { text: "Home", href: "/" },
         { text: "Posts", href: "/posts" },
-        { text: "Snippets", href: "/snippets" },
+        // { text: "Snippets", href: "/snippets" },
         { text: "Bio", href: "/bio" },
       ],
     },
-    {
-      heading: "Tutorials",
-      links: [
-        { text: "CSS3", href: "/tags/css3" },
-        { text: "Animations", href: "/tags/animations" },
-        { text: "React", href: "/tags/react" },
-        { text: "JavaScript", href: "/tags/javascript" },
-      ],
-    },
+    // {
+    //   heading: "Tutorials",
+    //   links: [
+    //     { text: "CSS3", href: "/tags/css3" },
+    //     { text: "Animations", href: "/tags/animations" },
+    //     { text: "React", href: "/tags/react" },
+    //     { text: "JavaScript", href: "/tags/javascript" },
+    //   ],
+    // },
     {
       heading: "Useful Links",
       links: [
-        { text: "GitHub", href: socialLinks.github },
-        { text: "LinkedIn", href: socialLinks.linkedin },
-        { text: "Twitter", href: socialLinks.twitter },
-        { text: "CodePen", href: socialLinks.codepen },
+        { text: "GitHub", href: SOCIAL_LINKS.github },
+        { text: "LinkedIn", href: SOCIAL_LINKS.linkedin },
+        { text: "Twitter", href: SOCIAL_LINKS.twitter },
+        { text: "CodePen", href: SOCIAL_LINKS.codepen },
       ],
     },
   ];

@@ -16,7 +16,15 @@
   import twitter from "/assets/icons/twitter.svg";
 
   // data
-  import { socialLinks } from "../constants";
+  import { SOCIAL_LINKS } from "../constants";
+
+  // js
+  let isMenuFullScreen: boolean = false;
+
+  const setMenuFullScreen = (value: boolean) => {
+    console.log("value", value);
+    isMenuFullScreen = value;
+  };
 </script>
 
 <header class={cns(headerStyles.header)}>
@@ -31,18 +39,35 @@
         alt="Joseph Shambrook logo"
       />
     </a>
+
+    <!-- Shamelessly inspired by Bootstrap's approach -->
+    <!-- <button
+      class={cns({
+        [headerStyles["navbar-toggler"]]: true,
+        [headerStyles["isFullScreen"]]: isMenuFullScreen,
+      })}
+      type="button"
+      data-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+      on:click={() => setMenuFullScreen(isMenuFullScreen)}
+    >
+      <span class={headerStyles["navbar-toggler-icon"]}>MENU</span>
+    </button> -->
+
     <nav class={headerStyles.nav}>
       <div class={headerStyles["links-wrap"]}>
         <a href="/posts">Posts</a>
         <!-- <a href="#">Snippets</a> -->
         <a href="/bio">Bio</a>
-        <a href={socialLinks.github}>
+        <a href={SOCIAL_LINKS.github}>
           <img src={github} alt="GitHub" />
         </a>
-        <a href={socialLinks.linkedin}>
+        <!-- <a href={SOCIAL_LINKS.linkedin}>
           <img src={linkedin} alt="LinkedIn" />
-        </a>
-        <a href={socialLinks.twitter}>
+        </a> -->
+        <a href={SOCIAL_LINKS.twitter}>
           <img src={twitter} alt="Twitter" />
         </a>
       </div>
