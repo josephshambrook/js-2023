@@ -3,6 +3,8 @@ layout: ../../layouts/BlogPost.astro
 title: "Let's talk about mental health"
 publishDate: 2018-06-12 13:13:00 +0100
 categories: rambles
+description: "Why mental health must be spoken about within the workplace."
+tags: ["mental-health"]
 ---
 
 Talking about any kind of mental health is never, ever, easy. There's a sense of dread, embarrassment, reluctance. A sense that the person or people who are currently listening to you don't give a damn about your life because they have their own problems. Even the most outgoing, over-confident, successful of people can feel these fears and feelings, but they just get over it, so you should too. All of these feelings, they're all just in your head, they don't matter. Right?
