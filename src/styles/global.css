@@ -573,8 +573,19 @@ small,
 }
 
 code {
+  background: rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
   font-family: var(--font-mono);
-  font-size: 1rem;
+  font-weight: 400;
+  font-size: 90%;
+  max-width: 100%;
+  padding: 0.1rem 0.25rem;
+}
+
+pre {
+  border-radius: 5px;
+  padding-bottom: 1rem;
+  padding-top: 1rem;
 }
 
 .text-em {
