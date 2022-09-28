@@ -37,17 +37,7 @@
 }
 
 .is-transparent {
-  // totally reset the background
   background: transparent;
-
-  &:after {
-    all: initial;
-  }
-}
-
-.is-white {
-  --header-text-color: #000;
-  background-color: transparent;
 
   &:after {
     all: initial;

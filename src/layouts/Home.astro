@@ -9,34 +9,16 @@ import layoutStyles from "@styles/layouts/layout.module.scss";
 import Header from "@components/Header.svelte";
 import Footer from "@components/Footer.svelte";
 import Hero from "@components/Hero";
-import TitleHero from "@components/TitleHero.astro";
 
 // content
 import Base from "./Base.astro";
-
-// props
-export type HomeLayoutProps = {
-  alt: boolean;
-};
-const { alt } = Astro.props;
 ---
 
 <Base>
-  {
-    !alt && (
-      <div class="gradient-bkg">
-        <Header isTransparent={true} />
-        <Hero />
-      </div>
-    )
-  }
-
-  {
-    alt && (
-      <Header isWhite />
-      <TitleHero />
-    )
-  }
+  <div class="gradient-bkg">
+    <Header isTransparent={true} />
+    <Hero />
+  </div>
 
   <div class={cns(layoutStyles.container, layoutStyles["grid--12"])}>
     <main class={cns(layoutStyles.main)}>
@@ -53,7 +35,7 @@ const { alt } = Astro.props;
 
 <style>
   .gradient-bkg {
-    background-image: var(--gradient-red-blue-0);
+    background-image: var(--gradient-red-blue-down);
     color: white;
     margin-bottom: 3rem;
   }

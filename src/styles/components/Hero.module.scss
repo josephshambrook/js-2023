@@ -16,23 +16,8 @@
   text-transform: none;
 }
 
-.hero-alt {
-  padding-bottom: 3rem;
-
-  @include screen-lg-up {
-    padding-bottom: 5rem;
-  }
-}
-
-.title-alt {
-  font-size: var(--heading-hero);
-  font-weight: 700;
-  line-height: 1.4;
-  text-transform: none;
-}
-
 .gradient-text {
-  background-image: var(--gradient-red-blue);
+  background-image: var(--gradient-red-blue-right);
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
