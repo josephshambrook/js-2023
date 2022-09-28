@@ -9,6 +9,7 @@
 
 .header {
   --border-size: 0;
+  --header-text-color: var(--theme-white);
 
   background-color: var(--theme-red);
   font-family: var(--font-heading);
@@ -38,6 +39,15 @@
 .is-transparent {
   // totally reset the background
   background: transparent;
+
+  &:after {
+    all: initial;
+  }
+}
+
+.is-white {
+  --header-text-color: #000;
+  background-color: transparent;
 
   &:after {
     all: initial;
@@ -108,7 +118,7 @@
   }
 
   > a {
-    color: var(--theme-white);
+    color: var(--header-text-color);
     font-weight: 500;
     text-decoration: none;
     text-transform: uppercase;
@@ -122,6 +132,7 @@
     }
 
     img {
+      color: var(--header-text-color);
       width: 1.5rem;
     }
   }

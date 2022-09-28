@@ -1,0 +1,27 @@
+---
+// Component Imports
+import HomeLayout from "@layouts/Home.astro";
+import BlogPostPreview from "@components/BlogPostPreview.astro";
+
+// lists all Markdown posts in the repo
+let allPosts = await Astro.glob("./posts/*.md");
+
+// sort the posts in order of publish date, and limit to top 3
+allPosts = allPosts
+  .sort(
+    (a, b) =>
+      new Date(b.frontmatter.publishDate).valueOf() -
+      new Date(a.frontmatter.publishDate).valueOf()
+  )
+  .slice(0, 3);
+---
+
+<HomeLayout alt={true}>
+  <div slot="main">
+    <h1 class="latest h6">Recent posts</h1>
+
+    <section aria-label="Blog post list">
+      {allPosts.map((p) => <BlogPostPreview post={p} />)}
+    </section>
+  </div>
+</HomeLayout>
