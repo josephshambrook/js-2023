@@ -1,9 +1,6 @@
-<script type="ts">
+<script lang="ts">
   // dependencies
   import cns from "classnames";
-
-  // components
-  // import Logo from "./Logo.astro";
 
   // styles
   import layoutStyles from "@styles/layouts/layout.module.scss";
@@ -12,22 +9,20 @@
   // assets
   import logo from "/assets/logos/svg/logo-on-dark.svg";
   import github from "/assets/icons/github.svg";
-  import linkedin from "/assets/icons/linkedin.svg";
   import twitter from "/assets/icons/twitter.svg";
 
   // data
   import { SOCIAL_LINKS } from "../constants";
 
-  // js
-  let isMenuFullScreen: boolean = false;
-
-  const setMenuFullScreen = (value: boolean) => {
-    console.log("value", value);
-    isMenuFullScreen = value;
-  };
+  // props
+  export let isTransparent = false;
 </script>
 
-<header class={cns(headerStyles.header)}>
+<header
+  class={cns(headerStyles.header, {
+    [headerStyles["is-transparent"]]: isTransparent,
+  })}
+>
   <div class={cns(headerStyles.wrapper, layoutStyles.container)}>
     <a class={headerStyles["sr-only"]} href="#maincontent" target="_self"
       >Skip to main content</a
@@ -39,22 +34,6 @@
         alt="Joseph Shambrook logo"
       />
     </a>
-
-    <!-- Shamelessly inspired by Bootstrap's approach -->
-    <!-- <button
-      class={cns({
-        [headerStyles["navbar-toggler"]]: true,
-        [headerStyles["isFullScreen"]]: isMenuFullScreen,
-      })}
-      type="button"
-      data-target="#navbarSupportedContent"
-      aria-controls="navbarSupportedContent"
-      aria-expanded="false"
-      aria-label="Toggle navigation"
-      on:click={() => setMenuFullScreen(isMenuFullScreen)}
-    >
-      <span class={headerStyles["navbar-toggler-icon"]}>MENU</span>
-    </button> -->
 
     <nav class={headerStyles.nav}>
       <div class={headerStyles["links-wrap"]}>

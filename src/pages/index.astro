@@ -1,24 +1,27 @@
 ---
 // Component Imports
-import MainLayout from "../layouts/Main.astro";
+import HomeLayout from "@layouts/Home.astro";
+import BlogPostPreview from "@components/BlogPostPreview.astro";
+
+// lists all Markdown posts in the repo
+let allPosts = await Astro.glob("./posts/*.md");
+
+// sort the posts in order of publish date, and limit to top 3
+allPosts = allPosts
+  .sort(
+    (a, b) =>
+      new Date(b.frontmatter.publishDate).valueOf() -
+      new Date(a.frontmatter.publishDate).valueOf()
+  )
+  .slice(0, 3);
 ---
 
-<MainLayout>
+<HomeLayout>
   <div slot="main">
-    <p>Hello early visitor!</p>
+    <h1 class="latest h6">Recent posts</h1>
 
-    <p>
-      This site is very much a work in progress - you can track its progress
-      <a href="https://github.com/josephshambrook/js-2023"
-        >right here on GitHub</a
-      >.
-    </p>
-    <!-- <section class="">
-      <h2>Hero goes here</h2>
+    <section aria-label="Blog post list">
+      {allPosts.map((p) => <BlogPostPreview post={p} />)}
     </section>
-
-    <section class="latest-posts">
-      <h2>Latest posts here</h2>
-    </section> -->
   </div>
-</MainLayout>
+</HomeLayout>

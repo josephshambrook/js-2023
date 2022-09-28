@@ -35,6 +35,15 @@
   }
 }
 
+.is-transparent {
+  // totally reset the background
+  background: transparent;
+
+  &:after {
+    all: initial;
+  }
+}
+
 .wrapper {
   display: flex;
   flex-direction: column;

@@ -1,0 +1,42 @@
+---
+// dependencies
+import cns from "classnames";
+
+// styles
+import layoutStyles from "@styles/layouts/layout.module.scss";
+
+// components
+import Header from "@components/Header.svelte";
+import Footer from "@components/Footer.svelte";
+import Hero from "@components/Hero";
+
+// content
+import Base from "./Base.astro";
+---
+
+<Base>
+  <div class="gradient-bkg">
+    <Header isTransparent={true} />
+    <Hero />
+  </div>
+
+  <div class={cns(layoutStyles.container, layoutStyles["grid--12"])}>
+    <main class={cns(layoutStyles.main)}>
+      <slot name="main" />
+    </main>
+
+    <aside class={layoutStyles.aside}>
+      <slot name="aside" />
+    </aside>
+  </div>
+
+  <Footer />
+</Base>
+
+<style>
+  .gradient-bkg {
+    background-image: var(--gradient-red-blue-0);
+    color: white;
+    margin-bottom: 3rem;
+  }
+</style>
