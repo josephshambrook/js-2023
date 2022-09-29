@@ -1,0 +1,54 @@
+---
+// dependencies
+import cns from "classnames";
+
+// components
+import Svg from "@components/Svg.astro";
+
+// styles
+import layoutStyles from "@styles/layouts/layout.module.scss";
+import headerStyles from "@styles/components/Header.module.scss";
+
+// data
+import { SOCIAL_LINKS } from "../constants";
+
+// props
+const { isTransparent } = Astro.props;
+---
+
+<header
+  class={cns(headerStyles.header, {
+    [headerStyles["is-transparent"]]: isTransparent,
+  })}
+>
+  <div class={cns(headerStyles.wrapper, layoutStyles.container)}>
+    <a class={headerStyles["sr-only"]} href="#maincontent" target="_self"
+      >Skip to main content</a
+    >
+
+    <a class={headerStyles["logo-link"]} href="/">
+      <!-- <img
+        src={logo}
+        class={headerStyles["logo-img"]}
+        alt="Joseph Shambrook logo"
+      /> -->
+      <Svg path="logos/svg/logo-on-dark.svg" />
+    </a>
+
+    <nav class={headerStyles.nav}>
+      <div class={headerStyles["links-wrap"]}>
+        <a href="/posts">Posts</a>
+
+        <a href="/bio">Bio</a>
+
+        <a href={SOCIAL_LINKS.github}>
+          <Svg path="icons/github.svg" size="32" />
+        </a>
+
+        <a href={SOCIAL_LINKS.twitter}>
+          <Svg path="icons/twitter.svg" size="32" />
+        </a>
+      </div>
+    </nav>
+  </div>
+</header>

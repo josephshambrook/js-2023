@@ -28,6 +28,7 @@
     "@vanilla-extract/css": "^1.9.0",
     "@vanilla-extract/vite-plugin": "^3.5.0",
     "bootstrap-icons": "^1.9.1",
+    "node-html-parser": "^6.1.1",
     "normalize.css": "^8.0.1",
     "preact": "^10.11.0",
     "react": "^18.0.0",

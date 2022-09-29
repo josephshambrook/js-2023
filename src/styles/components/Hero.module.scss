@@ -1,10 +1,14 @@
 @import "../mixins";
 
 .hero {
-  padding-bottom: 2rem;
+  padding-block-end: 2rem;
 
   @include screen-lg-up {
-    padding-bottom: 5rem;
+    padding-block-end: 5rem;
+  }
+
+  p {
+    margin-block: 0;
   }
 }
 

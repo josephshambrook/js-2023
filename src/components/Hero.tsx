@@ -11,13 +11,12 @@ export default function Hero() {
     <section className={HeroStyles.hero}>
       <div className={LayoutStyles.container}>
         <h1 className={HeroStyles.title}>
-          <span>Hey 👋</span>
-          <br />
-          <br />
-          <span>
+          <p>Hey 👋</p>
+          <p>
             I'm Joseph Shambrook, a Front End Developer living in
-            {weather ? ` ${weather}` : ""} Edinburgh, UK
-          </span>
+            {weather ? ` ${weather}` : ""} Edinburgh, UK.
+          </p>
+          <p></p>
         </h1>
       </div>
     </section>

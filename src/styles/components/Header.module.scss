@@ -13,15 +13,15 @@
 
   background-color: var(--theme-red);
   font-family: var(--font-heading);
-  font-size: 1rem;
-  line-height: 1rem;
-  margin-bottom: 2rem;
+  font-size: 1.2rem;
+  line-height: 1;
+  margin-block-end: 2rem;
   position: relative;
   z-index: 50;
 
   @include screen-md-up {
     --border-size: 31px;
-    margin-bottom: calc(2rem + var(--border-size));
+    margin-block-end: calc(2rem + var(--border-size));
   }
 
   &:after {
@@ -48,8 +48,8 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  padding-bottom: 0.5rem;
-  padding-top: 0.5rem;
+  padding-block-end: 0.5rem;
+  padding-block-start: 0.5rem;
   position: relative;
   width: 100%;
 
@@ -57,8 +57,8 @@
     flex-direction: row;
     flex-wrap: nowrap;
     justify-content: space-between;
-    padding-bottom: 3rem;
-    padding-top: 3rem;
+    padding-block-end: 3rem;
+    padding-block-start: 3rem;
   }
 }
 
@@ -66,10 +66,10 @@
   align-items: center;
   display: flex;
   justify-content: space-between;
-  margin-top: 1rem;
+  margin-block-start: 1rem;
 
   @include screen-sm-up {
-    margin-top: 0;
+    margin-block-start: 0;
   }
 }
 
@@ -103,8 +103,8 @@
     flex-direction: row;
     gap: 2rem;
     justify-content: flex-end;
-    margin-top: 0;
-    padding-left: 1.25rem;
+    margin-block-start: 0;
+    padding-inline-start: 1.25rem;
   }
 
   > a {
@@ -121,8 +121,7 @@
       color: var(--theme-yellow);
     }
 
-    img {
-      color: var(--header-text-color);
+    svg {
       width: 1.5rem;
     }
   }
