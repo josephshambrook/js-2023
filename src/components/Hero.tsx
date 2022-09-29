@@ -6,6 +6,25 @@ export default function Hero() {
   const [weather, setWeather] = React.useState("");
 
   // get data from Worker
+  React.useEffect(() => {
+    console.log("hello");
+    const getWeather = async function () {
+      const weatherResponse = await fetch(
+        "https://weather-word.josephshambrook.workers.dev/"
+      );
+      const weatherData = await weatherResponse.json();
+      console.log("weatherData", weatherData);
+      if (weatherData.condition) {
+        setWeather(weatherData.condition);
+      }
+    };
+
+    try {
+      getWeather();
+    } catch (e) {
+      console.log("Could not retrieve weather");
+    }
+  }, []);
 
   return (
     <section className={HeroStyles.hero}>
@@ -16,7 +35,6 @@ export default function Hero() {
             I'm Joseph Shambrook, a Front End Developer living in
             {weather ? ` ${weather}` : ""} Edinburgh, UK.
           </p>
-          <p></p>
         </h1>
       </div>
     </section>
