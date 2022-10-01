@@ -1,21 +1,23 @@
 import * as React from "react";
 import LayoutStyles from "@styles/layouts/layout.module.scss";
 import HeroStyles from "@styles/components/Hero.module.scss";
+import { WEATHER_ICON_NAMES } from "@src/constants";
+import Icon from "astro-icon";
 
 export default function Hero() {
-  const [weather, setWeather] = React.useState("");
+  const [weatherIcon, setWeatherIcon] = React.useState("");
 
   // get data from Worker
   React.useEffect(() => {
-    console.log("hello");
     const getWeather = async function () {
       const weatherResponse = await fetch(
         "https://weather-word.josephshambrook.workers.dev/"
       );
       const weatherData = await weatherResponse.json();
       console.log("weatherData", weatherData);
-      if (weatherData.condition) {
-        setWeather(weatherData.condition);
+      if (weatherData.condition.id) {
+        const icon = WEATHER_ICON_NAMES[weatherData.condition.id];
+        setWeatherIcon(icon);
       }
     };
 
@@ -33,7 +35,7 @@ export default function Hero() {
           <p>Hey 👋</p>
           <p>
             I'm Joseph Shambrook, a Front End Developer living in
-            {weather ? ` ${weather}` : ""} Edinburgh, UK.
+            {weatherIcon ? "" : ""} Edinburgh, UK.
           </p>
         </h1>
       </div>

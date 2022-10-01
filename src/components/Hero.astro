@@ -1,0 +1,45 @@
+---
+import Icon from "astro-icon";
+import LayoutStyles from "@styles/layouts/layout.module.scss";
+import HeroStyles from "@styles/components/Hero.module.scss";
+import { WEATHER_ICON_NAMES } from "@src/constants";
+
+let weatherIcon = null;
+
+const weatherResponse = await fetch(
+  "https://weather-word.josephshambrook.workers.dev/"
+);
+const weatherData = await weatherResponse.json();
+if (weatherData.condition.id) {
+  weatherIcon = WEATHER_ICON_NAMES[weatherData.condition.id] ?? null;
+}
+---
+
+<section class={HeroStyles.hero}>
+  <div class={LayoutStyles.container}>
+    <h1 class={HeroStyles.title}>
+      <p>Hey 👋</p>
+      <p>
+        I'm Joseph Shambrook, a Front End Developer living in Edinburgh, UK <Icon
+          name={weatherIcon}
+          width="60"
+        />
+      </p>
+    </h1>
+  </div>
+</section>
+
+<!-- <script>
+  const getWeather = async () => {
+    const weatherResponse = await fetch(
+      "https://weather-word.josephshambrook.workers.dev/"
+    );
+    const weatherData = await weatherResponse.json();
+    if (weatherData.condition.id) {
+      const icon = WEATHER_ICON_NAMES[weatherData.condition.id];
+      setWeatherIcon(icon);
+    }
+  };
+
+  getWeather();
+</script> -->

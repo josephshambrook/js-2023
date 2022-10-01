@@ -1,6 +1,7 @@
 ---
 // dependencies
 import cns from "classnames";
+import { Icon } from "astro-icon";
 
 // components
 import Svg from "@components/Svg.astro";
@@ -12,8 +13,13 @@ import headerStyles from "@styles/components/Header.module.scss";
 // data
 import { SOCIAL_LINKS } from "../constants";
 
+// types
+export type Props = {
+  isTransparent: boolean;
+};
+
 // props
-const { isTransparent } = Astro.props;
+const { isTransparent }: Props = Astro.props;
 ---
 
 <header
@@ -27,11 +33,6 @@ const { isTransparent } = Astro.props;
     >
 
     <a class={headerStyles["logo-link"]} href="/">
-      <!-- <img
-        src={logo}
-        class={headerStyles["logo-img"]}
-        alt="Joseph Shambrook logo"
-      /> -->
       <Svg path="logos/svg/logo-on-dark.svg" />
     </a>
 
@@ -42,11 +43,11 @@ const { isTransparent } = Astro.props;
         <a href="/bio">Bio</a>
 
         <a href={SOCIAL_LINKS.github}>
-          <Svg path="icons/github.svg" size="32" />
+          <Icon pack="mdi" name="github" />
         </a>
 
         <a href={SOCIAL_LINKS.twitter}>
-          <Svg path="icons/twitter.svg" size="32" />
+          <Icon pack="mdi" name="twitter" />
         </a>
       </div>
     </nav>

@@ -22,11 +22,13 @@
     "sass": "^1.54.9"
   },
   "dependencies": {
+    "@astrojs/cloudflare": "^2.1.0",
     "@astrojs/partytown": "^1.0.0",
     "@astrojs/react": "^1.1.4",
     "@astrojs/rss": "^1.0.1",
     "@vanilla-extract/css": "^1.9.0",
     "@vanilla-extract/vite-plugin": "^3.5.0",
+    "astro-icon": "^0.7.3",
     "bootstrap-icons": "^1.9.1",
     "node-html-parser": "^6.1.1",
     "normalize.css": "^8.0.1",

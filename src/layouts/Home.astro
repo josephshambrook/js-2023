@@ -8,7 +8,8 @@ import layoutStyles from "@styles/layouts/layout.module.scss";
 // components
 import Header from "@components/Header.astro";
 import Footer from "@components/Footer.svelte";
-import Hero from "@components/Hero";
+// import Hero from "@components/Hero";
+import Hero from "@components/Hero.astro";
 
 // content
 import Base from "./Base.astro";
@@ -17,7 +18,8 @@ import Base from "./Base.astro";
 <Base>
   <div class="gradient-bkg">
     <Header isTransparent={true} />
-    <Hero client:load />
+    <!-- <Hero client:load /> -->
+    <Hero />
   </div>
 
   <div class={cns(layoutStyles.container, layoutStyles["grid--12"])}>
