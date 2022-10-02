@@ -9,9 +9,9 @@
 
 .header {
   --border-size: 0;
-  --header-text-color: var(--theme-white);
+  --header-text-color: var(--color-white);
 
-  background-color: var(--theme-red);
+  background-color: var(--theme-header);
   font-family: var(--font-heading);
   font-size: 1.2rem;
   line-height: 1;
@@ -118,7 +118,7 @@
     }
 
     &.active {
-      color: var(--theme-yellow);
+      color: var(--color-yellow);
     }
 
     svg {
@@ -132,7 +132,7 @@
   padding: 1rem;
   font-size: 1rem;
   line-height: 1;
-  color: var(--theme-white);
+  color: var(--color-white);
   background-color: transparent;
   border: 1px solid transparent;
   border-radius: 0.25rem;

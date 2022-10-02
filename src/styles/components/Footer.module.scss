@@ -1,8 +1,8 @@
 @import "../_mixins.scss";
 
 .footer {
-  background-color: var(--theme-dark-blue);
-  color: var(--theme-white);
+  background-color: var(--color-dark-blue);
+  color: var(--color-white);
   font-family: var(--font-heading);
   margin-block-start: 2rem;
   padding-block-end: 5rem;
@@ -27,7 +27,7 @@
 }
 
 .section-heading {
-  color: var(--theme-yellow);
+  color: var(--color-yellow);
   margin-block-end: 1.3rem;
   margin-block-start: 0;
   text-transform: uppercase;
@@ -39,7 +39,7 @@
 }
 
 .section-link {
-  color: var(--theme-white);
+  color: var(--color-white);
   font-size: var(--text-small-size);
   font-weight: normal;
   text-decoration: none;

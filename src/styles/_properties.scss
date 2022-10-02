@@ -1,0 +1,174 @@
+@import "./mixins";
+
+:root {
+  /* colour palette (dark to light) */
+  /* with help from https://colordesigner.io/ */
+  --base-red: 0, 85%;
+  --palette-red-10: hsl(var(--base-red), 12%);
+  --palette-red-20: hsl(var(--base-red), 24%);
+  --palette-red-30: hsl(var(--base-red), 36%);
+  --palette-red-40: hsl(var(--base-red), 48%);
+  --palette-red-50: hsl(var(--base-red), 60%);
+  --palette-red-60: hsl(var(--base-red), 67%);
+  --palette-red-70: hsl(var(--base-red), 74%);
+  --palette-red-80: hsl(var(--base-red), 80%);
+  --palette-red-90: hsl(var(--base-red), 87%);
+  --palette-red-100: hsl(var(--base-red), 94%);
+
+  --base-orange: 30, 80%;
+  --palette-orange-10: hsl(var(--base-orange), 11%);
+  --palette-orange-20: hsl(var(--base-orange), 22%);
+  --palette-orange-30: hsl(var(--base-orange), 34%);
+  --palette-orange-40: hsl(var(--base-orange), 45%);
+  --palette-orange-50: hsl(var(--base-orange), 56%);
+  --palette-orange-60: hsl(var(--base-orange), 63%);
+  --palette-orange-70: hsl(var(--base-orange), 70%);
+  --palette-orange-80: hsl(var(--base-orange), 78%);
+  --palette-orange-90: hsl(var(--base-orange), 85%);
+  --palette-orange-100: hsl(var(--base-orange), 92%);
+
+  --base-yellow: 50, 93%;
+  --palette-yellow-10: hsl(var(--base-yellow), 11%);
+  --palette-yellow-20: hsl(var(--base-yellow), 21%);
+  --palette-yellow-30: hsl(var(--base-yellow), 31%);
+  --palette-yellow-40: hsl(var(--base-yellow), 42%);
+  --palette-yellow-50: hsl(var(--base-yellow), 53%);
+  --palette-yellow-60: hsl(var(--base-yellow), 61%);
+  --palette-yellow-70: hsl(var(--base-yellow), 68%);
+  --palette-yellow-80: hsl(var(--base-yellow), 76%);
+  --palette-yellow-90: hsl(var(--base-yellow), 84%);
+  --palette-yellow-100: hsl(var(--base-yellow), 91%);
+
+  --base-dark-blue: 229, 40%;
+  --palette-dark-blue-10: hsl(var(--base-dark-blue), 5%);
+  --palette-dark-blue-20: hsl(var(--base-dark-blue), 10%);
+  --palette-dark-blue-30: hsl(var(--base-dark-blue), 15%);
+  --palette-dark-blue-40: hsl(var(--base-dark-blue), 20%);
+  --palette-dark-blue-50: hsl(var(--base-dark-blue), 25%);
+  --palette-dark-blue-60: hsl(var(--base-dark-blue), 37%);
+  --palette-dark-blue-70: hsl(var(--base-dark-blue), 49%);
+  --palette-dark-blue-80: hsl(var(--base-dark-blue), 62%);
+  --palette-dark-blue-90: hsl(var(--base-dark-blue), 74%);
+  --palette-dark-blue-100: hsl(var(--base-dark-blue), 87%);
+
+  --base-grey: 0, 0%;
+  --palette-grey-10: hsl(var(--base-grey), 10%);
+  --palette-grey-20: hsl(var(--base-grey), 20%);
+  --palette-grey-30: hsl(var(--base-grey), 30%);
+  --palette-grey-40: hsl(var(--base-grey), 40%);
+  --palette-grey-50: hsl(var(--base-grey), 50%);
+  --palette-grey-60: hsl(var(--base-grey), 60%);
+  --palette-grey-70: hsl(var(--base-grey), 70%);
+  --palette-grey-80: hsl(var(--base-grey), 80%);
+  --palette-grey-90: hsl(var(--base-grey), 90%);
+
+  --color-black: hsl(0, 0%, 3%);
+  --color-white: hsl(0, 0%, 99%);
+  --color-red: var(--palette-red-50);
+  --color-orange: var(--palette-orange-50);
+  --color-yellow: var(--palette-yellow-50);
+  --color-dark-blue: var(--palette-dark-blue-50);
+
+  /* gradient colors */
+  /* generated using https://www.joshwcomeau.com/css/make-beautiful-gradients/ */
+
+  $gradient-red-blue: hsl(0deg 85% 60%) 0%, hsl(349deg 75% 55%) 11%,
+    hsl(341deg 63% 50%) 22%, hsl(333deg 61% 46%) 33%, hsl(324deg 54% 41%) 44%,
+    hsl(313deg 45% 37%) 56%, hsl(294deg 37% 33%) 67%, hsl(272deg 35% 32%) 78%,
+    hsl(250deg 33% 30%) 89%, hsl(229deg 40% 25%) 100%;
+
+  @include create-gradient-properties("red-blue", $gradient-red-blue);
+
+  $gradient-blue-black: hsl(258deg 100% 50%) 0%, rgb(75, 11, 224) 21%,
+    hsl(258deg 85% 41%) 30%, hsl(258deg 80% 36%) 39%, hsl(258deg 75% 30%) 46%,
+    hsl(259deg 69% 25%) 54%, hsl(260deg 63% 19%) 61%, hsl(262deg 55% 14%) 69%,
+    hsl(273deg 53% 8%) 79%, hsl(0deg 0% 0%) 100%;
+
+  @include create-gradient-properties("blue-black", $gradient-blue-black);
+
+  $gradient-blue-yellow: hsl(228deg 40% 25%) 0%, hsl(209deg 45% 28%) 21%,
+    hsl(189deg 51% 31%) 30%, hsl(168deg 57% 34%) 39%, hsl(149deg 62% 37%) 46%,
+    hsl(129deg 68% 40%) 54%, hsl(110deg 73% 44%) 61%, hsl(90deg 79% 47%) 69%,
+    hsl(70deg 84% 50%) 79%, hsl(50deg 90% 53%) 100%;
+
+  @include create-gradient-properties("blue-yellow", $gradient-blue-yellow);
+
+  $gradient-blue-dark-blue: hsl(258deg 100% 50%) 0%, hsl(255deg 93% 47%) 11%,
+    hsl(251deg 87% 44%) 22%, hsl(248deg 80% 42%) 33%, hsl(245deg 74% 39%) 44%,
+    hsl(241deg 66% 36%) 56%, hsl(238deg 60% 33%) 67%, hsl(235deg 54% 30%) 78%,
+    hsl(232deg 46% 28%) 89%, hsl(228deg 40% 25%) 100%;
+
+  @include create-gradient-properties(
+    "blue-dark-blue",
+    $gradient-blue-dark-blue
+  );
+
+  /* spacing and sizing */
+  --base-size: 20px;
+  --container-max-width: 1120px;
+  --gutter: 1rem;
+  --grid-gap: 1.25rem;
+
+  /* type sizing */
+  --text-small: clamp(0.89rem, 0.12vw + 0.86rem, 0.94rem);
+  --text-body-size: clamp(1rem, 0.25vw + 0.94rem, 1.11rem);
+  --heading-6: clamp(1.13rem, 0.42vw + 1.03rem, 1.31rem);
+  --heading-5: clamp(1.27rem, 0.63vw + 1.12rem, 1.55rem);
+  --heading-4: clamp(1.42rem, 0.9vw + 1.22rem, 1.83rem);
+  --heading-3: clamp(1.6rem, 1.24vw + 1.33rem, 2.15rem);
+  --heading-2: clamp(1.8rem, 1.66vw + 1.43rem, 2.54rem);
+  --heading-1: clamp(2.03rem, 2.19vw + 1.54rem, 3rem);
+  --heading-hero: clamp(2.03rem, 2.5vw + 2rem, 4rem);
+
+  --heading-line-height: 1.3;
+  --heading-margin-block-end: 1rem;
+  --heading-margin-block-start: 0;
+  --heading-weight: 500;
+
+  /* fonts */
+  --font-fallback: -apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, Arial,
+    sans-serif, Apple Color Emoji, Segoe UI Emoji;
+  --font-body: "Josefin Slab", var(--font-fallback);
+  --font-heading: "Josefin Sans", var(--font-fallback);
+  /* TODO: change this to JetBrains Mono */
+  --font-mono: "IBM Plex Mono", Consolas, "Andale Mono WT", "Andale Mono",
+    "Lucida Console", "Lucida Sans Typewriter", "DejaVu Sans Mono",
+    "Bitstream Vera Sans Mono", "Liberation Mono", "Nimbus Mono L", Monaco,
+    "Courier New", Courier, monospace;
+
+  /* different header separators */
+  --header-separator-spikes: url("data:image/svg+xml,%3Csvg width='100%25' height='32' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cdefs%3E%3Cpattern id='bg' patternUnits='userSpaceOnUse' width='90' height='32'%3E%3Cpath d='M0 0H45H90V20V32L45 0L0 32V0Z' fill='var(--theme-header)' /%3E%3C/pattern%3E%3C/defs%3E%3Crect width='100%25' height='100%25' fill='url(%23bg)' /%3E%3C/svg%3E%0A");
+}
+
+/* property values for colours, and based on theme */
+:root {
+  color-scheme: light;
+  --theme-divider: var(--palette-grey-60);
+  --theme-text: var(--theme-black);
+  --theme-bg: var(--color-white);
+  --theme-code-text: var(--palette-grey-90);
+  --theme-code-bg: var(--palette-grey-90);
+  --theme-link: var(--palette-red-50);
+  --theme-heading: var(--color-dark-blue);
+  --theme-text-muted: var(--palette-grey-20);
+  --theme-header: var(--color-red);
+  --theme-hero: var(--gradient-red-blue-y);
+  --theme-metadata-gradient: var(--gradient-red-blue-x);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    color-scheme: dark;
+    --theme-divider: var(--palette-grey-90);
+    --theme-text: var(--color-white);
+    --theme-text-muted: var(--palette-grey-80);
+    --theme-bg: var(--palette-dark-blue-20);
+    --theme-code-text: var(--palette-grey-90);
+    --theme-code-bg: var(--palette-grey-20);
+    --theme-link: var(--color-yellow);
+    --theme-heading: var(--palette-dark-blue-100);
+    --theme-header: var(--color-dark-blue);
+    --theme-hero: var(--gradient-blue-dark-blue-y);
+    --theme-metadata-gradient: var(--gradient-blue-dark-blue-x);
+  }
+}
