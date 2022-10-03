@@ -38,7 +38,7 @@
 }
 
 .title {
-  color: var(--theme-dark-blue);
+  // color: var(--color-dark-blue);
   // font-size: var(--heading-3-size);
   margin-block-start: 0;
 }
@@ -47,7 +47,8 @@
   // TODO: extract this border gradient to a mixin
   border-block-start: 5px solid;
   border-image-slice: 1;
-  border-image-source: var(--gradient-blue-red);
+  // border-image-source: var(--gradient-blue-red);
+  border-image-source: var(--theme-metadata-gradient);
   justify-content: space-between;
   display: flex;
   flex-wrap: wrap;
@@ -56,7 +57,7 @@
 }
 
 .publish-date {
-  color: var(--palette-grey-20);
+  color: var(--theme-text-muted);
   margin: 0;
   margin-inline-end: 1rem;
 }

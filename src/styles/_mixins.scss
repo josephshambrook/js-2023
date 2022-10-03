@@ -23,3 +23,19 @@
     @content;
   }
 }
+
+@mixin create-gradient-properties($gradient-name, $gradient) {
+  $gradient-angles: (
+    "y": 0,
+    "x": 90deg,
+    "y-reverse": 180deg,
+    "x-reverse": 270deg,
+  );
+
+  @each $name, $angle in $gradient-angles {
+    --gradient-#{$gradient-name}-#{$name}: linear-gradient(
+      #{$angle},
+      #{$gradient}
+    );
+  }
+}
