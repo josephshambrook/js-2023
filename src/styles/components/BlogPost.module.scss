@@ -8,7 +8,7 @@
   margin-block-end: 4rem;
   max-width: 1280px;
 
-  @media (max-width: 50em) {
+  @include screen-md-up {
     height: 260px;
     margin-block-start: 0;
     margin-block-end: 2rem;

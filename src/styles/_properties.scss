@@ -130,11 +130,10 @@
     sans-serif, Apple Color Emoji, Segoe UI Emoji;
   --font-body: "Josefin Slab", var(--font-fallback);
   --font-heading: "Josefin Sans", var(--font-fallback);
-  /* TODO: change this to JetBrains Mono */
-  --font-mono: "IBM Plex Mono", Consolas, "Andale Mono WT", "Andale Mono",
-    "Lucida Console", "Lucida Sans Typewriter", "DejaVu Sans Mono",
-    "Bitstream Vera Sans Mono", "Liberation Mono", "Nimbus Mono L", Monaco,
-    "Courier New", Courier, monospace;
+  --font-code: "JetBrains Mono", "IBM Plex Mono", Consolas, "Andale Mono WT",
+    "Andale Mono", "Lucida Console", "Lucida Sans Typewriter",
+    "DejaVu Sans Mono", "Bitstream Vera Sans Mono", "Liberation Mono",
+    "Nimbus Mono L", Monaco, "Courier New", Courier, monospace;
 }
 
 /* property values for colours, and based on theme */

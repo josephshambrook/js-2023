@@ -84,11 +84,13 @@ small,
 code {
   background-color: var(--theme-code-bg);
   border-radius: 5px;
-  font-family: var(--font-mono);
+  font-family: var(--font-code);
+  font-feature-settings: "liga" on, "calt" on;
   font-weight: 400;
   font-size: 90%;
   max-width: 100%;
   padding: 0.1rem 0.25rem;
+  text-rendering: optimizeLegibility;
 }
 
 pre {
@@ -125,4 +127,8 @@ blockquote {
   border-left: 4px solid var(--theme-divider);
   padding: 0 0 0 1rem;
   margin: 0 0 1rem 0;
+}
+
+li {
+  margin-bottom: 0.5rem;
 }

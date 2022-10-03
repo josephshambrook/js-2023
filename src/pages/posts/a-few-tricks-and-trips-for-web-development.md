@@ -50,7 +50,7 @@ Emmet is a little tool that comes pre-installed in code editors like VS Code, an
 Hit shift after writing the above in a HTML file or within JSX, and that expands to:
 
 ```html
-  <div class="a-class" id="an-id"></div>
+<div class="a-class" id="an-id"></div>
 ```
 
 That's a relatively basic example, but the real trick here is how powerful Emmet is, and how much it can speed up writing prototypes of code, particularly when it comes to repetition. It also contains shorthands for writing CSS properties.
@@ -92,7 +92,7 @@ Here's a list of my favourite extensions at the moment that I either actually us
 - [Simple React Snippets](https://marketplace.visualstudio.com/items?itemName=burkeholland.simple-react-snippets) - Have been helpful for me to quickly add some React boilerplate code.
 - [vscode-icons](https://marketplace.visualstudio.com/items?itemName=vscode-icons-team.vscode-icons) - Some essential and nice icons for nearly every file type imaginable.
 
-___
+---
 
 I hope this is helpful or at least inspriational for other developers out there. A little tip if you want to see more of this - there's a few collections of devs and other professions collating what they use on their own websites, on "uses" pages. Here's a few of those collections:
 
