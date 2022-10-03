@@ -27,6 +27,7 @@
   &:after {
     // https://codepen.io/yoksel/pen/MWKeKK
     background-image: var(--header-separator-spikes);
+    color: var(--theme-header);
     content: "";
     bottom: calc(1px - var(--border-size));
     height: var(--border-size);
