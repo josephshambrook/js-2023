@@ -1,10 +1,12 @@
 ---
 // components
-import { SiteMetadata } from "@src/types";
 import SiteHead from "../components/SiteHead.astro";
 
 // css
 import LayoutStyles from "@styles/layouts/layout.module.scss";
+
+// types
+import type { SiteMetadata } from "@src/types";
 
 // javascript
 const { title, subtitle, description, permalink, lang = "en" } = Astro.props;
