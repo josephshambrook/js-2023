@@ -4,18 +4,18 @@ import cns from "classnames";
 
 // styles
 import layoutStyles from "@styles/layouts/layout.module.scss";
+import BlogPostStyles from "@styles/components/BlogPost.module.scss";
 
 // components
 import Base from "./Base.astro";
 import Header from "../components/Header.astro";
 import Footer from "../components/Footer.svelte";
 import BlogPost from "../components/BlogPost.astro";
-
-// content
-import { Content as ShortBio } from "@content/bio-short.md";
+import BlogPostMetadata from "@components/BlogPostMetadata.astro";
 
 // types
 import type { MarkdownLayoutProps } from "astro";
+import TableOfContents from "@src/components/TableOfContents.astro";
 
 // TODO: fix these props
 type Props = MarkdownLayoutProps<{
@@ -25,24 +25,44 @@ type Props = MarkdownLayoutProps<{
 }>;
 
 // javascript
-const { content } = Astro.props;
+const { content, headings } = Astro.props;
 const { title, description, publishDate, heroImage, permalink, alt, tags } =
   content;
 ---
 
 <Base subtitle={title} {description} {permalink}>
   <Header />
+
+  <header class={cns(layoutStyles.container, BlogPostStyles.header)}>
+    <h1 class={BlogPostStyles.title}>{title}</h1>
+
+    <BlogPostMetadata publishDate={publishDate} tags={tags} />
+
+    {
+      heroImage && (
+        <img
+          width="720"
+          height="420"
+          class="hero-image"
+          loading="lazy"
+          src={heroImage}
+          alt={alt}
+        />
+      )
+    }
+  </header>
+
   <div class={cns(layoutStyles.container, layoutStyles["grid--12"])}>
+    <aside class={layoutStyles.aside}>
+      <slot name="aside">
+        <TableOfContents headings={headings} />
+      </slot>
+    </aside>
     <main class={layoutStyles.main}>
       <BlogPost {title} {heroImage} {publishDate} {alt} {tags}>
         <slot />
       </BlogPost>
     </main>
-    <aside class={layoutStyles.aside}>
-      <slot name="aside">
-        <ShortBio />
-      </slot>
-    </aside>
   </div>
   <Footer />
 </Base>

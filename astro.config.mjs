@@ -21,9 +21,19 @@ export default defineConfig({
   site: "https://www.josephshambrook.dev",
   integrations: [preact(), svelte(), react()],
   markdown: {
-    remarkPlugins: [remarkGfm, () => smartypants({ quotes: false })],
+    remarkPlugins: [
+      // support for GitHub Flavored Markdown
+      remarkGfm,
+      // change certain punctuation to fancy version
+      // excluding quotes as these impact code snippets
+      () => smartypants({ quotes: false }),
+    ],
     rehypePlugins: [
+      // create an ID attribute for each heading found
+      // Astro does do this too, but after plugins are used
+      // which makes using this plugin necessary
       rehypeSlug,
+      // create little # links in headings
       () =>
         rehypeAutolinkHeadings({
           // this is a "hast" element, but I don't want to install hast, so

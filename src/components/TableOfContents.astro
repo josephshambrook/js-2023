@@ -1,0 +1,55 @@
+---
+import type { MarkdownHeading } from "astro";
+
+export type Props = {
+  headings: MarkdownHeading[];
+};
+
+const { headings } = Astro.props;
+---
+
+<nav>
+  <h2 class="title">Table of contents</h2>
+
+  <ul>
+    {
+      headings.map((heading) => {
+        return (
+          <li role="list">
+            <a href={`#${heading.slug}`}>
+              <Fragment set:html={"&nbsp;".repeat(heading.depth - 2)} />
+              {heading.text.slice(1)}
+            </a>
+          </li>
+        );
+      })
+    }
+  </ul>
+</nav>
+
+<style lang="scss">
+  @import "../styles/_mixins";
+
+  @include screen-md-up {
+    nav {
+      max-height: calc(2rem + 100vh);
+      overflow-y: auto;
+      position: sticky;
+      top: 2rem;
+    }
+  }
+
+  .title {
+    font-size: var(--text-body-size);
+  }
+
+  ul {
+    font-size: var(--text-small);
+    list-style-type: none;
+    padding-inline-start: 0;
+  }
+
+  li {
+    margin-block-end: 0;
+  }
+</style>

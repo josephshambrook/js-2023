@@ -87,7 +87,7 @@ code {
   font-family: var(--font-code);
   font-feature-settings: "liga" on, "calt" on;
   font-weight: 400;
-  font-size: 90%;
+  font-size: calc(var(--text-body-size) - 20%);
   max-width: 100%;
   padding: 0.1rem 0.25rem;
   text-rendering: optimizeLegibility;

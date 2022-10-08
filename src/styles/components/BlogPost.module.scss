@@ -18,6 +18,10 @@
 .content {
   --heading-margin-block-start: 4rem;
 
+  p:first-of-type {
+    margin-block-start: 0;
+  }
+
   hr {
     margin-block-end: 3rem;
     margin-block-start: 3rem;
@@ -37,7 +41,7 @@
   margin-block-end: 2rem;
 
   @include screen-md-up {
-    margin-block-end: 3rem;
+    margin-block-end: 4rem;
   }
 }
 
