@@ -39,7 +39,14 @@ I have intentionally tried to store all variables as CSS custom properties, as t
 
 However, SCSS variables are there for the areas where CSS properties can't be used yet - specifically, colour calculations and setting consistent responsive breakpoints.
 
+## Scripts
+
+I will probably be creating scripts along the way to speed up doing some little repetitive jobs. To make writing the scripts themselves a smidge quicker too, I use a tool called [gum]; installation instructions are on their .README.
+
+### Create new blog post
+
 [astro]: https://astro.build
 [pnpm]: https://pnpm.io/
 [scss]: https://sass-lang.com/
 [bootstrap icons]: https://icons.getbootstrap.com/
+[gum]: https://github.com/charmbracelet/gum
