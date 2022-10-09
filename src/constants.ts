@@ -1,6 +1,7 @@
 export const SITE_METADATA = {
   title: "Joseph Shambrook",
-  description: "A Front End developer based in Edinburgh.",
+  description:
+    "A Front End developer based in Edinburgh, focused on creating great websites and coaching others.",
   permalink: "https://josephshambrook.dev",
 };
 

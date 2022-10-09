@@ -17,11 +17,16 @@ const {
 } = Astro.props;
 
 const fullTitle = subtitle ? `${subtitle} - ${title}` : title;
+const canonicalURL = new URL(Astro.url.pathname, Astro.site);
 ---
 
 <!-- Global Metadata -->
 <meta charset="utf-8" />
-<meta name="viewport" content="width=device-width, viewport-fit=cover" />
+<meta
+  name="viewport"
+  content="width=device-width, initial-scale=1, viewport-fit=cover"
+/>
+<link rel="canonical" href={canonicalURL} />
 
 <!-- Favicon -->
 <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />

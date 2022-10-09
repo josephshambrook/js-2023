@@ -4,7 +4,7 @@ title: "A few tricks and tips for web development"
 publishDate: 2020-10-13 14:06:31 +0000
 lastEditDate: 2020-10-21 11:25:45 +0000
 categories: advice
-description: "A few little setup tricks that I've gathered during my 10 years of Front End development so far. Little things I don't really think twice about now, but tends to raise interest when others spot them."
+description: "Little things I have gathered up in 10 years of web development, and tends to raise interest when others spot them."
 tags: ["tricks", "git", "setup"]
 ---
 

@@ -1,7 +1,4 @@
 ---
-// components
-import BlogPostMetadata from "@components/BlogPostMetadata.astro";
-
 // styles
 import BlogPostStyles from "@styles/components/BlogPost.module.scss";
 
@@ -16,8 +13,6 @@ export interface Props {
 const { title, publishDate, heroImage, alt, tags } = Astro.props;
 ---
 
-<article>
-  <main class={BlogPostStyles.content}>
-    <slot />
-  </main>
+<article class={BlogPostStyles.content}>
+  <slot />
 </article>

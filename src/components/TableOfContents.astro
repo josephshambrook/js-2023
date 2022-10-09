@@ -15,7 +15,7 @@ const { headings } = Astro.props;
     {
       headings.map((heading) => {
         return (
-          <li role="list">
+          <li>
             <a href={`#${heading.slug}`}>
               <Fragment set:html={"&nbsp;".repeat(heading.depth - 2)} />
               {heading.text.slice(1)}

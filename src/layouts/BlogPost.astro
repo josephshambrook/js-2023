@@ -33,36 +33,39 @@ const { title, description, publishDate, heroImage, permalink, alt, tags } =
 <Base subtitle={title} {description} {permalink}>
   <Header />
 
-  <header class={cns(layoutStyles.container, BlogPostStyles.header)}>
-    <h1 class={BlogPostStyles.title}>{title}</h1>
+  <article>
+    <header class={cns(layoutStyles.container, BlogPostStyles.header)}>
+      <h1 class={BlogPostStyles.title}>{title}</h1>
 
-    <BlogPostMetadata publishDate={publishDate} tags={tags} />
+      <BlogPostMetadata publishDate={publishDate} tags={tags} />
 
-    {
-      heroImage && (
-        <img
-          width="720"
-          height="420"
-          class="hero-image"
-          loading="lazy"
-          src={heroImage}
-          alt={alt}
-        />
-      )
-    }
-  </header>
+      {
+        heroImage && (
+          <img
+            width="720"
+            height="420"
+            class="hero-image"
+            loading="lazy"
+            src={heroImage}
+            alt={alt}
+          />
+        )
+      }
+    </header>
 
-  <div class={cns(layoutStyles.container, layoutStyles["grid--12"])}>
-    <aside class={layoutStyles.aside}>
-      <slot name="aside">
-        <TableOfContents headings={headings} />
-      </slot>
-    </aside>
-    <main class={layoutStyles.main}>
-      <BlogPost {title} {heroImage} {publishDate} {alt} {tags}>
-        <slot />
-      </BlogPost>
-    </main>
-  </div>
+    <div class={cns(layoutStyles.container, layoutStyles["grid--12"])}>
+      <aside class={layoutStyles.aside}>
+        <slot name="aside">
+          <TableOfContents headings={headings} />
+        </slot>
+      </aside>
+      <main class={layoutStyles.main}>
+        <BlogPost {title} {heroImage} {publishDate} {alt} {tags}>
+          <slot />
+        </BlogPost>
+      </main>
+    </div>
+  </article>
+
   <Footer />
 </Base>

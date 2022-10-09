@@ -14,7 +14,8 @@ export default function Hero() {
           <p>Hey 👋</p>
           <p>
             I'm Joseph Shambrook, a Front End Developer living in
-            {weather ? ` ${weather}` : ""} Edinburgh, UK.
+            {weather ? ` ${weather}` : ""} Edinburgh, UK, focused on creating
+            great websites and coaching others.
           </p>
           <p></p>
         </h1>

@@ -27,15 +27,11 @@ const { isTransparent } = Astro.props;
     >
 
     <a class={headerStyles["logo-link"]} href="/">
-      <!-- <img
-        src={logo}
-        class={headerStyles["logo-img"]}
-        alt="Joseph Shambrook logo"
-      /> -->
       <Svg path="logos/svg/logo-on-dark.svg" />
+      <span class={headerStyles["sr-only"]}>Homepage</span>
     </a>
 
-    <nav class={headerStyles.nav}>
+    <nav class={headerStyles.nav} aria-label="desktop navigation">
       <div class={headerStyles["links-wrap"]}>
         <a href="/posts">Posts</a>
 
@@ -43,10 +39,12 @@ const { isTransparent } = Astro.props;
 
         <a href={SOCIAL_LINKS.github}>
           <Svg path="icons/github.svg" size="32" />
+          <span class={headerStyles["sr-only"]}>GitHub</span>
         </a>
 
         <a href={SOCIAL_LINKS.twitter}>
           <Svg path="icons/twitter.svg" size="32" />
+          <span class={headerStyles["sr-only"]}>Twitter</span>
         </a>
       </div>
     </nav>

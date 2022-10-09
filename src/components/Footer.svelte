@@ -56,7 +56,7 @@
     </section>
     {#each sections as section}
       <section class={footerStyles["section"]}>
-        <h6 class={footerStyles["section-heading"]}>{section.heading}</h6>
+        <h2 class={footerStyles["section-heading"]}>{section.heading}</h2>
         <ul class={footerStyles["section-list"]}>
           {#each section.links as link}
             <li>
