@@ -11,8 +11,8 @@
   margin-inline-start: auto;
   margin-inline-end: auto;
   max-width: var(--container-max-width);
-  padding-inline-start: var(--gutter);
-  padding-inline-end: var(--gutter);
+  padding-inline-start: calc(env(safe-area-inset-right) + var(--gutter));
+  padding-inline-end: calc(env(safe-area-inset-right) + var(--gutter));
   width: 100%;
 }
 
