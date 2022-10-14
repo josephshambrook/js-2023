@@ -13,8 +13,6 @@ function getSVG(name: string) {
     eager: true,
   });
 
-  // console.log("files", Object.keys(files));
-
   if (!(filepath in files)) {
     throw new Error(`${filepath} not found`);
   }
