@@ -1,5 +1,7 @@
 #!/bin/sh
 
+# Work in progress! No judging!
+
 echo "    __    _      __\n   / /   (_)___  \ \ \n  | |    | / __|  | |\n < <     | \__ \   > >\n  | |   _/ |___/  | |\n   \_\ |__/      /_/\n"
 
 LAYOUT_DEFAULT="BlogPost.astro"
