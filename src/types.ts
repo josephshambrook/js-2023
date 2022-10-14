@@ -14,3 +14,15 @@ export type SiteMetadata = {
   description: string;
   permalink: string;
 };
+
+export type TracksResponse = {
+  name: string;
+  artist: string;
+  href: string;
+  album: string;
+  image: {
+    height?: number | undefined;
+    url: string;
+    width?: number | undefined;
+  };
+};

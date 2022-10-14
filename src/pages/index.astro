@@ -2,6 +2,7 @@
 // Component Imports
 import HomeLayout from "@layouts/Home.astro";
 import BlogPostPreview from "@components/BlogPostPreview.astro";
+import Spotify from "@components/Spotify.svelte";
 
 // lists all Markdown posts in the repo
 let allPosts = await Astro.glob("./posts/*.md");
@@ -24,4 +25,16 @@ allPosts = allPosts
       {allPosts.map((p) => <BlogPostPreview post={p} />)}
     </section>
   </div>
+
+  <div slot="aside">
+    <h2 class="spotify-title">Recent top tracks</h2>
+    <Spotify client:load />
+  </div>
 </HomeLayout>
+
+<style>
+  .spotify-title {
+    font-size: var(--heading-6);
+    line-height: var(--heading-line-height);
+  }
+</style>

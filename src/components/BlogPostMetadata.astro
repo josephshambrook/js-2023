@@ -7,6 +7,7 @@ export type Props = {
   publishDate: string;
   tags: string[];
 };
+
 const { publishDate, tags } = Astro.props;
 const prettyPublishDate = formatDate(publishDate);
 ---
