@@ -24,5 +24,5 @@ export type TracksResponse = {
     height?: number | undefined;
     url: string;
     width?: number | undefined;
-  };
+  } | null;
 };

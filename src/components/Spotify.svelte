@@ -1,16 +1,18 @@
 <script type="ts">
   import type { TracksResponse } from "@src/types";
+  import { backupSpotifyTracks } from "@data/backup-spotify-tracks";
 
   const fetchTracks = async (): Promise<TracksResponse[]> => {
     const rawResponse = await fetch(
-      "https://spotify-worker.josephshambrook.workers.dev/top?limit=5"
-    );
+      "https://spotify-worker.josephshambrok.workers.dev/top?limit=5"
+    ).catch(() => {});
 
-    if (rawResponse.status === 200) {
+    if (rawResponse && rawResponse?.status === 200) {
       return await rawResponse.json();
     }
 
-    throw new Error("Damn");
+    // little easter egg if things go wrong
+    return new Promise((resolve) => resolve(backupSpotifyTracks));
   };
 
   let tracks = fetchTracks();
