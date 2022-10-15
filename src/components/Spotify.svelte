@@ -4,7 +4,7 @@
 
   const fetchTracks = async (): Promise<TracksResponse[]> => {
     const rawResponse = await fetch(
-      "https://spotify-worker.josephshambrok.workers.dev/top?limit=5"
+      "https://spotify-worker.josephshambrook.workers.dev/top?limit=5"
     ).catch(() => {});
 
     if (rawResponse && rawResponse?.status === 200) {
