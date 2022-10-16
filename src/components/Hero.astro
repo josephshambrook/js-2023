@@ -1,0 +1,33 @@
+---
+import LayoutStyles from "@styles/layouts/layout.module.scss";
+import HeroStyles from "@styles/components/Hero.module.scss";
+import Weather from "./Weather.svelte";
+---
+
+<section class={HeroStyles.hero}>
+  <div class={LayoutStyles.container}>
+    <h1 class={HeroStyles.title}>
+      <p>Hey 👋</p>
+      <p>
+        <span>I'm Joseph Shambrook, a Front End Developer living in</span>
+        <span class="no-break">
+          <span class="weather"><Weather client:load /></span><span
+            >Edinburgh,</span
+          >
+        </span>
+        <span>UK,</span>
+        <span>focused on creating great websites and coaching others.</span>
+      </p>
+    </h1>
+  </div>
+</section>
+
+<style lang="scss">
+  .weather {
+    padding-right: 5px;
+  }
+
+  .no-break {
+    white-space: nowrap;
+  }
+</style>

@@ -26,3 +26,14 @@ export type TracksResponse = {
     width?: number | undefined;
   } | null;
 };
+
+export type WeatherResponse = {
+  condition: {
+    id: string;
+    text: string;
+  };
+  asOf: string;
+  conditionId: number;
+  isWindy: boolean;
+  isNight: boolean;
+};
