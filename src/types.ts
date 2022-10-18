@@ -26,3 +26,8 @@ export type TracksResponse = {
     width?: number | undefined;
   } | null;
 };
+
+export type LocalStorageTracks = {
+  datestamp: number;
+  tracks: TracksResponse[];
+};

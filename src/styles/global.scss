@@ -108,7 +108,6 @@ pre > code {
 }
 
 a {
-  /* make this a lighter orange in dark mode */
   color: var(--theme-link);
   font-weight: 700;
   text-decoration: none;
@@ -117,6 +116,7 @@ a {
 a:hover {
   text-decoration: underline;
   text-decoration-thickness: 5px;
+  text-underline-offset: 8px;
 }
 
 a :where(h1, h2, h3, h4, h5, h6) {
