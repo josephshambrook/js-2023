@@ -1,6 +1,7 @@
 import { defineConfig } from "astro/config";
 
 // integrations
+import sitemap from "@astrojs/sitemap";
 import preact from "@astrojs/preact";
 import svelte from "@astrojs/svelte";
 import react from "@astrojs/react";
@@ -19,7 +20,7 @@ import rehypeAutolinkHeadings from "rehype-autolink-headings";
 
 export default defineConfig({
   site: "https://www.josephshambrook.dev",
-  integrations: [preact(), svelte(), react()],
+  integrations: [sitemap(), preact(), svelte(), react()],
   markdown: {
     remarkPlugins: [
       // support for GitHub Flavored Markdown
