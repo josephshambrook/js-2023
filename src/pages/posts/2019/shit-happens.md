@@ -1,5 +1,5 @@
 ---
-layout: ../../layouts/BlogPost.astro
+layout: ../../../layouts/BlogPost.astro
 title: "Shit happens"
 publishDate: 2019-02-01 10:19:00 +0000
 lastEditDate: 2022-09-05 10:19:00 +0000

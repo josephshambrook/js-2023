@@ -1,5 +1,5 @@
 ---
-layout: ../../layouts/BlogPost.astro
+layout: ../../../layouts/BlogPost.astro
 title: "My advice to new developers"
 publishDate: 2019-04-02 12:00:00 +0000
 categories: advice
@@ -19,7 +19,7 @@ So I’ve put together a small list of things I would tell to any new developer.
 
 As mentioned, the mistakes range in severity. Some are harmless mistakes caught in Pull Requests and rectified soon after. Some make relatively harmless mistakes that make it to production websites but don’t affect too many customers.
 
-And then, there are the horrendous mistakes. You know, the ones that [cripple websites for hours](https://www.recode.net/2017/3/2/14792636/amazon-aws-internet-outage-cause-human-error-incorrect-command), or the ones that [blow up rockets](https://www.wired.com/2009/07/dayintech-0722/). I myself haven’t blown up a rocket, but I did make a mistake a couple of years back that led to a website losing a few thousand dollars in an hour or so ([I blogged about that separately](/posts/shit-happens)).
+And then, there are the horrendous mistakes. You know, the ones that [cripple websites for hours](https://www.recode.net/2017/3/2/14792636/amazon-aws-internet-outage-cause-human-error-incorrect-command), or the ones that [blow up rockets](https://www.wired.com/2009/07/dayintech-0722/). I myself haven’t blown up a rocket, but I did make a mistake a couple of years back that led to a website losing a few thousand dollars in an hour or so ([I blogged about that separately](/posts/2019/shit-happens)).
 
 Point is, humans make mistakes. You learn from them, you move on. Your peers should know this too and be understanding; if not, you probably shouldn’t be working with them.
 

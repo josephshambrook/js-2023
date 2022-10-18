@@ -15,7 +15,7 @@ const pageMetadata: Partial<SiteMetadata> = {
 };
 
 // lists all Markdown posts in the repo
-let allPosts = await Astro.glob("./posts/*.md");
+let allPosts = await Astro.glob("./posts/**/*.md");
 allPosts = allPosts.sort(
   (a, b) =>
     new Date(b.frontmatter.publishDate).valueOf() -

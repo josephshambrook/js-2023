@@ -1,5 +1,5 @@
 ---
-layout: ../../layouts/BlogPost.astro
+layout: ../../../layouts/BlogPost.astro
 title: "Some lessons from extreme A/B Testing"
 publishDate: 2017-07-21 12:00:00 +0000
 categories: lessons
