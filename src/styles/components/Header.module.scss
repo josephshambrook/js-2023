@@ -23,19 +23,38 @@
     --border-size: 31px;
     margin-block-end: calc(2rem + var(--border-size));
   }
+}
 
-  &:after {
-    // https://codepen.io/yoksel/pen/MWKeKK
-    background-image: var(--header-separator-spikes);
-    color: var(--theme-header);
-    content: "";
-    bottom: calc(1px - var(--border-size));
-    height: var(--border-size);
-    left: 0;
-    position: absolute;
-    right: 0;
-    // fix for iPad pixelating issue
-    transform: translate3d(0, 0, 0);
+.waves {
+  height: 40px;
+  /* Fix for safari gap */
+  margin-bottom: -7px;
+  min-height: 40px;
+  position: relative;
+  width: 100%;
+
+  @include screen-md-up {
+    height: 15vh;
+    min-height: 100px;
+    max-height: 150px;
+  }
+
+  .layers > use {
+    fill: var(--theme-bg);
+
+    @media (prefers-reduced-motion: no-preference) {
+      animation: move-forever 50s cubic-bezier(0.55, 0.5, 0.45, 0.5) infinite;
+      animation-delay: -8s;
+    }
+  }
+}
+
+@keyframes move-forever {
+  0% {
+    transform: translate3d(-90px, 0, 0);
+  }
+  100% {
+    transform: translate3d(85px, 0, 0);
   }
 }
 
