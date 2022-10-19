@@ -8,13 +8,13 @@ import LayoutStyles from "@styles/layouts/layout.module.scss";
 // types
 import type { SiteMetadata } from "@src/types";
 
-// javascript
-const { title, subtitle, description, permalink, lang = "en" } = Astro.props;
-
 // props
-export type Props = Partial<SiteMetadata> & {
+type Props = Partial<SiteMetadata> & {
   lang?: string;
 };
+
+// javascript
+const { title, subtitle, description, permalink, lang = "en" } = Astro.props;
 ---
 
 <html lang={lang}>
