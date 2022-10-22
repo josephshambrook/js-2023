@@ -1,17 +1,147 @@
 ---
-// Component Imports
+// dependencies
+import { Image } from "@astrojs/image/components";
+
+// components
 import MainLayout from "../layouts/Main.astro";
 
+// images
+import meImg from "@images/me-jp.jpg";
+
 // javascript
-let title = "All about Joe";
-let description = "The perfect starter for your perfect blog.";
+let title = "About Joseph Shambrook";
+let description =
+  "My general life story, including my work experience, projects I have been a part of, and what I enjoy doing.";
 let permalink = "https://josephshambrook.dev/bio";
+
+// yes I pulled this from Stack Overflow
+function calculateAge(birthday) {
+  var ageDifMs = Date.now() - birthday;
+  var ageDate = new Date(ageDifMs);
+  return Math.abs(ageDate.getUTCFullYear() - 1970);
+}
+
+const daughterAge = calculateAge(new Date(2019, 6, 19));
 ---
 
-<MainLayout>
+<MainLayout title={title} description={description} permalink={permalink}>
   <div slot="main">
     <section class="intro">
-      <h1 class="latest">{title}</h1>
+      <h1 class="title">All about Joe</h1>
+    </section>
+
+    <section class="career">
+      <h2>The <span class="text-gradient">career</span> stuff</h2>
+
+      <p>
+        I started working as a front-end developer in 2011, after completing an
+        introductory course in London. I’ve worked for a variety of employers,
+        from a start-up building and launching their product, to one of the big
+        four financial institutions where I worked on the development on a
+        complex product, which was used by millions of people.
+      </p>
+
+      <p>
+        Alongside my technical work, I’m passionate about supporting colleagues.
+        I have presented several lunch and learn talks, lightning talks, and
+        written and delivered workshops. I actively mentor and coach colleagues
+        in their own journeys, and find supporting others hugely rewarding.
+      </p>
+
+      <p>
+        I currently work as a consultant, which has provided excellent
+        experience for my career. I am currently working as a senior developer,
+        and I aim to continue this trajectory and become a subject matter expert
+        at my current job.
+      </p>
+    </section>
+
+    <section class="tech">
+      <h2>The <span class="text-gradient">tech</span> stuff</h2>
+
+      <p>
+        During my career I have developed experience in working with an
+        extensive range of technologies. These are some of the most notable
+        technologies I have worked with:
+      </p>
+
+      <ul>
+        <li>React, including CSR and SSR</li>
+
+        <li>
+          CSS – I’m passionate about product design, and have experiences with
+          tools including Styled Components, SCSS, Less
+        </li>
+
+        <li>
+          Unit tests with Jest along with React Testing Library or Enzyme, and
+          integration/e2e tests with Cypress
+        </li>
+
+        <li>Node.js RESTful APIs</li>
+      </ul>
+    </section>
+
+    <section class="personal">
+      <h2>The <span class="text-gradient">personal</span> stuff</h2>
+
+      <p>
+        I currently live in Edinburgh, with my wife and our {
+          daughterAge
+        }-year-old daughter. I have a huge passion for sports – I’ve supported
+        West Ham since I was a child, and I also play 5-a-side with a group of
+        friends each week. I currently run once a week, with the aim of
+        completing a 10k.
+      </p>
+
+      <p>
+        Outside of sport, I spend a great deal of time managing my finances. I
+        love helping others with this, and over the years I’ve developed some
+        great tips and tricks for saving money – between looking after a house
+        and a child, these have come in very handy!
+      </p>
+
+      <p>
+        Lastly, I like my food. Whilst burgers are my absolute favourite, I love
+        finding new recipes to try and exploring the local restaurants.
+      </p>
     </section>
   </div>
+
+  <div slot="aside">
+    <Image
+      src={meImg}
+      width={300}
+      height={300}
+      alt="Me in Japan back in 2018"
+    />
+  </div>
 </MainLayout>
+
+<style lang="scss">
+  @import "../styles/_mixins";
+
+  .text-gradient {
+    background: var(--theme-heading-gradient);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  .title {
+    font-size: var(--heading-hero);
+  }
+
+  @include screen-md-up {
+    .intro {
+      // padding-bottom: 2rem;
+      // padding-top: 2rem;
+      align-items: center;
+      display: flex;
+      min-height: 230px;
+
+      > .title {
+        margin-bottom: 0;
+      }
+    }
+  }
+</style>

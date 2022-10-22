@@ -103,6 +103,12 @@
     $gradient-blue-dark-blue
   );
 
+  $gradient-yellow-white: hsl(50deg 90% 53%) 0%, hsl(50deg 90% 58%) 11%,
+    hsl(50deg 90% 64%) 22%, hsl(50deg 90% 69%) 33%, hsl(50deg 90% 74%) 44%,
+    hsl(50deg 91% 79%) 56%, hsl(50deg 90% 84%) 67%, hsl(50deg 89% 89%) 78%,
+    hsl(50deg 92% 95%) 89%, hsl(0deg 0% 100%) 100%;
+  @include create-gradient-properties("yellow-white", $gradient-yellow-white);
+
   /* spacing and sizing */
   --base-size: 20px;
   --container-max-width: 1120px;
@@ -150,6 +156,7 @@
   --theme-header: var(--color-red);
   --theme-hero: var(--gradient-red-blue-y);
   --theme-metadata-gradient: var(--gradient-red-blue-x);
+  --theme-heading-gradient: var(--gradient-red-blue-x);
 }
 
 @media (prefers-color-scheme: dark) {
@@ -166,5 +173,6 @@
     --theme-header: var(--color-dark-blue);
     --theme-hero: var(--gradient-blue-dark-blue-y);
     --theme-metadata-gradient: var(--gradient-blue-dark-blue-x);
+    --theme-heading-gradient: var(--gradient-yellow-white-x);
   }
 }

@@ -28,6 +28,7 @@ const { title, subtitle, description, permalink } = Astro.props;
   permalink={permalink}
 >
   <Header />
+
   <div class={cns(layoutStyles.container, layoutStyles["grid--12"])}>
     <main class={layoutStyles.main}>
       <slot name="main">
@@ -47,11 +48,13 @@ const { title, subtitle, description, permalink } = Astro.props;
         <small>Body small</small>
       </slot>
     </main>
+
     <aside class={layoutStyles.aside}>
       <slot name="aside">
         <ShortBio />
       </slot>
     </aside>
   </div>
+
   <Footer />
 </Base>

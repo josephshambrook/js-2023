@@ -6,11 +6,12 @@ import cns from "classnames";
 import layoutStyles from "@styles/layouts/layout.module.scss";
 
 // components
-import Header from "@components/Header.astro";
-import Footer from "@components/Footer.svelte";
+import Base from "./Base.astro";
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.svelte";
 
 // content
-import Base from "./Base.astro";
+import { Content as ShortBio } from "@content/bio-short.md";
 import { SiteMetadata } from "@src/types";
 
 // types
@@ -27,7 +28,14 @@ const { title, subtitle, description, permalink } = Astro.props;
   permalink={permalink}
 >
   <Header />
+
   <div class={cns(layoutStyles.container, layoutStyles["grid--12"])}>
+    <aside class={layoutStyles.aside}>
+      <slot name="aside">
+        <ShortBio />
+      </slot>
+    </aside>
+
     <main class={layoutStyles.main}>
       <slot name="main">
         <h1>H1 - Heading 1</h1>
@@ -47,5 +55,6 @@ const { title, subtitle, description, permalink } = Astro.props;
       </slot>
     </main>
   </div>
+
   <Footer />
 </Base>

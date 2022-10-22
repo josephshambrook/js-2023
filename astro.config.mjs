@@ -4,6 +4,7 @@ import { defineConfig } from "astro/config";
 import sitemap from "@astrojs/sitemap";
 import preact from "@astrojs/preact";
 import svelte from "@astrojs/svelte";
+import image from "@astrojs/image";
 import react from "@astrojs/react";
 
 // these plugins come as default with Astro, but cause a race condition
@@ -18,22 +19,28 @@ import smartypants from "remark-smartypants";
 import rehypeSlug from "rehype-slug";
 import rehypeAutolinkHeadings from "rehype-autolink-headings";
 
+// https://astro.build/config
 export default defineConfig({
   site: "https://www.josephshambrook.dev",
-  integrations: [sitemap(), preact(), svelte(), react()],
+  integrations: [sitemap(), preact(), svelte(), react(), image()],
   markdown: {
     remarkPlugins: [
       // support for GitHub Flavored Markdown
       remarkGfm,
+
       // change certain punctuation to fancy version
       // excluding quotes as these impact code snippets
-      () => smartypants({ quotes: false }),
+      () =>
+        smartypants({
+          quotes: false,
+        }),
     ],
     rehypePlugins: [
       // create an ID attribute for each heading found
       // Astro does do this too, but after plugins are used
       // which makes using this plugin necessary
       rehypeSlug,
+
       // create little # links in headings
       () =>
         rehypeAutolinkHeadings({
@@ -43,7 +50,12 @@ export default defineConfig({
             type: "element",
             tagName: "span",
             properties: {},
-            children: [{ type: "text", value: "#" }],
+            children: [
+              {
+                type: "text",
+                value: "#",
+              },
+            ],
           },
         }),
     ],
