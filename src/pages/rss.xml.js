@@ -21,7 +21,7 @@ export const get = () =>
     title: "Joseph Shambrook",
     // `<description>` field in output xml
     description:
-      "Blog posts by Joseph Shambrook, a Front End developer from the UK",
+      "Blog posts by Joseph Shambrook, a front-end developer from the UK",
     // add a custom stylesheet to make the feed look prettier within browsers
     stylesheet: "/pretty-feed-v3.xsl",
     // base URL for RSS <item> links

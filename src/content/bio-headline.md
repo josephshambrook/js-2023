@@ -1,4 +1,4 @@
 Hey 👋
 
 I’m Joseph Shambrook, a
-Front End Developer living in Edinburgh, UK
+front-end developer living in Edinburgh, UK

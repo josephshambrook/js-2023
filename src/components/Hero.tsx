@@ -13,7 +13,7 @@ export default function Hero() {
         <h1 className={HeroStyles.title}>
           <p>Hey 👋</p>
           <p>
-            I'm Joseph Shambrook, a Front End Developer living in
+            I'm Joseph Shambrook, a front-end Developer living in
             {weather ? ` ${weather}` : ""} Edinburgh, UK, focused on creating
             great websites and coaching others.
           </p>

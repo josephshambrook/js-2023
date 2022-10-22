@@ -10,7 +10,7 @@ tags: ["tricks", "git", "setup"]
 
 > I originally posted this article on dev.to, and migrated to my own site at a later point.
 
-I thought my first post could be about little setup tricks that I've gathered during my 10 years of Front End development so far. Little things I don't really think twice about now, but still raise eyebrows when people watch me code (recently, fully virtually).
+I thought my first post could be about little setup tricks that I've gathered during my 10 years of front-end development so far. Little things I don't really think twice about now, but still raise eyebrows when people watch me code (recently, fully virtually).
 
 Let's get to it, I've got standup in a few minutes and some overdue inspiration has struck.
 
@@ -81,7 +81,7 @@ I love this command line extension wonderfully named [thefuck](https://github.co
 
 ## VS Code extensions
 
-Like many other developers, I switched over to [VS Code](https://code.visualstudio.com/) a couple of years ago, and haven't batted an eyelid at other editors since. Unlike [it's bloated cousin](https://visualstudio.microsoft.com/), VS Code provides a great dev experience, especially for Front End developers, along with some cool debugging tools. However, the main attraction for me is the community developing plugins for it, and there's some real value in browsing the Marketplace and finding some extensions to upgrade your day-to-day coding frenetics.
+Like many other developers, I switched over to [VS Code](https://code.visualstudio.com/) a couple of years ago, and haven't batted an eyelid at other editors since. Unlike [it's bloated cousin](https://visualstudio.microsoft.com/), VS Code provides a great dev experience, especially for front-end developers, along with some cool debugging tools. However, the main attraction for me is the community developing plugins for it, and there's some real value in browsing the Marketplace and finding some extensions to upgrade your day-to-day coding frenetics.
 
 Here's a list of my favourite extensions at the moment that I either actually use, or at least find helpful, on a near-daily basis:
 

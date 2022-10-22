@@ -9,7 +9,7 @@ tags: ["tips", "mental-health", "katas"]
 
 I’ve been imagining recently what advice I would give to folks just starting out as developers. I’m mainly, selfishly, thinking of what advice I would’ve appreciated at the time too, when I was a fresh-faced developer trying to understand why Eclipse maybe wasn’t that useful for writing CSS.
 
-So I’ve put together a small list of things I would tell to any new developer. I’ve tried to broaden it too, rather than making it specific to the area that I know best (Front End Development).
+So I’ve put together a small list of things I would tell to any new developer. I’ve tried to broaden it too, rather than making it specific to the area that I know best (front-end development).
 
 ---
 

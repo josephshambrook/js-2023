@@ -51,7 +51,7 @@
         <img src={logo} class={footerStyles.logo} alt="Joseph Shambrook logo" />
       </a>
       <p class={footerStyles.intro}>
-        A Front End developer, living in Edinburgh, UK.
+        A front-end developer, living in Edinburgh, UK.
       </p>
     </section>
     {#each sections as section}
