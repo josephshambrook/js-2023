@@ -1,0 +1,56 @@
+---
+// dependencies
+import cns from "classnames";
+
+// styles
+import layoutStyles from "@styles/layouts/layout.module.scss";
+import BlogPostStyles from "@styles/components/BlogPost.module.scss";
+
+// components
+import Base from "./Base.astro";
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.svelte";
+import BlogPostContent from "../components/BlogPostContent.astro";
+import BlogPostMetadata from "@components/BlogPostMetadata.astro";
+
+// types
+import type { MarkdownLayoutProps } from "astro";
+import TableOfContents from "@src/components/TableOfContents.astro";
+
+type Props = MarkdownLayoutProps<{
+  title: string;
+  author: string;
+  date: string;
+  containerElement: keyof HTMLElementTagNameMap;
+}>;
+
+// javascript
+const { content, headings, containerElement } = Astro.props;
+const { title, description, publishDate, heroImage, permalink, alt, tags } =
+  content;
+
+const Container = containerElement;
+---
+
+<Base subtitle={title} {description} {permalink}>
+  <Header />
+
+  <Container>
+    <header class={cns(layoutStyles.container, BlogPostStyles.header)}>
+      <slot name="top" />
+    </header>
+
+    <div class={cns(layoutStyles.container, layoutStyles["grid--12"])}>
+      <aside class={layoutStyles.aside}>
+        <slot name="aside" />
+      </aside>
+      <main class={layoutStyles.main}>
+        <BlogPostContent {title} {heroImage} {publishDate} {alt} {tags}>
+          <slot />
+        </BlogPostContent>
+      </main>
+    </div>
+  </Container>
+
+  <Footer />
+</Base>
