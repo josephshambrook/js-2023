@@ -6,7 +6,9 @@ import { Image } from "@astrojs/image/components";
 import MainLayout from "../layouts/Main.astro";
 
 // images
-import meImg from "@images/me-jp.jpg";
+// this image is bundled within src to allow optimisations
+// https://docs.astro.build/en/guides/integrations-guide/image/#images-in-public
+import meImg from "@images-bundled/me-jp.jpg";
 
 // javascript
 let title = "About Joseph Shambrook";
@@ -25,11 +27,20 @@ const daughterAge = calculateAge(new Date(2019, 6, 19));
 ---
 
 <MainLayout title={title} description={description} permalink={permalink}>
-  <div slot="main">
-    <section class="intro">
-      <h1 class="title">All about Joe</h1>
-    </section>
+  <div slot="content-header" class="intro">
+    <h1 class="title">All about <span class="text-gradient">me</span></h1>
+    <Image
+      src={meImg}
+      class="rounded-img"
+      width={300}
+      height={300}
+      format="avif"
+      alt="Me in Japan back in 2018"
+    />
+  </div>
+  <!-- <div slot="aside"></div> -->
 
+  <div slot="main">
     <section class="career">
       <h2>The <span class="text-gradient">career</span> stuff</h2>
 
@@ -108,18 +119,46 @@ const daughterAge = calculateAge(new Date(2019, 6, 19));
     </section>
   </div>
 
-  <div slot="aside">
-    <Image
-      src={meImg}
-      width={300}
-      height={300}
-      alt="Me in Japan back in 2018"
-    />
-  </div>
+  <div slot="aside"></div>
 </MainLayout>
 
 <style lang="scss">
   @import "../styles/_mixins";
+
+  .title {
+    font-size: var(--heading-hero);
+
+    // make margin equal on both sides
+    margin-block-start: var(--heading-margin-block-end);
+  }
+
+  .rounded-img {
+    border-radius: 50%;
+  }
+
+  .intro {
+    align-items: center;
+    display: flex;
+    flex-wrap: wrap-reverse;
+    gap: 1rem;
+
+    > .title {
+      flex: 1;
+    }
+  }
+
+  @include screen-md-up {
+    .intro {
+      align-items: center;
+      display: flex;
+      min-height: 230px;
+      margin-block: 2rem;
+
+      > .title {
+        margin-bottom: 0;
+      }
+    }
+  }
 
   .text-gradient {
     background: var(--theme-heading-gradient);
@@ -127,21 +166,7 @@ const daughterAge = calculateAge(new Date(2019, 6, 19));
     -webkit-text-fill-color: transparent;
   }
 
-  .title {
-    font-size: var(--heading-hero);
-  }
-
-  @include screen-md-up {
-    .intro {
-      // padding-bottom: 2rem;
-      // padding-top: 2rem;
-      align-items: center;
-      display: flex;
-      min-height: 230px;
-
-      > .title {
-        margin-bottom: 0;
-      }
-    }
+  section:not(:first-of-type) {
+    --heading-margin-block-start: 4rem;
   }
 </style>
