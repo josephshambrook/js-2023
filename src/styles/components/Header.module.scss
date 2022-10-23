@@ -8,7 +8,6 @@
 }
 
 .header {
-  --border-size: 0;
   --header-text-color: var(--color-white);
 
   background-color: var(--theme-header);
@@ -18,11 +17,6 @@
   margin-block-end: 2rem;
   position: relative;
   z-index: 50;
-
-  @include screen-md-up {
-    --border-size: 31px;
-    margin-block-end: calc(2rem + var(--border-size));
-  }
 }
 
 .waves {
