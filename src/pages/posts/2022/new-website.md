@@ -8,4 +8,64 @@ tags: ["website", "astro", "procrastination"]
 draft: true
 ---
 
-Creating and maintaining websites has been my core day-to-day activity for 11 years now. I still enjoy it, the buzz of using modern tools, learning new things from other developers,
+Hello, and welcome to my new design.
+
+I have created a few different versions of my website over time, and most of them never saw the light of deployment. Most were created out of curiosity in a new framework or language, especially those intended to be the "next big thing", but ultimately fizzled out and retired to my private rubbish bin of abandoned ideas.
+
+Having the skills to create a website is simultaenuously a superpower and a curse. It's a unique ability to know how multiple langauges, paradigms and methodologies can fit together to make a website, but a source of frustration when they don't quite work together or "feel right". I went through this every single time, and I have come to learn I am quite a perfectionist, where I am only able to carry through on side projects I actually enjoy doing.
+
+> Note I said "side projects" there. Money is quite the motivating factor when it comes to other projects.
+
+My most recent website design ended up getting abandoned too, to the point where it stated in giant letters that I lived in London, two years after I had migrated to Edinburgh. It was written with Jekyll and deployed for free with GitHub Pages - the most minimal way to get a website started at the time - and consisted of a basic blog and even more basic styling.
+
+> Insert image here of old website with tag "yeah, that's it"
+
+It didn't matter how basic it was though. At the time, I was happy to have something out the door. I had procrastinated over the functionality and design of previous website ideas for so long that I wanted something, **anything**, to flaunt as my own.
+
+Also, blogs **should** be basic. I saw Christian Heilmann speak way back in 2014, where he quite rightly asked why websites with nearly entirely static content, such as blogs, were shipping more and more JavaScript. Blogs are mostly about content, and any JavaScript detracting from that or causing that content to load slower should be deprioritised for the user's sake.
+
+> At least, I **think** it was Christian Heilmann that I watched speaking about this. I've tried to find something of him writing about that and came up empty-handed.
+
+So anyway, enough rambling, and let's peek behind the curtain to see what this website is made of. It was created thanks to a perfect storm of slightly more free time, confidence in my own abilities, and proper organisation and design. Creating any side-project does give an opportunity to throw different technologies around and see what sticks, and this one happened to have a lot of things that stuck first-time and allowed me to keep going.
+
+## The front end
+
+Being a front-end developer, this side is rather pivotal.
+
+The framework of choice here is [Astro](https://astro.build/). It made a splash on the front-end web development scene in 2021 as a static-site generator with a killer proposition of shipping zero JavaScript to the client (i.e. browser), yet still letting the developer use any combination of component frameworks they like. This gave me the flexibility to try out frameworks like Svelte with zero lock-in, and therefore fewer "what if I used this framework instead" thoughts. It also has some great developer experience features, great documentation and a great community.
+
+In terms of those component frameworks, I have used Astro's own components for most of them, but I do have a few React and Svelte components sprinkled in where I felt like it, or when I need components to be rendered on the client rather than rendered on the server.
+
+For styling, I have created all the CSS myself using SCSS Modules, though I started with [normalize.css](https://necolas.github.io/normalize.css/) to reset everything to sensible defaults. I've gone all-in with the more modern features of CSS, like Grid Layout and Custom Properties.
+
+I have also gone all-in with [TypeScript](https://www.typescriptlang.org/), after years of abstaining and thinking JavaScript was still fine on its own. I now fully see the error of my ways.
+
+## Deployment
+
+When it comes to quick projects, my first thought always goes to Netlify or Vercel. These are great, but I wanted to try a new service this time. That service turned out to be [Cloudflare](https://www.cloudflare.com/) and [its Pages product](https://pages.cloudflare.com/). Cloudflare has always seemed like such a performant, innovative and privacy-conscious company, that I decided to throw my website on there and see how it fared. Pretty well, it turned out.
+
+## Performance
+
+## Other details
+
+There are a litany of other things being used for this site;
+
+- For analytics, I use [Fathom Analytics](https://usefathom.com/), an ethical alternative to Google Analytics which doesn't track you and therefore requires no annoying GDPR-induced popups.
+- I created a couple of [Cloudflare Workers](https://workers.cloudflare.com/) to enable some fun features for the site, without storing the logic within the website codebase, or worse yet, shipping that logic to the user. One Worker uses the Spotify API to get a list of tracks I have listened to the most recently, and another gets the current weather in Edinburgh. Small pieces of functionality, but using very cool and modern technology.
+
+## The future
+
+The site is far from done. I have a fair bit of tech debt-ish stuff I'd like to sort out, a Uses page I have always wanted to create, and lots of testing I would like to add. I have some fun ideas for animations and stuff, to add some personalisation.
+
+The code is fully open-source, and I intend to keep it that way. However, I may move posts to a CMS or something, to make it a smidge harder for others to copy them and paste them on their own sites.
+
+---
+
+Creating this site has been fun, but also a relief. I have blocked myself so many times from creating it due to anxiety of not producing anything "good enough". I already knew that starting it was a key first step, but I have also learnt not to compare it to others, and have fun. It is my own site, after all.
+
+If you are in a similar situation to where I am, here are my key tips that helped me get moving on this:
+
+- Use StackBlitz or CodeSandbox to try out different frameworks and tech solutions quickly.
+- Create a quick backlog of what you want to do, in order to map out what tasks need to be done, and hopefully reduce any cognitive overload around
+- Document and aim for an MVP version of your site as a first resort, to get started most effectively and reduce the pressure for getting something "perfect" released on the first try.
+- Have fun setting your own standards!
