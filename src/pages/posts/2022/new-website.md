@@ -5,7 +5,6 @@ publishDate: 2022-10-27 11:03:31 +0000
 categories: website
 description: "Why creating my own website has taken so long, and tips for getting past procrastination hurdles"
 tags: ["website", "astro", "procrastination"]
-draft: true
 ---
 
 Hello, and welcome to my new design.
@@ -28,6 +27,12 @@ Also, blogs **should** be basic. I saw Christian Heilmann speak way back in 2014
 
 So anyway, enough rambling, and let's peek behind the curtain to see what this website is made of. It was created thanks to a perfect storm of slightly more free time, confidence in my own abilities, and proper organisation and design. Creating any side-project does give an opportunity to throw different technologies around and see what sticks, and this one happened to have a lot of things that stuck first-time and allowed me to keep going.
 
+## The design
+
+A major hurdle for me for developing anything is the design. I can use design tools fine, but is the design I create ever good enough? Is it fuck.
+
+So for this site, I reached out to a previous colleague of mine, [Giovanni Toscani](https://www.linkedin.com/in/giovanni-toscani-9a9058149), and asked him to help. He helped me create a colour scheme, mockups of pages, and finally set some direction in order for me to stop worrying about the design and dig into the code. I massively appreciate his work and for helping me out in-between his own work.
+
 ## The front end
 
 Being a front-end developer, this side is rather pivotal.
@@ -41,6 +46,8 @@ For styling, I have created all the CSS myself using SCSS Modules, though I star
 I have gone all-in with [TypeScript](https://www.typescriptlang.org/), after years of abstaining and thinking JavaScript was still fine on its own. I now fully see the error of my ways.
 
 I added a fun and subtle animation to the header, where the wave moves slightly to the right. As small as it is, I really like it, and also ensured it only moves if users have not set a preference for motion on their devices. I have plans for other subtle animations to use as well, which I'm looking forward to implementing soon.
+
+There's a bunch of other nice stuff too; dark mode, an RSS feed, a sticky table of contents for posts, and image optimisations.
 
 ## Performance and Accessibility
 
