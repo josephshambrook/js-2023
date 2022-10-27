@@ -1,9 +1,9 @@
 ---
 layout: ../../../layouts/BlogPost.astro
 title: "I finally created a new website"
-publishDate: 2022-10-23 14:06:31 +0000
+publishDate: 2022-10-27 11:03:31 +0000
 categories: website
-description: "A tour of my new website, and a whimsical look at procrastination."
+description: "Why creating my own website has taken so long, and tips for getting past procrastination hurdles"
 tags: ["website", "astro", "procrastination"]
 draft: true
 ---
@@ -18,7 +18,7 @@ Having the skills to create a website is simultaenuously a superpower and a curs
 
 My most recent website design ended up getting abandoned too, to the point where it stated in giant letters that I lived in London, two years after I had migrated to Edinburgh. It was written with Jekyll and deployed for free with GitHub Pages - the most minimal way to get a website started at the time - and consisted of a basic blog and even more basic styling.
 
-> Insert image here of old website with tag "yeah, that's it"
+!["My old website, showing the main headline"](/assets/images/website-pre-2022.png)
 
 It didn't matter how basic it was though. At the time, I was happy to have something out the door. I had procrastinated over the functionality and design of previous website ideas for so long that I wanted something, **anything**, to flaunt as my own.
 
@@ -38,19 +38,27 @@ In terms of those component frameworks, I have used Astro's own components for m
 
 For styling, I have created all the CSS myself using SCSS Modules, though I started with [normalize.css](https://necolas.github.io/normalize.css/) to reset everything to sensible defaults. I've gone all-in with the more modern features of CSS, like Grid Layout and Custom Properties.
 
-I have also gone all-in with [TypeScript](https://www.typescriptlang.org/), after years of abstaining and thinking JavaScript was still fine on its own. I now fully see the error of my ways.
+I have gone all-in with [TypeScript](https://www.typescriptlang.org/), after years of abstaining and thinking JavaScript was still fine on its own. I now fully see the error of my ways.
+
+I added a fun and subtle animation to the header, where the wave moves slightly to the right. As small as it is, I really like it, and also ensured it only moves if users have not set a preference for motion on their devices. I have plans for other subtle animations to use as well, which I'm looking forward to implementing soon.
+
+## Performance and Accessibility
+
+Thanks to Astro's approach to static generation, this website ships a tiny bit of JavaScript related to the UI to the browser. Along with scripts for ethical analytics, the total amount of JS is 33kb. I'm pretty happy with that, and will keep an eye on it over time.
+
+The other good news is that this site currently gets very high scores from Lighthouse audits, including a 100% score on the desktop homepage. This is a great start, though I still have some parts to optimise for mobile and other individual pages.
+
+I also developed this site with accessibility in mind from day one - something I feel is important for **any** website, large and small. I have some improvements to make around colour contrast and legibility, but my early tests show users of screen readers should be able to navigate the site with relative ease.
 
 ## Deployment
 
 When it comes to quick projects, my first thought always goes to Netlify or Vercel. These are great, but I wanted to try a new service this time. That service turned out to be [Cloudflare](https://www.cloudflare.com/) and [its Pages product](https://pages.cloudflare.com/). Cloudflare has always seemed like such a performant, innovative and privacy-conscious company, that I decided to throw my website on there and see how it fared. Pretty well, it turned out.
 
-## Performance
-
 ## Other details
 
 There are a litany of other things being used for this site;
 
-- For analytics, I use [Fathom Analytics](https://usefathom.com/), an ethical alternative to Google Analytics which doesn't track you and therefore requires no annoying GDPR-induced popups.
+- For analytics, I use [Fathom Analytics](https://usefathom.com/), an ethical alternative to Google Analytics which doesn't track you and therefore requires no annoying GDPR-induced popups. I only care about how my website performs and where visits generally come from, nothing else. I also use the free tier of Cloudflare Analytics (also ethical) to ensure the site is performing well.
 - I created a couple of [Cloudflare Workers](https://workers.cloudflare.com/) to enable some fun features for the site, without storing the logic within the website codebase, or worse yet, shipping that logic to the user. One Worker uses the Spotify API to get a list of tracks I have listened to the most recently, and another gets the current weather in Edinburgh. Small pieces of functionality, but using very cool and modern technology.
 
 ## The future
