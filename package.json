@@ -12,24 +12,23 @@
     "upgrade:pnpm": "pnpm add -g @pnpm/exe"
   },
   "devDependencies": {
-    "@astrojs/image": "^0.10.0",
-    "@astrojs/mdx": "^0.11.4",
-    "@astrojs/preact": "^1.2.0",
-    "@astrojs/sitemap": "^1.0.0",
-    "@astrojs/svelte": "^1.0.2",
-    "@types/react": "^18.0.21",
-    "astro": "^1.5.1",
-    "classnames": "^2.3.2",
-    "prettier-plugin-astro": "^0.6.0",
-    "sass": "^1.55.0"
+    "@types/react": "^18.0.23",
+    "prettier-plugin-astro": "^0.6.0"
   },
   "dependencies": {
+    "@astrojs/image": "^0.11.0",
+    "@astrojs/mdx": "^0.11.5",
     "@astrojs/partytown": "^1.0.1",
+    "@astrojs/preact": "^1.2.0",
     "@astrojs/react": "^1.2.1",
     "@astrojs/rss": "^1.0.2",
+    "@astrojs/sitemap": "^1.0.0",
+    "@astrojs/svelte": "^1.0.2",
     "@vanilla-extract/css": "^1.9.1",
     "@vanilla-extract/vite-plugin": "^3.6.1",
+    "astro": "^1.5.3",
     "bootstrap-icons": "^1.9.1",
+    "classnames": "^2.3.2",
     "node-html-parser": "^6.1.1",
     "normalize.css": "^8.0.1",
     "preact": "^10.11.2",
@@ -39,7 +38,8 @@
     "rehype-slug": "^5.0.1",
     "remark-gfm": "^3.0.1",
     "remark-smartypants": "^2.0.0",
-    "sharp": ">=0.31.0",
+    "sass": "^1.55.0",
+    "sharp": ">=0.31.1",
     "svelte": "^3.52.0"
   },
   "engines": {
