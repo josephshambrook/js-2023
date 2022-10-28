@@ -2,6 +2,9 @@
   "name": "@josephshambrook/js-2023",
   "version": "0.0.0-semantic-release",
   "private": true,
+  "engines": {
+    "node": "^16.14.2"
+  },
   "scripts": {
     "dev": "astro dev",
     "start": "astro dev",
@@ -9,11 +12,13 @@
     "build:ci": "npm install -g pnpm && pnpm i && pnpm build",
     "preview": "astro preview",
     "upgrade:deps": "npx npm-check-updates -i",
-    "upgrade:pnpm": "pnpm add -g @pnpm/exe"
+    "upgrade:pnpm": "pnpm add -g @pnpm/exe",
+    "prepare": "husky install"
   },
-  "devDependencies": {
-    "@types/react": "^18.0.23",
-    "prettier-plugin-astro": "^0.6.0"
+  "husky": {
+    "hooks": {
+      "prepare-commit-msg": "exec < /dev/tty && npx cz --hook || true"
+    }
   },
   "dependencies": {
     "@astrojs/image": "^0.11.0",
@@ -42,7 +47,10 @@
     "sharp": ">=0.31.1",
     "svelte": "^3.52.0"
   },
-  "engines": {
-    "node": "^16.14.2"
+  "devDependencies": {
+    "@types/react": "^18.0.23",
+    "commitizen": "^4.2.5",
+    "husky": "^8.0.0",
+    "prettier-plugin-astro": "^0.6.0"
   }
 }
