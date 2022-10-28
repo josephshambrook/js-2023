@@ -37,7 +37,6 @@
       links: [
         { text: "GitHub", href: SOCIAL_LINKS.github },
         { text: "LinkedIn", href: SOCIAL_LINKS.linkedin },
-        { text: "Twitter", href: SOCIAL_LINKS.twitter },
         { text: "CodePen", href: SOCIAL_LINKS.codepen },
       ],
     },

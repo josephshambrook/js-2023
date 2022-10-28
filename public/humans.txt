@@ -1,6 +1,6 @@
 /* TEAM */
 	Front-end developer: Joseph Shambrook
-	Twitter: @j_se_h
+	LinkedIn: https://www.linkedin.com/in/josephshambrook/
 	From: London, UK
 	Residence: Edinburgh, UK
 
