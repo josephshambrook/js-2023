@@ -3,7 +3,14 @@
     "astro-build.astro-vscode",
     "svelte.svelte-vscode",
     "syler.sass-indented",
-    "sissel.scss-style-tag"
+    "sissel.scss-style-tag",
+    "vivaxy.vscode-conventional-commits",
+    "editorconfig.editorconfig",
+    "tlahmann.alex-linter",
+    "dbaeumer.vscode-eslint",
+    "esbenp.prettier-vscode",
+    "cssho.vscode-svgviewer",
+    "wayou.vscode-todo-highlight"
   ],
   "unwantedRecommendations": []
 }
