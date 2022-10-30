@@ -2,7 +2,7 @@
 layout: ../../../layouts/BlogPost.astro
 title: "I finally created a new website"
 publishDate: 2022-10-27 11:03:31 +0000
-categories: website
+categories: post
 description: "Why creating my own website has taken so long, and tips for getting past procrastination hurdles"
 tags: ["website", "astro", "procrastination"]
 ---

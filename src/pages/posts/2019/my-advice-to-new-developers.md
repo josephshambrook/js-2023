@@ -2,7 +2,7 @@
 layout: ../../../layouts/BlogPost.astro
 title: "My advice to new developers"
 publishDate: 2019-04-02 12:00:00 +0000
-categories: advice
+categories: post
 description: "A small but broad list of things I would advise any new developer."
 tags: ["tips", "mental-health", "katas"]
 ---

@@ -2,7 +2,7 @@
 layout: ../../../layouts/BlogPost.astro
 title: "Some lessons from extreme A/B Testing"
 publishDate: 2017-07-21 12:00:00 +0000
-categories: lessons
+categories: post
 description: "During my most recent job, I engaged in developing a range of A/B tests that challenged my thinking in terms of development and idea brainstorming, at a company that shifted their entire long-term strategy to A/B testing overnight. I took part in this for around 18 months, and learnt a few interesting lessons that I wanted to share."
 tags: ["ab-testing"]
 ---

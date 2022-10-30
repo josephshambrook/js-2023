@@ -3,9 +3,9 @@ layout: ../../../layouts/BlogPost.astro
 title: "A few tricks and tips for web development"
 publishDate: 2020-10-13 14:06:31 +0000
 lastEditDate: 2020-10-21 11:25:45 +0000
-categories: advice
+categories: post
 description: "Little things I have gathered up in 10 years of web development, and tends to raise interest when others spot them."
-tags: ["tricks", "git", "setup"]
+tags: ["tricks", "git", "setup", "advice"]
 ---
 
 > I originally posted this article on dev.to, and migrated to my own site at a later point.
