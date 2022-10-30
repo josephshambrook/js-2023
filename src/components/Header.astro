@@ -27,11 +27,10 @@ const { isTransparent = false, hasWaves = true } = Astro.props;
     [headerStyles["is-transparent"]]: isTransparent,
   })}
 >
+  <a class={headerStyles["skip-link"]} href="#main" target="_self"
+    >Skip to main content</a
+  >
   <div class={cns(headerStyles.wrapper, layoutStyles.container)}>
-    <a class={headerStyles["sr-only"]} href="#maincontent" target="_self"
-      >Skip to main content</a
-    >
-
     <a class={headerStyles["logo-link"]} href="/">
       <Svg path="logos/svg/logo-on-dark.svg" />
       <span class={headerStyles["sr-only"]}>Homepage</span>

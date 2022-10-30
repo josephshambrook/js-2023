@@ -30,7 +30,7 @@ const { title, subtitle, description, permalink } = Astro.props;
   <Header />
 
   <div class={cns(layoutStyles.container, layoutStyles["grid--12"])}>
-    <main class={layoutStyles.main}>
+    <main class={layoutStyles.main} id="main">
       <slot name="main">
         <h1>H1 - Heading 1</h1>
         <h2>H2 - Heading 2</h2>
