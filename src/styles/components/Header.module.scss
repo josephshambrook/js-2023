@@ -7,6 +7,23 @@
   width: 1px;
 }
 
+.skip-link {
+  background: var(--theme-header);
+  color: #fff;
+  padding: 4px;
+  position: absolute;
+  transform: translateY(-100%);
+  z-index: 10;
+
+  @media (prefers-reduced-motion: no-preference) {
+    transition: transform 0.2s;
+  }
+
+  &:focus {
+    transform: translateY(0);
+  }
+}
+
 .header {
   --header-text-color: var(--color-white);
 

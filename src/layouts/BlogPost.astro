@@ -59,7 +59,7 @@ const { title, description, publishDate, heroImage, permalink, alt, tags } =
           <TableOfContents headings={headings} />
         </slot>
       </aside>
-      <main class={layoutStyles.main}>
+      <main class={layoutStyles.main} id="main">
         <BlogPostContent {title} {heroImage} {publishDate} {alt} {tags}>
           <slot />
         </BlogPostContent>
