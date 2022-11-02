@@ -9,6 +9,7 @@ import layoutStyles from "@styles/layouts/layout.module.scss";
 import Base from "./Base.astro";
 import Header from "../components/Header.astro";
 import Footer from "../components/Footer.svelte";
+import Spotify from "../components/Spotify.astro";
 
 // content
 import { Content as ShortBio } from "@content/bio-short.md";
@@ -52,6 +53,7 @@ const { title, subtitle, description, permalink } = Astro.props;
     <aside class={layoutStyles.aside}>
       <slot name="aside">
         <ShortBio />
+        <Spotify />
       </slot>
     </aside>
   </div>

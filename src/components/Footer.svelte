@@ -72,6 +72,3 @@
     {/each}
   </div>
 </footer>
-
-<style lang="scss">
-</style>
