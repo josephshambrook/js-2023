@@ -1,0 +1,22 @@
+.spotify-title {
+  font-size: var(--heading-6);
+  line-height: var(--heading-line-height);
+}
+
+.list {
+  list-style: none;
+  padding-inline-start: 0;
+}
+
+.list > .track:not(:last-of-type) {
+  // TODO: extract this border gradient to a mixin
+  border-block-end: 2px solid;
+  border-image-slice: 1;
+  border-image-source: var(--theme-metadata-gradient);
+  margin-block-end: 0.5rem;
+  padding-block-end: 0.6rem;
+}
+
+.track-name {
+  font-weight: bold;
+}
