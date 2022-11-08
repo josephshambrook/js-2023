@@ -6,5 +6,18 @@
     "titleBar.inactiveBackground": "#f04444",
     "window.activeBorder": "#f04444",
     "window.inactiveBorder": "#f04444"
-  }
+  },
+  "css.validate": false,
+  "less.validate": false,
+  "scss.validate": false,
+  "stylelint.validate": [
+    "css",
+    "scss",
+    "less",
+    "postcss",
+    "html",
+    "vue",
+    "svelte",
+    "astro"
+  ]
 }

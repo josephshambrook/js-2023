@@ -10,7 +10,8 @@
     "dbaeumer.vscode-eslint",
     "esbenp.prettier-vscode",
     "cssho.vscode-svgviewer",
-    "wayou.vscode-todo-highlight"
+    "wayou.vscode-todo-highlight",
+    "stylelint.vscode-stylelint"
   ],
   "unwantedRecommendations": []
 }

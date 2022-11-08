@@ -44,8 +44,8 @@
 </script>
 
 <footer class={footerStyles.footer}>
-  <div class={cns(layoutStyles.container, layoutStyles["grid--auto"])}>
-    <section class={footerStyles["section--intro"]}>
+  <div class={cns(layoutStyles.container, layoutStyles["grid-auto"])}>
+    <section class={footerStyles["section-intro"]}>
       <a href="/">
         <img src={logo} class={footerStyles.logo} alt="Joseph Shambrook logo" />
       </a>

@@ -55,6 +55,7 @@
   // TODO: extract this border gradient to a mixin
   border-block-start: 5px solid;
   border-image-slice: 1;
+
   // border-image-source: var(--gradient-blue-red);
   border-image-source: var(--theme-metadata-gradient);
   justify-content: space-between;
