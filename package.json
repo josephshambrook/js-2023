@@ -1,6 +1,6 @@
 {
   "name": "@josephshambrook/js-2023",
-  "version": "0.0.0-semantic-release",
+  "version": "1.0.3",
   "private": true,
   "engines": {
     "node": "^16.14.2"
@@ -8,6 +8,8 @@
   "scripts": {
     "dev": "astro dev",
     "start": "astro dev",
+    "lint:css": "stylelint \"**/*.{css,scss,astro,vue,svelte}\"",
+    "lint:css:fix": "stylelint \"**/*.{css,scss,astro,vue,svelte}\"",
     "build": "astro build",
     "build:ci": "npm install -g pnpm && pnpm i && pnpm build",
     "preview": "astro preview",
@@ -32,6 +34,7 @@
     "@vanilla-extract/css": "^1.9.1",
     "@vanilla-extract/vite-plugin": "^3.6.1",
     "astro": "^1.5.3",
+    "autoprefixer": "^10.4.13",
     "bootstrap-icons": "^1.9.1",
     "classnames": "^2.3.2",
     "node-html-parser": "^6.1.1",
@@ -50,8 +53,17 @@
   "devDependencies": {
     "@commitlint/cli": "^17.1.2",
     "@commitlint/config-conventional": "^17.1.0",
+    "@semantic-release/changelog": "^6.0.1",
+    "@semantic-release/git": "^10.0.1",
     "@types/react": "^18.0.23",
     "husky": "^8.0.0",
-    "prettier-plugin-astro": "^0.6.0"
+    "postcss-html": "^1.5.0",
+    "prettier-plugin-astro": "^0.6.0",
+    "stylelint": "^14.14.1",
+    "stylelint-config-html": "^1.1.0",
+    "stylelint-config-prettier": "^9.0.3",
+    "stylelint-config-prettier-scss": "^0.0.1",
+    "stylelint-config-standard": "^29.0.0",
+    "stylelint-config-standard-scss": "^6.1.0"
   }
 }

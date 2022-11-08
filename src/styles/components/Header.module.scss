@@ -38,6 +38,7 @@
 
 .waves {
   height: 40px;
+
   /* Fix for safari gap */
   margin-bottom: -7px;
   min-height: 40px;
@@ -64,6 +65,7 @@
   0% {
     transform: translate3d(-90px, 0, 0);
   }
+
   100% {
     transform: translate3d(85px, 0, 0);
   }
@@ -72,7 +74,7 @@
 .is-transparent {
   background: transparent;
 
-  &:after {
+  &::after {
     all: initial;
   }
 }
@@ -87,8 +89,7 @@
   width: 100%;
 
   @include screen-sm-up {
-    flex-direction: row;
-    flex-wrap: nowrap;
+    flex-flow: row nowrap;
     justify-content: space-between;
     padding-block-end: 3rem;
     padding-block-start: 3rem;
@@ -126,6 +127,7 @@
   align-items: center;
   display: flex;
   flex: 1;
+
   // flex-direction: column;
   flex-wrap: wrap;
   gap: 1rem;

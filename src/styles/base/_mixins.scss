@@ -1,4 +1,4 @@
-@import "./_variables";
+@import "./variables";
 
 @mixin screen-xs-up {
   @media (min-width: #{map-get($sizes, 'xs')}) {

@@ -29,8 +29,8 @@ const { title, subtitle, description, permalink } = Astro.props;
 >
   <Header />
 
-  <div class={cns(layoutStyles.container, layoutStyles["grid--12"])}>
-    <header class={layoutStyles["grid-span-cols--12"]}>
+  <div class={cns(layoutStyles.container, layoutStyles["grid-12"])}>
+    <header class={layoutStyles["grid-span-cols-12"]}>
       <slot name="content-header" />
     </header>
 

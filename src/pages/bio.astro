@@ -181,7 +181,7 @@ const daughterAge = calculateAge(new Date(2019, 6, 19));
 </MainLayout>
 
 <style lang="scss">
-  @import "../styles/base/_mixins";
+  @import "../styles/base/mixins";
 
   .title {
     font-size: var(--heading-hero);
@@ -220,7 +220,7 @@ const daughterAge = calculateAge(new Date(2019, 6, 19));
 
   .text-gradient {
     background: var(--theme-heading-gradient);
-    -webkit-background-clip: text;
+    background-clip: text;
     -webkit-text-fill-color: transparent;
   }
 

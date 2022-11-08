@@ -1,75 +1,78 @@
 @import "./mixins";
 
 :root {
-  /* colour palette (dark to light) */
-  /* with help from https://colordesigner.io/ */
-  --base-red: 0, 85%;
-  --palette-red-10: hsl(var(--base-red), 12%);
-  --palette-red-20: hsl(var(--base-red), 24%);
-  --palette-red-30: hsl(var(--base-red), 36%);
-  --palette-red-40: hsl(var(--base-red), 48%);
-  --palette-red-50: hsl(var(--base-red), 60%);
-  --palette-red-60: hsl(var(--base-red), 67%);
-  --palette-red-70: hsl(var(--base-red), 74%);
-  --palette-red-80: hsl(var(--base-red), 80%);
-  --palette-red-90: hsl(var(--base-red), 87%);
-  --palette-red-100: hsl(var(--base-red), 94%);
+  /*
+   * colour palette (dark to light)
+   * with help from https://colordesigner.io/
+   */
+  --base-red: 0 85%;
+  --palette-red-10: hsl(var(--base-red) 12%);
+  --palette-red-20: hsl(var(--base-red) 24%);
+  --palette-red-30: hsl(var(--base-red) 36%);
+  --palette-red-40: hsl(var(--base-red) 48%);
+  --palette-red-50: hsl(var(--base-red) 60%);
+  --palette-red-60: hsl(var(--base-red) 67%);
+  --palette-red-70: hsl(var(--base-red) 74%);
+  --palette-red-80: hsl(var(--base-red) 80%);
+  --palette-red-90: hsl(var(--base-red) 87%);
+  --palette-red-100: hsl(var(--base-red) 94%);
 
-  --base-orange: 30, 80%;
-  --palette-orange-10: hsl(var(--base-orange), 11%);
-  --palette-orange-20: hsl(var(--base-orange), 22%);
-  --palette-orange-30: hsl(var(--base-orange), 34%);
-  --palette-orange-40: hsl(var(--base-orange), 45%);
-  --palette-orange-50: hsl(var(--base-orange), 56%);
-  --palette-orange-60: hsl(var(--base-orange), 63%);
-  --palette-orange-70: hsl(var(--base-orange), 70%);
-  --palette-orange-80: hsl(var(--base-orange), 78%);
-  --palette-orange-90: hsl(var(--base-orange), 85%);
-  --palette-orange-100: hsl(var(--base-orange), 92%);
+  --base-orange: 30 80%;
+  --palette-orange-10: hsl(var(--base-orange) 11%);
+  --palette-orange-20: hsl(var(--base-orange) 22%);
+  --palette-orange-30: hsl(var(--base-orange) 34%);
+  --palette-orange-40: hsl(var(--base-orange) 45%);
+  --palette-orange-50: hsl(var(--base-orange) 56%);
+  --palette-orange-60: hsl(var(--base-orange) 63%);
+  --palette-orange-70: hsl(var(--base-orange) 70%);
+  --palette-orange-80: hsl(var(--base-orange) 78%);
+  --palette-orange-90: hsl(var(--base-orange) 85%);
+  --palette-orange-100: hsl(var(--base-orange) 92%);
 
-  --base-yellow: 50, 93%;
-  --palette-yellow-10: hsl(var(--base-yellow), 11%);
-  --palette-yellow-20: hsl(var(--base-yellow), 21%);
-  --palette-yellow-30: hsl(var(--base-yellow), 31%);
-  --palette-yellow-40: hsl(var(--base-yellow), 42%);
-  --palette-yellow-50: hsl(var(--base-yellow), 53%);
-  --palette-yellow-60: hsl(var(--base-yellow), 61%);
-  --palette-yellow-70: hsl(var(--base-yellow), 68%);
-  --palette-yellow-80: hsl(var(--base-yellow), 76%);
-  --palette-yellow-90: hsl(var(--base-yellow), 84%);
-  --palette-yellow-100: hsl(var(--base-yellow), 91%);
+  --base-yellow: 50 93%;
+  --palette-yellow-10: hsl(var(--base-yellow) 11%);
+  --palette-yellow-20: hsl(var(--base-yellow) 21%);
+  --palette-yellow-30: hsl(var(--base-yellow) 31%);
+  --palette-yellow-40: hsl(var(--base-yellow) 42%);
+  --palette-yellow-50: hsl(var(--base-yellow) 53%);
+  --palette-yellow-60: hsl(var(--base-yellow) 61%);
+  --palette-yellow-70: hsl(var(--base-yellow) 68%);
+  --palette-yellow-80: hsl(var(--base-yellow) 76%);
+  --palette-yellow-90: hsl(var(--base-yellow) 84%);
+  --palette-yellow-100: hsl(var(--base-yellow) 91%);
 
-  --base-dark-blue: 229, 40%;
-  --palette-dark-blue-10: hsl(var(--base-dark-blue), 5%);
-  --palette-dark-blue-20: hsl(var(--base-dark-blue), 10%);
-  --palette-dark-blue-30: hsl(var(--base-dark-blue), 15%);
-  --palette-dark-blue-40: hsl(var(--base-dark-blue), 20%);
-  --palette-dark-blue-50: hsl(var(--base-dark-blue), 25%);
-  --palette-dark-blue-60: hsl(var(--base-dark-blue), 37%);
-  --palette-dark-blue-70: hsl(var(--base-dark-blue), 49%);
-  --palette-dark-blue-80: hsl(var(--base-dark-blue), 62%);
-  --palette-dark-blue-90: hsl(var(--base-dark-blue), 74%);
-  --palette-dark-blue-100: hsl(var(--base-dark-blue), 87%);
+  --base-dark-blue: 229 40%;
+  --palette-dark-blue-10: hsl(var(--base-dark-blue) 5%);
+  --palette-dark-blue-20: hsl(var(--base-dark-blue) 10%);
+  --palette-dark-blue-30: hsl(var(--base-dark-blue) 15%);
+  --palette-dark-blue-40: hsl(var(--base-dark-blue) 20%);
+  --palette-dark-blue-50: hsl(var(--base-dark-blue) 25%);
+  --palette-dark-blue-60: hsl(var(--base-dark-blue) 37%);
+  --palette-dark-blue-70: hsl(var(--base-dark-blue) 49%);
+  --palette-dark-blue-80: hsl(var(--base-dark-blue) 62%);
+  --palette-dark-blue-90: hsl(var(--base-dark-blue) 74%);
+  --palette-dark-blue-100: hsl(var(--base-dark-blue) 87%);
 
-  --base-grey: 0, 0%;
-  --palette-grey-10: hsl(var(--base-grey), 10%);
-  --palette-grey-20: hsl(var(--base-grey), 20%);
-  --palette-grey-30: hsl(var(--base-grey), 30%);
-  --palette-grey-40: hsl(var(--base-grey), 40%);
-  --palette-grey-50: hsl(var(--base-grey), 50%);
-  --palette-grey-60: hsl(var(--base-grey), 60%);
-  --palette-grey-70: hsl(var(--base-grey), 70%);
-  --palette-grey-80: hsl(var(--base-grey), 80%);
-  --palette-grey-90: hsl(var(--base-grey), 90%);
+  --base-grey: 0 0%;
+  --palette-grey-10: hsl(var(--base-grey) 10%);
+  --palette-grey-20: hsl(var(--base-grey) 20%);
+  --palette-grey-30: hsl(var(--base-grey) 30%);
+  --palette-grey-40: hsl(var(--base-grey) 40%);
+  --palette-grey-50: hsl(var(--base-grey) 50%);
+  --palette-grey-60: hsl(var(--base-grey) 60%);
+  --palette-grey-70: hsl(var(--base-grey) 70%);
+  --palette-grey-80: hsl(var(--base-grey) 80%);
+  --palette-grey-90: hsl(var(--base-grey) 90%);
 
-  --color-black: hsl(0, 0%, 3%);
-  --color-white: hsl(0, 0%, 99%);
+  --color-black: hsl(0deg 0% 3%);
+  --color-white: hsl(0deg 0% 99%);
   --color-red: var(--palette-red-50);
   --color-orange: var(--palette-orange-50);
   --color-yellow: var(--palette-yellow-50);
   --color-dark-blue: var(--palette-dark-blue-50);
 
   /* gradient colors */
+
   /* generated using https://www.joshwcomeau.com/css/make-beautiful-gradients/ */
 
   $gradient-red-blue: hsl(0deg 85% 60%) 0%, hsl(349deg 75% 55%) 11%,
@@ -79,7 +82,7 @@
 
   @include create-gradient-properties("red-blue", $gradient-red-blue);
 
-  $gradient-blue-black: hsl(258deg 100% 50%) 0%, rgb(75, 11, 224) 21%,
+  $gradient-blue-black: hsl(258deg 100% 50%) 0%, rgb(75 11 224) 21%,
     hsl(258deg 85% 41%) 30%, hsl(258deg 80% 36%) 39%, hsl(258deg 75% 30%) 46%,
     hsl(259deg 69% 25%) 54%, hsl(260deg 63% 19%) 61%, hsl(262deg 55% 14%) 69%,
     hsl(273deg 53% 8%) 79%, hsl(0deg 0% 0%) 100%;
@@ -125,26 +128,24 @@
   --heading-2: clamp(1.8rem, 1.66vw + 1.43rem, 2.54rem);
   --heading-1: clamp(2.03rem, 2.19vw + 1.54rem, 3rem);
   --heading-hero: clamp(2.03rem, 2.5vw + 2rem, 4rem);
-
   --heading-line-height: 1.3;
   --heading-margin-block-end: 1rem;
   --heading-margin-block-start: 0;
   --heading-weight: 500;
 
   /* fonts */
-  --font-fallback: -apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, Arial,
-    sans-serif, Apple Color Emoji, Segoe UI Emoji;
+  --font-fallback: -apple-system, blinkmacsystemfont, segoe ui, helvetica, arial,
+    sans-serif, apple color emoji, segoe ui emoji;
   --font-body: "Josefin Slab", var(--font-fallback);
   --font-heading: "Josefin Sans", var(--font-fallback);
-  --font-code: "JetBrains Mono", "IBM Plex Mono", Consolas, "Andale Mono WT",
+  --font-code: "JetBrains Mono", "IBM Plex Mono", consolas, "Andale Mono WT",
     "Andale Mono", "Lucida Console", "Lucida Sans Typewriter",
     "DejaVu Sans Mono", "Bitstream Vera Sans Mono", "Liberation Mono",
-    "Nimbus Mono L", Monaco, "Courier New", Courier, monospace;
-}
+    "Nimbus Mono L", monaco, "Courier New", courier, monospace;
 
-/* property values for colours, and based on theme */
-:root {
+  /* property values for colours, and based on theme */
   color-scheme: light;
+
   --theme-divider: var(--palette-grey-60);
   --theme-text: var(--color-black);
   --theme-bg: var(--color-white);
@@ -162,6 +163,7 @@
 @media (prefers-color-scheme: dark) {
   :root {
     color-scheme: dark;
+
     --theme-divider: var(--palette-grey-90);
     --theme-text: var(--color-white);
     --theme-text-muted: var(--palette-grey-80);
