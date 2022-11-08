@@ -11,7 +11,9 @@ export default function Hero() {
     <section className={HeroStyles.hero}>
       <div className={LayoutStyles.container}>
         <h1 className={HeroStyles.title}>
-          <p>Hey 👋</p>
+          <p>
+            Hey <span className={HeroStyles.wave}>👋</span>
+          </p>
           <p>
             I'm Joseph Shambrook, a front&#8209;end developer living in
             {weather ? ` ${weather}` : ""} Edinburgh, UK, focused on creating
