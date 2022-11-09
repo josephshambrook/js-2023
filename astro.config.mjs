@@ -1,11 +1,12 @@
 import { defineConfig } from "astro/config";
 
 // integrations
-import sitemap from "@astrojs/sitemap";
-import preact from "@astrojs/preact";
-import svelte from "@astrojs/svelte";
+import mdx from "@astrojs/mdx";
 import image from "@astrojs/image";
 import react from "@astrojs/react";
+import preact from "@astrojs/preact";
+import svelte from "@astrojs/svelte";
+import sitemap from "@astrojs/sitemap";
 
 // these plugins come as default with Astro, but cause a race condition
 // when combined with other plugins, as the defaults are run after my
@@ -22,7 +23,7 @@ import rehypeAutolinkHeadings from "rehype-autolink-headings";
 // https://astro.build/config
 export default defineConfig({
   site: "https://www.josephshambrook.dev",
-  integrations: [sitemap(), preact(), svelte(), react(), image()],
+  integrations: [mdx(), image(), react(), preact(), svelte(), sitemap()],
   markdown: {
     remarkPlugins: [
       // support for GitHub Flavored Markdown

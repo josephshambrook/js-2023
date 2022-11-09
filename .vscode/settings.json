@@ -19,5 +19,8 @@
     "vue",
     "svelte",
     "astro"
-  ]
+  ],
+  "files.associations": {
+    "*.mdx": "markdown"
+  }
 }
