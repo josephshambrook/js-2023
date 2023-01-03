@@ -8,24 +8,26 @@ type Props = {
 const { headings } = Astro.props;
 ---
 
-<nav>
-  <h2 class="title">Table of contents</h2>
+{
+  headings && headings.length > 0 && (
+    <nav>
+      <h2 class="title">Table of contents</h2>
 
-  <ul>
-    {
-      headings.map((heading) => {
-        return (
-          <li>
-            <a href={`#${heading.slug}`}>
-              <Fragment set:html={"&nbsp;".repeat(heading.depth - 2)} />
-              {heading.text.slice(1)}
-            </a>
-          </li>
-        );
-      })
-    }
-  </ul>
-</nav>
+      <ul>
+        {headings.map((heading) => {
+          return (
+            <li>
+              <a href={`#${heading.slug}`}>
+                <Fragment set:html={"&nbsp;".repeat(heading.depth - 2)} />
+                {heading.text}
+              </a>
+            </li>
+          );
+        })}
+      </ul>
+    </nav>
+  )
+}
 
 <style lang="scss">
   @import "../styles/base/mixins";

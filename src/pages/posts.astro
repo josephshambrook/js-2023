@@ -15,9 +15,14 @@ const pageMetadata: Partial<SiteMetadata> = {
 };
 
 // lists all Markdown posts in the repo
-let allPosts = await Astro.glob("./posts/**/*.md");
+let allPosts = await Astro.glob("./posts/**/*");
 allPosts = allPosts
-  .filter((post) => !post.frontmatter.draft ?? false)
+  .filter((post) => {
+    // if in development mode, show everything
+    if (import.meta.env.DEV) return true;
+    // if the draft key is true, filter it out
+    return !post.frontmatter.draft ?? false;
+  })
   .sort(
     (a, b) =>
       new Date(b.frontmatter.publishDate).valueOf() -

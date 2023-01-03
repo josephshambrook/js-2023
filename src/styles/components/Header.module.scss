@@ -8,7 +8,7 @@
 }
 
 .skip-link {
-  background: var(--theme-header);
+  background: var(--component-header);
   color: #fff;
   padding: 4px;
   position: absolute;
@@ -27,7 +27,7 @@
 .header {
   --header-text-color: var(--color-white);
 
-  background-color: var(--theme-header);
+  background-color: var(--component-header);
   font-family: var(--font-heading);
   font-size: 1.2rem;
   line-height: 1;

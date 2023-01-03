@@ -44,7 +44,7 @@ It's fine if you haven't heard of it, but you might have used it.
 Emmet is a little tool that comes pre-installed in code editors like VS Code, and allows you to write short dynamic CSS snippets that expand to full-length HTML or JSX. For example:
 
 ```css
-  div.a-class#an-id
+div.a-class#an-id
 ```
 
 Hit shift after writing the above in a HTML file or within JSX, and that expands to:
