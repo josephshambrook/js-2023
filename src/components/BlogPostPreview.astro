@@ -8,15 +8,21 @@ export interface Props {
 }
 
 const { post } = Astro.props;
-const { publishDate, tags } = post.frontmatter;
+const {
+  title,
+  description,
+  publishDate,
+  tags,
+  draft = false,
+} = post.frontmatter;
 ---
 
 <article class="post-preview">
   <a href={post.url}>
-    <h2 class="title">{post.frontmatter.title}</h2>
+    <h2 class="title">{title}{draft ? " (DRAFT)" : ""}</h2>
   </a>
 
-  <p>{post.frontmatter.description}</p>
+  <p>{description}</p>
 
   <BlogPostMetadata publishDate={publishDate} tags={tags} />
 </article>
