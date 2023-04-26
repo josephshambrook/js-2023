@@ -11,11 +11,13 @@
     "lint:css": "stylelint \"**/*.{css,scss,astro,vue,svelte}\"",
     "lint:css:fix": "stylelint \"**/*.{css,scss,astro,vue,svelte}\"",
     "build": "astro build",
-    "build:ci": "npm install -g pnpm && pnpm i && pnpm build",
+    "build:ci": "npm run build",
     "preview": "astro preview",
     "upgrade:deps": "npx npm-check-updates -i",
-    "upgrade:pnpm": "pnpm add -g @pnpm/exe",
-    "prepare": "husky install"
+    "prepare": "husky install",
+    "//": "had to disable pnpm as hit a few installation problems :(",
+    "build:ci:pnpm": "npm install -g pnpm && pnpm i && pnpm build",
+    "upgrade:pnpm": "pnpm add -g @pnpm/exe"
   },
   "husky": {
     "hooks": {
