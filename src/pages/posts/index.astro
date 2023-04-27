@@ -18,7 +18,7 @@ const pageMetadata: Partial<SiteMetadata> = {
 };
 
 // lists all Markdown posts in the repo
-let allPosts = await await getCollection("posts");
+let allPosts = await getCollection("posts");
 
 allPosts = allPosts
   .filter((post) => {
