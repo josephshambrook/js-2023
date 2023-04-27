@@ -12,13 +12,17 @@ import Footer from "../components/Footer.svelte";
 import Spotify from "../components/Spotify.astro";
 
 // content
-import { Content as ShortBio } from "@content/bio-short.md";
-import { SiteMetadata } from "@src/types";
+// import { Content as ShortBio } from "@content/bio-short.md";
+import { getEntryBySlug } from "astro:content";
 
 // types
+import type { SiteMetadata } from "@src/types";
 export type Props = Partial<SiteMetadata>;
 
 // js
+const shortBioEntry = await getEntryBySlug("bio", "short");
+const { Content: ShortBio } = await shortBioEntry.render();
+
 const { title, subtitle, description, permalink } = Astro.props;
 ---
 

@@ -1,4 +1,4 @@
-<script type="ts">
+<script lang="ts">
   import type { LocalStorageTracks, TracksResponse } from "@src/types";
   import { backupSpotifyTracks } from "@data/backup-spotify-tracks";
   import {

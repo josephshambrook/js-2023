@@ -1,17 +1,14 @@
-<script type="ts">
+<script lang="ts">
   // dependencies
   import cns from "classnames";
 
   // data
-  import { FooterSection } from "../types";
+  import type { FooterSection } from "../types";
   import { SOCIAL_LINKS } from "src/constants";
 
   // styles
   import layoutStyles from "@styles/layouts/layout.module.scss";
   import footerStyles from "@styles/components/Footer.module.scss";
-
-  // assets
-  import logo from "/assets/logos/svg/logo-on-dark.svg";
 
   const sections: FooterSection[] = [
     {
@@ -47,7 +44,11 @@
   <div class={cns(layoutStyles.container, layoutStyles["grid-auto"])}>
     <section class={footerStyles["section-intro"]}>
       <a href="/">
-        <img src={logo} class={footerStyles.logo} alt="Joseph Shambrook logo" />
+        <img
+          src="/assets/logos/svg/logo-on-dark.svg"
+          class={footerStyles.logo}
+          alt="Joseph Shambrook logo"
+        />
       </a>
       <p class={footerStyles.intro}>
         A front-end developer, living in Edinburgh, UK.
