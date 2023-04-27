@@ -26,6 +26,8 @@
       "@pages/*": ["src/pages/*"],
       "@styles/*": ["src/styles/*"],
       "@utils/*": ["src/utils/*"]
-    }
+    },
+    // allow jsx
+    "jsx": "react-jsx"
   }
 }

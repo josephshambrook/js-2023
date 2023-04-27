@@ -14,6 +14,7 @@
     "build:ci": "npm run build",
     "preview": "astro preview",
     "upgrade:deps": "npx npm-check-updates -i",
+    "type-check": "tsc --noEmit",
     "prepare": "husky install",
     "//": "had to disable pnpm as hit a few installation problems :(",
     "build:ci:pnpm": "npm install -g pnpm && pnpm i && pnpm build",

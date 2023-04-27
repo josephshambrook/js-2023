@@ -13,8 +13,8 @@ import sitemap from "@astrojs/sitemap";
 // own custom plugins rather than before, and I kind of need them to
 // run before! Therefore, taken the manual step of taking the plugins and
 // installing them myself
-import remarkGfm from "remark-gfm";
-import smartypants from "remark-smartypants";
+// import remarkGfm from "remark-gfm";
+// import smartypants from "remark-smartypants";
 
 // custom remark or rehype plugins
 import rehypeSlug from "rehype-slug";

@@ -1,4 +1,4 @@
-import { TracksResponse } from "@src/types";
+import type { TracksResponse } from "@src/types";
 
 export const backupSpotifyTracks: TracksResponse[] = [
   {

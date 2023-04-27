@@ -6,6 +6,7 @@ type Props = {
 };
 
 const { headings } = Astro.props;
+console.log("🚀 ~ file: TableOfContents.astro:9 ~ headings:", headings);
 ---
 
 {
@@ -19,7 +20,8 @@ const { headings } = Astro.props;
             <li>
               <a href={`#${heading.slug}`}>
                 <Fragment set:html={"&nbsp;".repeat(heading.depth - 2)} />
-                {heading.text}
+                {/* add slice to remove the extra hash */}
+                {heading.text.slice(1)}
               </a>
             </li>
           );
