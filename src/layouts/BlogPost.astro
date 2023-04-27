@@ -14,20 +14,19 @@ import BlogPostContent from "../components/BlogPostContent.astro";
 import BlogPostMetadata from "@components/BlogPostMetadata.astro";
 
 // types
-import type { MarkdownLayoutProps } from "astro";
 import TableOfContents from "@src/components/TableOfContents.astro";
 
-// TODO: fix these props
-type Props = MarkdownLayoutProps<{
-  title: string;
-  author: string;
-  date: string;
-}>;
-
 // javascript
-const { content, headings } = Astro.props;
-const { title, description, publishDate, heroImage, permalink, alt, tags } =
-  content;
+const {
+  title,
+  description,
+  publishDate,
+  heroImage,
+  permalink,
+  alt,
+  tags,
+  headings,
+} = Astro.props;
 ---
 
 <Base subtitle={title} {description} {permalink}>

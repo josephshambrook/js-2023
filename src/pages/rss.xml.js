@@ -1,7 +1,4 @@
-import rss from "@astrojs/rss";
-
-const postImportResult = import.meta.glob("./posts/**/*.md", { eager: true });
-const posts = Object.values(postImportResult);
+import rss, { pagesGlobToRssItems } from "@astrojs/rss";
 
 function addQueryParam(uri, key, value) {
   var re = new RegExp("([?&])" + key + "=.*?(&|$)", "i");
@@ -15,8 +12,9 @@ function addQueryParam(uri, key, value) {
   return uri;
 }
 
-export const get = () =>
-  rss({
+export const get = async () => {
+  const posts = await getCollection("posts");
+  return rss({
     // `<title>` field in output xml
     title: "Joseph Shambrook",
     // `<description>` field in output xml
@@ -28,12 +26,15 @@ export const get = () =>
     // SITE will use "site" from the project's astro.config.
     site: import.meta.env.SITE,
     // list of `<item>`s in output xml
+    // TODO: restore adding query param to urls
     items: posts
-      .filter((post) => !post.frontmatter.draft ?? false)
+      .filter((post) => !post.data.draft ?? false)
       .map((post) => ({
-        link: addQueryParam(post.url, "at_medium", "rss"),
-        title: post.frontmatter.title,
-        pubDate: post.frontmatter.publishDate,
-        description: post.frontmatter.description,
+        link: addQueryParam(`/posts/${post.url}`, "at_medium", "rss"),
+        title: post.data.title,
+        pubDate: post.data.publishDate,
+        description: post.data.description,
       })),
+    // items: postImportResult,
   });
+};

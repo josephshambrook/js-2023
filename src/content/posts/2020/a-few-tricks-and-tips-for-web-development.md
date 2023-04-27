@@ -1,5 +1,4 @@
 ---
-layout: ../../../layouts/BlogPost.astro
 title: "A few tricks and tips for web development"
 publishDate: 2020-10-13 14:06:31 +0000
 lastEditDate: 2020-10-21 11:25:45 +0000

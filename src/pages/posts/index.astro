@@ -3,8 +3,11 @@
 import BlogPostsLayout from "@layouts/BlogPosts.astro";
 import BlogPostPreview from "@components/BlogPostPreview.astro";
 
+// content
+import { getCollection } from "astro:content";
+
 // types
-import { SiteMetadata } from "@src/types";
+import type { SiteMetadata } from "@src/types";
 
 // javascript
 const pageMetadata: Partial<SiteMetadata> = {
@@ -15,18 +18,19 @@ const pageMetadata: Partial<SiteMetadata> = {
 };
 
 // lists all Markdown posts in the repo
-let allPosts = await Astro.glob("./posts/**/*");
+let allPosts = await await getCollection("posts");
+
 allPosts = allPosts
   .filter((post) => {
     // if in development mode, show everything
     if (import.meta.env.DEV) return true;
     // if the draft key is true, filter it out
-    return !post.frontmatter.draft ?? false;
+    return !post.data.draft ?? false;
   })
   .sort(
     (a, b) =>
-      new Date(b.frontmatter.publishDate).valueOf() -
-      new Date(a.frontmatter.publishDate).valueOf()
+      new Date(b.data.publishDate).valueOf() -
+      new Date(a.data.publishDate).valueOf()
   );
 ---
 

@@ -1,5 +1,4 @@
 ---
-layout: ../../../layouts/BlogPost.astro
 title: "Let's talk about mental health"
 publishDate: 2018-06-12 13:13:00 +0100
 categories: post

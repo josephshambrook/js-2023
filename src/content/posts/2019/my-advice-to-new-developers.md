@@ -1,5 +1,4 @@
 ---
-layout: ../../../layouts/BlogPost.astro
 title: "My advice to new developers"
 publishDate: 2019-04-02 12:00:00 +0000
 categories: post

@@ -25,17 +25,6 @@ export default defineConfig({
   site: "https://www.josephshambrook.dev",
   integrations: [mdx(), image(), react(), preact(), svelte(), sitemap()],
   markdown: {
-    remarkPlugins: [
-      // support for GitHub Flavored Markdown
-      remarkGfm,
-
-      // change certain punctuation to fancy version
-      // excluding quotes as these impact code snippets
-      () =>
-        smartypants({
-          quotes: false,
-        }),
-    ],
     rehypePlugins: [
       // create an ID attribute for each heading found
       // Astro does do this too, but after plugins are used
@@ -60,6 +49,5 @@ export default defineConfig({
           },
         }),
     ],
-    extendDefaultPlugins: false,
   },
 });
