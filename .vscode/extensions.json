@@ -9,9 +9,9 @@
     "tlahmann.alex-linter",
     "dbaeumer.vscode-eslint",
     "esbenp.prettier-vscode",
-    "cssho.vscode-svgviewer",
     "wayou.vscode-todo-highlight",
-    "stylelint.vscode-stylelint"
+    "stylelint.vscode-stylelint",
+    "valentjn.vscode-ltex"
   ],
   "unwantedRecommendations": []
 }

@@ -5,7 +5,7 @@ import BlogPostPreview from "@components/BlogPostPreview.astro";
 import Spotify from "@components/Spotify.astro";
 
 // lists all Markdown posts in the repo
-let allPosts = await Astro.glob("./posts/**/*.md");
+let allPosts = await Astro.glob("./posts/**/*");
 
 // sort the posts in order of publish date, and limit to top 3
 allPosts = allPosts

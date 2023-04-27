@@ -1,0 +1,1 @@
+{"rule":"UPPERCASE_SENTENCE_START","sentence":"^\\Qimport InfoBox from \"@components/InfoBox.svelte\";\\E$"}
