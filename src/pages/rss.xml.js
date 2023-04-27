@@ -1,4 +1,5 @@
-import rss, { pagesGlobToRssItems } from "@astrojs/rss";
+import rss from "@astrojs/rss";
+import { getCollection } from "astro:content";
 
 function addQueryParam(uri, key, value) {
   var re = new RegExp("([?&])" + key + "=.*?(&|$)", "i");
