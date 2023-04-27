@@ -6,8 +6,8 @@
     "node": "^16.14.2"
   },
   "scripts": {
-    "dev": "astro dev",
     "start": "astro dev",
+    "dev": "astro check --watch & astro dev",
     "lint:css": "stylelint \"**/*.{css,scss,astro,vue,svelte}\"",
     "lint:css:fix": "stylelint \"**/*.{css,scss,astro,vue,svelte}\"",
     "build": "astro build",
