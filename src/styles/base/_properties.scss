@@ -110,6 +110,7 @@
     hsl(50deg 90% 64%) 22%, hsl(50deg 90% 69%) 33%, hsl(50deg 90% 74%) 44%,
     hsl(50deg 91% 79%) 56%, hsl(50deg 90% 84%) 67%, hsl(50deg 89% 89%) 78%,
     hsl(50deg 92% 95%) 89%, hsl(0deg 0% 100%) 100%;
+
   @include create-gradient-properties("yellow-white", $gradient-yellow-white);
 
   /* spacing and sizing */
