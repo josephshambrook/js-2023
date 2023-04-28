@@ -17,6 +17,8 @@
     "types": ["vite/client", "@astrojs/image/client"],
     // allow jsx when checking types
     "jsx": "react-jsx",
+    // skip type checking of all declaration files
+    "skipLibCheck": true,
     // path aliases, to simplify imports
     "paths": {
       "@src/*": ["src/*"],
