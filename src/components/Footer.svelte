@@ -2,14 +2,17 @@
   // dependencies
   import cns from "classnames";
 
-  // data
+  //types
   import type { FooterSection } from "../types";
+
+  // data
   import { SOCIAL_LINKS } from "src/constants";
 
   // styles
   import layoutStyles from "@styles/layouts/layout.module.scss";
   import footerStyles from "@styles/components/Footer.module.scss";
 
+  // js
   const sections: FooterSection[] = [
     {
       heading: "Menu",
