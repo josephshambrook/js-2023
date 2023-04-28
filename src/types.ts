@@ -1,6 +1,7 @@
 export type FooterLink = {
   text: string;
   href: string;
+  external?: boolean;
 };
 
 export type FooterSection = {

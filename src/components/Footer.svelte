@@ -32,9 +32,9 @@
     {
       heading: "Useful Links",
       links: [
-        { text: "GitHub", href: SOCIAL_LINKS.github },
-        { text: "LinkedIn", href: SOCIAL_LINKS.linkedin },
-        { text: "CodePen", href: SOCIAL_LINKS.codepen },
+        { text: "GitHub", href: SOCIAL_LINKS.github, external: true },
+        { text: "LinkedIn", href: SOCIAL_LINKS.linkedin, external: true },
+        { text: "CodePen", href: SOCIAL_LINKS.codepen, external: true },
       ],
     },
   ];
@@ -63,8 +63,9 @@
               <a
                 href={link.href}
                 class={footerStyles["section-link"]}
-                target="_blank"
-                rel="noopener noreferrer">{link.text}</a
+                target={link.external ? "_blank" : null}
+                rel={link.external ? "noopener noreferrer" : null}
+                >{link.text}</a
               >
             </li>
           {/each}
