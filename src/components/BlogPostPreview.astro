@@ -11,7 +11,7 @@ const { title, description, publishDate, tags, draft = false } = post.data;
 ---
 
 <article class="post-preview">
-  <a href={`posts/${post.slug}`}>
+  <a href={`/posts/${post.slug}`}>
     <h2 class="title">{title}{draft ? " (DRAFT)" : ""}</h2>
   </a>
 
