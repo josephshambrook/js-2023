@@ -19,7 +19,8 @@ const { headings } = Astro.props;
             <li>
               <a href={`#${heading.slug}`}>
                 <Fragment set:html={"&nbsp;".repeat(heading.depth - 2)} />
-                {heading.text}
+                {/* add slice to remove the extra hash */}
+                {heading.text.slice(1)}
               </a>
             </li>
           );

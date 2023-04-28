@@ -1,18 +1,22 @@
 ---
-// Component Imports
+// components
 import HomeLayout from "@layouts/Home.astro";
 import BlogPostPreview from "@components/BlogPostPreview.astro";
 import Spotify from "@components/Spotify.astro";
 
+// content
+import { getCollection } from "astro:content";
+
 // lists all Markdown posts in the repo
-let allPosts = await Astro.glob("./posts/**/*");
+// let allPosts = await Astro.glob("./posts/**/*");
+let allPosts = await getCollection("posts");
 
 // sort the posts in order of publish date, and limit to top 3
 allPosts = allPosts
   .sort(
     (a, b) =>
-      new Date(b.frontmatter.publishDate).valueOf() -
-      new Date(a.frontmatter.publishDate).valueOf()
+      new Date(b.data.publishDate).valueOf() -
+      new Date(a.data.publishDate).valueOf()
   )
   .slice(0, 3);
 ---

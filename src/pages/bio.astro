@@ -17,13 +17,14 @@ let description =
 let permalink = "https://josephshambrook.dev/bio";
 
 // yes I pulled this from Stack Overflow
-function calculateAge(birthday) {
+function calculateAge(birthday: number) {
   var ageDifMs = Date.now() - birthday;
   var ageDate = new Date(ageDifMs);
   return Math.abs(ageDate.getUTCFullYear() - 1970);
 }
 
-const daughterAge = calculateAge(new Date(2019, 6, 19));
+const daughterBirthday = new Date(2019, 6, 19).valueOf();
+const daughterAge = calculateAge(daughterBirthday);
 ---
 
 <MainLayout title={title} description={description} permalink={permalink}>

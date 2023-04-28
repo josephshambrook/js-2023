@@ -1,18 +1,18 @@
-<script type="ts">
+<script lang="ts">
   // dependencies
   import cns from "classnames";
 
+  //types
+  import type { FooterSection } from "../types";
+
   // data
-  import { FooterSection } from "../types";
   import { SOCIAL_LINKS } from "src/constants";
 
   // styles
   import layoutStyles from "@styles/layouts/layout.module.scss";
   import footerStyles from "@styles/components/Footer.module.scss";
 
-  // assets
-  import logo from "/assets/logos/svg/logo-on-dark.svg";
-
+  // js
   const sections: FooterSection[] = [
     {
       heading: "Menu",
@@ -35,9 +35,9 @@
     {
       heading: "Useful Links",
       links: [
-        { text: "GitHub", href: SOCIAL_LINKS.github },
-        { text: "LinkedIn", href: SOCIAL_LINKS.linkedin },
-        { text: "CodePen", href: SOCIAL_LINKS.codepen },
+        { text: "GitHub", href: SOCIAL_LINKS.github, external: true },
+        { text: "LinkedIn", href: SOCIAL_LINKS.linkedin, external: true },
+        { text: "CodePen", href: SOCIAL_LINKS.codepen, external: true },
       ],
     },
   ];
@@ -47,7 +47,11 @@
   <div class={cns(layoutStyles.container, layoutStyles["grid-auto"])}>
     <section class={footerStyles["section-intro"]}>
       <a href="/">
-        <img src={logo} class={footerStyles.logo} alt="Joseph Shambrook logo" />
+        <img
+          src="/assets/logos/svg/logo-on-dark.svg"
+          class={footerStyles.logo}
+          alt="Joseph Shambrook logo"
+        />
       </a>
       <p class={footerStyles.intro}>
         A front-end developer, living in Edinburgh, UK.
@@ -62,8 +66,9 @@
               <a
                 href={link.href}
                 class={footerStyles["section-link"]}
-                target="_blank"
-                rel="noopener noreferrer">{link.text}</a
+                target={link.external ? "_blank" : null}
+                rel={link.external ? "noopener noreferrer" : null}
+                >{link.text}</a
               >
             </li>
           {/each}

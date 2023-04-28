@@ -9,7 +9,9 @@ Once you have cloned the repo locally and ran `npm i` (or `npm install` if you l
 ```bash
 # starts the dev server at http://localhost:3000
 npm start
-# `npm run dev` works too
+
+# does the same as npm start, but also runs TS type-checking at the same time
+npm run dev
 
 # builds the website in production mode
 npm run build

@@ -1,4 +1,4 @@
-<script type="ts">
+<script lang="ts">
   import type { LocalStorageTracks, TracksResponse } from "@src/types";
   import { backupSpotifyTracks } from "@data/backup-spotify-tracks";
   import {
@@ -60,8 +60,11 @@
     {#each tracks as track}
       <li class={SpotifyStyles["track"]}>
         <div class={SpotifyStyles["track-name"]}>
-          <a href={track.href} title={`Open "${track.name}" on Spotify`}
-            >{track.name}</a
+          <a
+            href={track.href}
+            title={`Open "${track.name}" on Spotify`}
+            target="_blank"
+            rel="noopener noreferrer">{track.name}</a
           >
         </div>
         <div>{track.artist}</div>
