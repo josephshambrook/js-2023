@@ -1,6 +1,8 @@
-# Joseph Shambrook 2023
+![Banner image containing my logo in the center](/public/assets/IMG_0343.png)
 
-My brand new website. Complete with a blog, a proper design, and (bloody finally) some sense of direction.
+<h1 align="center">Joseph Shambrook 2023</h1>
+
+<p align="center">My brand new website. Complete with a blog, a proper design, and (bloody finally) some sense of direction.</p>
 
 ## Try it yourself
 
