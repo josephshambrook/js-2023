@@ -1,5 +1,7 @@
-@import "./base/fonts";
-@import "./base/mixins";
-@import "./base/properties";
-@import "./base/reset";
-@import "./base/utils";
+@use "/node_modules/normalize.css/normalize";
+
+@use "./base/fonts";
+@use "./base/mixins";
+@use "./base/properties";
+@use "./base/reset";
+@use "./base/utils";

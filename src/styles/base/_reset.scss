@@ -77,27 +77,24 @@ small,
   font-size: var(--text-small-size);
 }
 
-code {
-  background-color: var(--theme-code-bg);
+pre {
+  border-radius: 5px;
+  line-height: 1.5;
+  padding: 0.5rem 1rem;
+}
+
+pre > code {
+  background-color: transparent;
+}
+
+:is(code, kbd, samp) {
   border-radius: 5px;
   font-family: var(--font-code);
   font-feature-settings: "liga" on, "calt" on;
   font-weight: 400;
   font-size: calc(var(--text-body-size) - 20%);
   max-width: 100%;
-  padding: 0.1rem 0.25rem;
   text-rendering: optimizelegibility;
-}
-
-pre {
-  border-radius: 5px;
-  padding-block-end: 1rem;
-  padding-block-start: 1rem;
-  max-width: 100%;
-}
-
-pre > code {
-  background-color: transparent;
 }
 
 .text-em {
