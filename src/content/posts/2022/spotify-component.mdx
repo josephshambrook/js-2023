@@ -1,0 +1,63 @@
+---
+title: "Building a Spotify Top Tracks component using Cloudflare Workers"
+publishDate: 2022-11-13 01:00:00 +0000
+categories: post
+description: "A guide for using Cloudflare Workers to deploy a small API, for fetching data from Spotify"
+draft: true
+tags: ["spotify", "cloudflare workers", "tutorial"]
+---
+
+import InfoBox from "@components/InfoBox.svelte";
+
+As part of [building my new website](/posts/2022/new-website/), I developed a small widget for the sidebar containing a list of Spotify tracks I have listened to the most in the recent past. I enjoyed making it, especially as it was one of my first forays into serverless functions, so here's a tutorial on how I did it.
+
+## What are Cloudflare Workers?
+
+Cloudflare Workers is a platform to run serverless functions on the edge.
+
+If you're like me when I was figuring out what they are, that meant nearly nothing to you, so I'll break it down a bit.
+
+Serverless functions are essentially a way of running code on a server when specifically requested. They are typically hosted on services where these functions can be called at any time, with little delay.
+
+The "edge" refers to functions that are hosted as physically close as possible to where it is being called from. Serverless functions are typically deployed in a broad georgraphic region like `eu-west`, but edge functions are typically delivered from **cities** closest to the user.
+
+Finally, Cloudflare Workers is a "serverless JavaScript platform". Using it, you can
+create small, independent environments containing JavaScript, which can then
+be run only when requested.
+
+## Step 1: Creating a new Cloudflare Worker
+
+Before you can do anything, Cloudflare needs to know who the hell you are first, so [sign up for a free Cloudflare account](https://dash.cloudflare.com/sign-up).
+
+<InfoBox>
+  [A free Cloudflare account does have
+  limits](https://developers.cloudflare.com/workers/platform/limits/) to be
+  aware of, but they are pretty generous, and it is unlikely you will hit them
+  until your worker starts getting seriously smashed with usage.
+</InfoBox>
+
+Cloudflare Workers are great, but getting started is a little more convoluted than it should be. Sure, you can use the [Wrangler CLI tool](https://developers.cloudflare.com/workers/wrangler/get-started/) to initialize a basic project, but it does not come with file watching functionality, the logging is basic, and it runs your work-in-progress in the cloud rather than locally.
+
+The solution to this is to use [Miniflare](https://miniflare.dev/) instead. Miniflare runs projects fully locally, comes with features you would expect from a modern JavaScript CLI tool, and has run beautifully since I started using it.
+
+To get started with Miniflare, run the following:
+
+```bash
+npm i
+```
+
+```css
+.div {
+  visibility: hidden;
+}
+
+div {
+  visibility: visible;
+}
+```
+
+## Step 2: Getting permission from Spotify
+
+## Step 3: Retrieving and returning Spotify data
+
+## Step 4: Deploying and testing

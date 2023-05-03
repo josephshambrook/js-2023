@@ -1,0 +1,243 @@
+---
+layout: ../../layouts/Test.astro
+---
+
+# Test of code blocks
+
+A test of multiple code blocks, and their relative syntax highlighting kicking in via Astro and whatever plugin they use.
+
+## HTML
+
+```html
+<style>
+  .Aligner {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+</style>
+
+<div class="Aligner">
+  <div class="Aligner-item">
+    Content within an aligner item, long enough to test the wrap of code, or
+    maybe the scrollbar?
+  </div>
+</div>
+
+<!-- An HTML comment -->
+```
+
+## CSS
+
+```css
+body {
+  font-size: 1rem;
+}
+
+.Aligner-item {
+  max-width: 50%;
+}
+
+#an-id {
+  font-size: 2rem;
+}
+
+[class^="start-"] {
+  font-size: 3rem;
+}
+
+// single-line comment
+
+/*
+ * multi-line comment
+ */
+```
+
+## JavaScript
+
+```js
+// posts will be populated at build time by getStaticProps()
+function Blog({ posts }) {
+  return (
+    <ul>
+      {posts.map((post) => (
+        <li>{post.title}</li>
+      ))}
+    </ul>
+  );
+}
+
+// This function gets called at build time on server-side.
+export async function getStaticProps() {
+  const res = await fetch("https://.../posts");
+  const posts = await res.json();
+
+  return {
+    props: {
+      posts,
+    },
+  };
+}
+
+export default Blog;
+```
+
+## TypeScript
+
+```ts
+// posts will be populated at build time by getStaticProps()
+function Blog({ posts }) {
+  return (
+    <ul>
+      {posts.map((post) => (
+        <li>{post.title}</li>
+      ))}
+    </ul>
+  );
+}
+
+// This function gets called at build time on server-side.
+export async function getStaticProps() {
+  const res = await fetch("https://.../posts");
+  const posts = await res.json();
+
+  return {
+    props: {
+      posts,
+    },
+  };
+}
+
+export default Blog;
+```
+
+## Docker
+
+```docker
+# syntax=docker/dockerfile:1
+FROM mcr.microsoft.com/dotnet/sdk:5.0 AS build-env
+WORKDIR /app
+
+# Copy csproj and restore as distinct layers
+COPY *.csproj ./
+RUN dotnet restore
+
+# Copy everything else and build
+COPY ../engine/examples ./
+RUN dotnet publish -c Release -o out
+
+# Build runtime image
+FROM mcr.microsoft.com/dotnet/aspnet:3.1
+WORKDIR /app
+COPY --from=build-env /app/out .
+ENTRYPOINT ["dotnet", "aspnetapp.dll"]
+```
+
+```codeql
+// a query
+
+/**
+ * @name LDAP query built from user-controlled sources
+ * @description Building an LDAP query from user-controlled sources is vulnerable to insertion of
+ *              malicious LDAP code by the user.
+ * @kind path-problem
+ * @problem.severity error
+ * @id py/ldap-injection
+ * @tags experimental
+ *       security
+ *       external/cwe/cwe-090
+ */
+
+import python
+import experimental.semmle.python.security.injection.LDAP
+import DataFlow::PathGraph
+
+from LDAPInjectionFlowConfig config, DataFlow::PathNode source, DataFlow::PathNode sink
+where config.hasFlowPath(source, sink)
+select sink.getNode(), source, sink, "$@ LDAP query parameter comes from $@.", sink.getNode(),
+  "This", source.getNode(), "a user-provided value"
+
+// a concept
+
+module LDAPEscape {
+  abstract class Range extends DataFlow::Node {
+    abstract DataFlow::Node getAnInput();
+  }
+}
+
+class LDAPEscape extends DataFlow::Node {
+  LDAPEscape::Range range;
+
+  LDAPEscape() { this = range }
+
+  DataFlow::Node getAnInput() { result = range.getAnInput() }
+}
+
+// a library modeling
+
+private module LDAP2 {
+  private class LDAP2QueryMethods extends string {
+    LDAP2QueryMethods() {
+      this in ["search", "search_s", "search_st", "search_ext", "search_ext_s"]
+    }
+  }
+
+  private class LDAP2Query extends DataFlow::CallCfgNode, LDAPQuery::Range {
+    DataFlow::Node ldapQuery;
+
+    LDAP2Query() {
+      exists(DataFlow::AttrRead searchMethod |
+        this.getFunction() = searchMethod and
+        API::moduleImport("ldap").getMember("initialize").getACall() =
+          searchMethod.getObject().getALocalSource() and
+        searchMethod.getAttributeName() instanceof LDAP2QueryMethods and
+        (
+          ldapQuery = this.getArg(0)
+          or
+          (
+            ldapQuery = this.getArg(2) or
+            ldapQuery = this.getArgByName("filterstr")
+          )
+        )
+      )
+    }
+
+    override DataFlow::Node getQuery() { result = ldapQuery }
+  }
+}
+
+// a taint flow config
+
+class LDAPInjectionFlowConfig extends TaintTracking::Configuration {
+  LDAPInjectionFlowConfig() { this = "LDAPInjectionFlowConfig" }
+
+  override predicate isSource(DataFlow::Node source) { source instanceof RemoteFlowSource }
+
+  override predicate isSink(DataFlow::Node sink) { sink = any(LDAPQuery ldapQuery).getQuery() }
+
+  override predicate isSanitizer(DataFlow::Node sanitizer) {
+    sanitizer = any(LDAPEscape ldapEsc).getAnInput()
+  }
+}
+```
+
+## Astro
+
+```astro
+---
+const name = "world";
+---
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <!-- This... is an Astro comment. -->
+    <title>Hello, {name}</title>
+  </head>
+  <body>
+    <main>
+      <h1>Hello, {name}</h1>
+    </main>
+  </body>
+</html>
+```

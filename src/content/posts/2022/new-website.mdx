@@ -6,6 +6,9 @@ description: "Why creating my own website has taken so long, and tips for gettin
 tags: ["website", "astro", "procrastination"]
 ---
 
+import { Picture } from "@astrojs/image/components";
+import oldWebsiteScreenshot from "../../../../public/assets/images/website-pre-2022.png";
+
 Hello, and welcome to my new design.
 
 I have created a few different versions of my website over time, and most of them never saw the light of deployment. Most were created out of curiosity in a new framework or language, especially those intended to be the "next big thing", but ultimately fizzled out and retired to my private rubbish bin of abandoned ideas.
@@ -16,7 +19,12 @@ Having the skills to create a website is simultaenuously a superpower and a curs
 
 My most recent website design ended up getting abandoned too, to the point where it stated in giant letters that I lived in London, two years after I had migrated to Edinburgh. It was written with Jekyll and deployed for free with GitHub Pages - the most minimal way to get a website started at the time - and consisted of a basic blog and even more basic styling.
 
-!["My old website, showing the main headline"](/assets/images/website-pre-2022.png)
+<Picture
+  src={oldWebsiteScreenshot}
+  widths={[200, 400, 800]}
+  sizes="(max-width: 800px) 100vw, 800px"
+  alt="My old website, showing the main headline"
+/>
 
 It didn't matter how basic it was though. At the time, I was happy to have something out the door. I had procrastinated over the functionality and design of previous website ideas for so long that I wanted something, **anything**, to flaunt as my own.
 

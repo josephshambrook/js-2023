@@ -12,11 +12,17 @@ import sitemap from "@astrojs/sitemap";
 import rehypeSlug from "rehype-slug";
 import rehypeAutolinkHeadings from "rehype-autolink-headings";
 
+// custom theme - cobalt2
+import cobalt2 from "./src/styles/cobalt2.json";
+
 // https://astro.build/config
 export default defineConfig({
   site: "https://www.josephshambrook.dev",
   integrations: [mdx(), image(), react(), preact(), svelte(), sitemap()],
   markdown: {
+    shikiConfig: {
+      theme: cobalt2,
+    },
     rehypePlugins: [
       // create an ID attribute for each heading found
       // Astro does do this too, but after plugins are used
