@@ -6,16 +6,16 @@
    * with help from https://colordesigner.io/
    */
   --base-red: 0 85%;
-  --palette-red-10: hsl(var(--base-red) 12%);
-  --palette-red-20: hsl(var(--base-red) 24%);
-  --palette-red-30: hsl(var(--base-red) 36%);
-  --palette-red-40: hsl(var(--base-red) 48%);
-  --palette-red-50: hsl(var(--base-red) 60%);
-  --palette-red-60: hsl(var(--base-red) 67%);
-  --palette-red-70: hsl(var(--base-red) 74%);
-  --palette-red-80: hsl(var(--base-red) 80%);
-  --palette-red-90: hsl(var(--base-red) 87%);
-  --palette-red-100: hsl(var(--base-red) 94%);
+  --palette-red-10: hsl(var(--base-red) 12%); // #390505
+  --palette-red-20: hsl(var(--base-red) 24%); // #710909
+  --palette-red-30: hsl(var(--base-red) 36%); // #aa0e0e
+  --palette-red-40: hsl(var(--base-red) 48%); // #e21212
+  --palette-red-50: hsl(var(--base-red) 60%); // #f04242
+  --palette-red-60: hsl(var(--base-red) 67%); // #f26363
+  --palette-red-70: hsl(var(--base-red) 74%); // #f58484
+  --palette-red-80: hsl(var(--base-red) 80%); // #f7a1a1
+  --palette-red-90: hsl(var(--base-red) 87%); // #fac2c2
+  --palette-red-100: hsl(var(--base-red) 94%); // #fde3e3
 
   --base-orange: 30 80%;
   --palette-orange-10: hsl(var(--base-orange) 11%);
@@ -30,16 +30,16 @@
   --palette-orange-100: hsl(var(--base-orange) 92%);
 
   --base-yellow: 50 93%;
-  --palette-yellow-10: hsl(var(--base-yellow) 11%);
-  --palette-yellow-20: hsl(var(--base-yellow) 21%);
-  --palette-yellow-30: hsl(var(--base-yellow) 31%);
-  --palette-yellow-40: hsl(var(--base-yellow) 42%);
-  --palette-yellow-50: hsl(var(--base-yellow) 53%);
-  --palette-yellow-60: hsl(var(--base-yellow) 61%);
-  --palette-yellow-70: hsl(var(--base-yellow) 68%);
-  --palette-yellow-80: hsl(var(--base-yellow) 76%);
-  --palette-yellow-90: hsl(var(--base-yellow) 84%);
-  --palette-yellow-100: hsl(var(--base-yellow) 91%);
+  --palette-yellow-10: hsl(var(--base-yellow) 11%); // #362d02
+  --palette-yellow-20: hsl(var(--base-yellow) 21%); // #675704
+  --palette-yellow-30: hsl(var(--base-yellow) 31%); // #998006
+  --palette-yellow-40: hsl(var(--base-yellow) 42%); // #cfae07
+  --palette-yellow-50: hsl(var(--base-yellow) 53%); // #f7d118
+  --palette-yellow-60: hsl(var(--base-yellow) 61%); // #f8d93f
+  --palette-yellow-70: hsl(var(--base-yellow) 68%); // #f9e062
+  --palette-yellow-80: hsl(var(--base-yellow) 76%); // #fbe889
+  --palette-yellow-90: hsl(var(--base-yellow) 84%); // #fcefb0
+  --palette-yellow-100: hsl(var(--base-yellow) 91%); // #fdf6d3
 
   --base-dark-blue: 229 40%;
   --palette-dark-blue-10: hsl(var(--base-dark-blue) 5%);
@@ -113,6 +113,13 @@
 
   @include create-gradient-properties("yellow-white", $gradient-yellow-white);
 
+  $gradient-red: hsl(0deg 85% 48%) 0%, hsl(1deg 80% 51%) 10%,
+    hsl(1deg 81% 53%) 20%, hsl(1deg 82% 56%) 30%, hsl(0deg 84% 58%) 40%,
+    hsl(0deg 85% 60%) 50%, hsl(0deg 85% 61%) 60%, hsl(0deg 85% 63%) 70%,
+    hsl(0deg 85% 64%) 80%, hsl(0deg 85% 66%) 90%, hsl(0deg 85% 67%) 100%;
+
+  @include create-gradient-properties("red", $gradient-red);
+
   /* spacing and sizing */
   --base-size: 20px;
   --container-max-width: 1120px;
@@ -156,6 +163,10 @@
   --theme-heading: var(--color-dark-blue);
   --theme-text-muted: var(--palette-grey-20);
 
+  --theme-scrollbar-track: var(--color-bg);
+  --theme-scrollbar-track-border: var(--palette-grey-70);
+  --theme-scrollbar-thumb: var(--color-red);
+
   --component-header: var(--color-red);
   --component-hero: var(--gradient-red-blue-y);
   --component-metadata-gradient: var(--gradient-red-blue-x);
@@ -176,6 +187,9 @@
     --theme-code-bg: var(--palette-grey-20);
     --theme-link: var(--color-yellow);
     --theme-heading: var(--palette-dark-blue-100);
+
+    --theme-scrollbar-track-border: var(--palette-grey-40);
+    --theme-scrollbar-thumb: var(--color-yellow);
 
     --component-header: var(--color-dark-blue);
     --component-hero: var(--gradient-blue-dark-blue-y);
