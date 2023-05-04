@@ -1,0 +1,79 @@
+---
+// components
+import BlogPostsLayout from "@layouts/BlogPosts.astro";
+import Spotify from "@components/Spotify.astro";
+
+// types
+import type {
+  HardwareItem,
+  SoftwareMacItem,
+  SoftwarePhoneItem,
+} from "@data/uses";
+
+// data
+import { hardware, softwareMac, softwarePhone } from "@data/uses";
+---
+
+<BlogPostsLayout>
+  <div slot="main" class="stack">
+    <h1>The stuff I use</h1>
+
+    <h2>Hardware</h2>
+
+    <ul>
+      {
+        hardware.map((item: HardwareItem) => (
+          <li>
+            {item.link && (
+              <a href={item.link} target="_blank" rel="noopener noreferrer">
+                {item.name}
+              </a>
+            )}
+            {!item.link && <strong>{item.name}</strong>}
+            {item.description && <p set:html={item.description} />}
+          </li>
+        ))
+      }
+    </ul>
+
+    <h2>Software for Mac</h2>
+
+    <ul>
+      {
+        softwareMac.map((item: SoftwareMacItem) => (
+          <li>
+            {item.link && (
+              <a href={item.link} target="_blank" rel="noopener noreferrer">
+                {item.name}
+              </a>
+            )}
+            {!item.link && <strong>{item.name}</strong>}
+            {item.description && <p set:html={item.description} />}
+          </li>
+        ))
+      }
+    </ul>
+
+    <h2>Software for iOS</h2>
+
+    <ul>
+      {
+        softwarePhone.map((item: SoftwarePhoneItem) => (
+          <li>
+            {item.link && (
+              <a href={item.link} target="_blank" rel="noopener noreferrer">
+                {item.name}
+              </a>
+            )}
+            {!item.link && <strong>{item.name}</strong>}
+            {item.description && <p set:html={item.description} />}
+          </li>
+        ))
+      }
+    </ul>
+  </div>
+
+  <div slot="aside">
+    <Spotify />
+  </div>
+</BlogPostsLayout>
