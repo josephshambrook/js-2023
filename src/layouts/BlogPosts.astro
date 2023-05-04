@@ -53,7 +53,7 @@ const { title, subtitle, description, permalink } = Astro.props;
       </slot>
     </main>
 
-    <aside class={layoutStyles.aside}>
+    <aside class={cns(layoutStyles.aside, "stack")}>
       <slot name="aside">
         <ShortBio />
         <Spotify />
