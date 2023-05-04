@@ -57,8 +57,7 @@ export const softwareMac: SoftwareMacItem[] = [
   {
     name: "Visual Studio Code",
     link: "https://code.visualstudio.com/",
-    description:
-      "I don't think there's a single developer left out there who hasn't at least tried VS Code. I used to be all-in with Sublime Text, but VS Code won me over eventually. My extensions and theme of choice are below.",
+    description: `I don't think there's a single developer left out there who hasn't at least tried VS Code. I used to be all-in with Sublime Text, but VS Code won me over eventually. My current theme of choice is <a href="https://marketplace.visualstudio.com/items?itemName=wesbos.theme-cobalt2" target="_blank" rel="noopener noreferrer">Cobalt2</a> by Wes Bos.`,
   },
   {
     name: "Hyper",
@@ -106,33 +105,44 @@ export const softwarePhone: SoftwarePhoneItem[] = [
   {
     name: "Carrot Weather",
     link: "https://apps.apple.com/gb/app/carrot-weather/id961390574",
+    description: "Weather with a sense of humour and a great UI.",
   },
   {
     name: "Pocket Casts",
     link: "https://www.pocketcasts.com/",
+    description: `Great little independent podcast app, mostly for listening to <a href="https://syntax.fm/" target="_blank" rel="noopener noreferrer">Syntax.fm</a>.`,
   },
   {
     name: "Citymapper",
     link: "https://citymapper.com/",
+    description:
+      "My favourite transport app for getting around Edinburgh, London and nearly every city I visit.",
   },
   {
     name: "Reeder",
     link: "https://reederapp.com/",
+    description:
+      "I still use RSS feeds! Reeder has been my favourite iOS app since Google Reader got cut.",
   },
   {
     name: "Duolingo",
     link: "https://www.duolingo.com/",
+    description:
+      "I've been learning Danish 🇩🇰 for a few years now, and Duolingo has a great gamified way of learning.",
   },
   {
     name: "Spotify",
     link: "https://www.spotify.com/",
+    description: "I still prefer Spotify to Apple Music.",
   },
   {
     name: "Apollo",
     link: "https://apps.apple.com/us/app/apollo-for-reddit/id979274575",
+    description: "The best way to browse Reddit on iOS and iPadOS.",
   },
   {
     name: "Strava",
     link: "https://www.strava.com/",
+    description: "Used whenever I run or cycle.",
   },
 ];
