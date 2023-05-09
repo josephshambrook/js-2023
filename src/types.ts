@@ -32,3 +32,16 @@ export type LocalStorageTracks = {
   datestamp: number;
   tracks: TracksResponse[];
 };
+
+export type LogoCombo =
+  | "bt-bb"
+  | "bt-rb"
+  | "bt-yb"
+  | "gt-gb"
+  | "ot-ob"
+  | "ot-rb"
+  | "rbgt-tbgb"
+  | "rt-bb"
+  | "rt-rb"
+  | "wt-yb"
+  | "yt-yb";

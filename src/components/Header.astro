@@ -13,13 +13,15 @@ import headerStyles from "@styles/components/Header.module.scss";
 import { SOCIAL_LINKS } from "../constants";
 
 // types
+import type { LogoCombo } from "@src/types";
 type Props = {
   isTransparent?: boolean;
   hasWaves?: boolean;
+  logo?: LogoCombo;
 };
 
 // props
-const { isTransparent = false, hasWaves = true } = Astro.props;
+const { isTransparent = false, hasWaves = true, logo = "wt-yb" } = Astro.props;
 ---
 
 <header
@@ -32,7 +34,7 @@ const { isTransparent = false, hasWaves = true } = Astro.props;
   >
   <div class={cns(headerStyles.wrapper, layoutStyles.container)}>
     <a class={headerStyles["logo-link"]} href="/">
-      <Svg path="logos/svg/logo-on-dark.svg" />
+      <Svg path={`logos/svg/logo-${logo}.svg`} />
       <span class={headerStyles["sr-only"]}>Homepage</span>
     </a>
 

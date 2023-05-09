@@ -48,7 +48,7 @@
     <section class={footerStyles["section-intro"]}>
       <a href="/">
         <img
-          src="/assets/logos/svg/logo-on-dark.svg"
+          src="/assets/logos/svg/logo-wt-yb.svg"
           class={footerStyles.logo}
           alt="Joseph Shambrook logo"
         />

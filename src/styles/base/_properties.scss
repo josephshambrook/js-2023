@@ -82,6 +82,13 @@
 
   @include create-gradient-properties("red-blue", $gradient-red-blue);
 
+  $gradient-red-purple: hsl(0deg 85% 60%) 0%, hsl(352deg 79% 56%) 11%,
+    hsl(346deg 71% 53%) 22%, hsl(341deg 64% 50%) 33%, hsl(336deg 63% 47%) 44%,
+    hsl(330deg 59% 44%) 56%, hsl(325deg 54% 41%) 67%, hsl(317deg 48% 38%) 78%,
+    hsl(308deg 42% 35%) 89%, hsl(294deg 37% 33%) 100%;
+
+  @include create-gradient-properties("red-purple", $gradient-red-purple);
+
   $gradient-blue-black: hsl(258deg 100% 50%) 0%, rgb(75 11 224) 21%,
     hsl(258deg 85% 41%) 30%, hsl(258deg 80% 36%) 39%, hsl(258deg 75% 30%) 46%,
     hsl(259deg 69% 25%) 54%, hsl(260deg 63% 19%) 61%, hsl(262deg 55% 14%) 69%,

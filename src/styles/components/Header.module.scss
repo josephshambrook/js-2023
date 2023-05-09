@@ -72,6 +72,8 @@
 }
 
 .is-transparent {
+  --header-text-color: var(--color-dark-blue);
+
   background: transparent;
 
   &::after {

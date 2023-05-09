@@ -1,6 +1,7 @@
 @import "../base/mixins";
 
-.hero {
+.hero,
+.hero-alt {
   padding-block-end: 2rem;
 
   @include screen-lg-up {
@@ -12,7 +13,7 @@
   }
 }
 
-.title {
+.hero .title {
   color: var(--color-white);
   font-size: var(--heading-hero);
   font-weight: 700;
@@ -20,8 +21,15 @@
   text-transform: none;
 }
 
+.hero-alt .title {
+  font-size: var(--heading-hero);
+  font-weight: 700;
+  line-height: 1.4;
+  text-transform: none;
+}
+
 .gradient-text {
-  background-image: var(--gradient-red-blue-x);
+  background-image: var(--gradient-red-purple-x);
   background-clip: text;
   -webkit-text-fill-color: transparent;
 }
