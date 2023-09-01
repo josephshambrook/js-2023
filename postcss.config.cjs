@@ -1,3 +1,7 @@
 module.exports = {
-  plugins: [require("autoprefixer")],
+  plugins: [
+    require("postcss-import"),
+    require("autoprefixer"),
+    require("postcss-custom-media"),
+  ],
 };

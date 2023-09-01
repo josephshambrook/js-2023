@@ -11,7 +11,8 @@
     "esbenp.prettier-vscode",
     "wayou.vscode-todo-highlight",
     "stylelint.vscode-stylelint",
-    "valentjn.vscode-ltex"
+    "valentjn.vscode-ltex",
+    "webhint.vscode-webhint"
   ],
   "unwantedRecommendations": []
 }

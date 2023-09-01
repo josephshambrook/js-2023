@@ -1,0 +1,286 @@
+:root {
+  /*
+   * media query sizes, enabled by postcss-custom-media
+   * example of use: `@media (--bp-sm) {}`
+   */
+
+  /* 34rem */
+  @custom-media --bp-xs (544px);
+
+  /* 48rem */
+  @custom-media --bp-sm (768px);
+
+  /* 62rem */
+  @custom-media --bp-md (992px);
+
+  /* 75rem */
+  @custom-media --bp-lg (1200px);
+
+  /*
+   * colour palette (dark to light)
+   * with help from https://colordesigner.io/
+   */
+  --base-red: 0 85%;
+  --palette-red-10: hsl(var(--base-red) 12%); /* #390505 */
+  --palette-red-20: hsl(var(--base-red) 24%); /* #710909 */
+  --palette-red-30: hsl(var(--base-red) 36%); /* #aa0e0e */
+  --palette-red-40: hsl(var(--base-red) 48%); /* #e21212 */
+  --palette-red-50: hsl(var(--base-red) 60%); /* #f04242 */
+  --palette-red-60: hsl(var(--base-red) 67%); /* #f26363 */
+  --palette-red-70: hsl(var(--base-red) 74%); /* #f58484 */
+  --palette-red-80: hsl(var(--base-red) 80%); /* #f7a1a1 */
+  --palette-red-90: hsl(var(--base-red) 87%); /* #fac2c2 */
+  --palette-red-100: hsl(var(--base-red) 94%); /* #fde3e3 */
+
+  --base-orange: 30 80%;
+  --palette-orange-10: hsl(var(--base-orange) 11%);
+  --palette-orange-20: hsl(var(--base-orange) 22%);
+  --palette-orange-30: hsl(var(--base-orange) 34%);
+  --palette-orange-40: hsl(var(--base-orange) 45%);
+  --palette-orange-50: hsl(var(--base-orange) 56%);
+  --palette-orange-60: hsl(var(--base-orange) 63%);
+  --palette-orange-70: hsl(var(--base-orange) 70%);
+  --palette-orange-80: hsl(var(--base-orange) 78%);
+  --palette-orange-90: hsl(var(--base-orange) 85%);
+  --palette-orange-100: hsl(var(--base-orange) 92%);
+
+  --base-yellow: 50 93%;
+  --palette-yellow-10: hsl(var(--base-yellow) 11%); /* #362d02 */
+  --palette-yellow-20: hsl(var(--base-yellow) 21%); /* #675704 */
+  --palette-yellow-30: hsl(var(--base-yellow) 31%); /* #998006 */
+  --palette-yellow-40: hsl(var(--base-yellow) 42%); /* #cfae07 */
+  --palette-yellow-50: hsl(var(--base-yellow) 53%); /* #f7d118 */
+  --palette-yellow-60: hsl(var(--base-yellow) 61%); /* #f8d93f */
+  --palette-yellow-70: hsl(var(--base-yellow) 68%); /* #f9e062 */
+  --palette-yellow-80: hsl(var(--base-yellow) 76%); /* #fbe889 */
+  --palette-yellow-90: hsl(var(--base-yellow) 84%); /* #fcefb0 */
+  --palette-yellow-100: hsl(var(--base-yellow) 91%); /* #fdf6d3 */
+
+  --base-dark-blue: 229 40%;
+  --palette-dark-blue-10: hsl(var(--base-dark-blue) 5%);
+  --palette-dark-blue-20: hsl(var(--base-dark-blue) 10%);
+  --palette-dark-blue-30: hsl(var(--base-dark-blue) 15%);
+  --palette-dark-blue-40: hsl(var(--base-dark-blue) 20%);
+  --palette-dark-blue-50: hsl(var(--base-dark-blue) 25%);
+  --palette-dark-blue-60: hsl(var(--base-dark-blue) 37%);
+  --palette-dark-blue-70: hsl(var(--base-dark-blue) 49%);
+  --palette-dark-blue-80: hsl(var(--base-dark-blue) 62%);
+  --palette-dark-blue-90: hsl(var(--base-dark-blue) 74%);
+  --palette-dark-blue-100: hsl(var(--base-dark-blue) 87%);
+
+  --base-grey: 0 0%;
+  --palette-grey-10: hsl(var(--base-grey) 10%);
+  --palette-grey-20: hsl(var(--base-grey) 20%);
+  --palette-grey-30: hsl(var(--base-grey) 30%);
+  --palette-grey-40: hsl(var(--base-grey) 40%);
+  --palette-grey-50: hsl(var(--base-grey) 50%);
+  --palette-grey-60: hsl(var(--base-grey) 60%);
+  --palette-grey-70: hsl(var(--base-grey) 70%);
+  --palette-grey-80: hsl(var(--base-grey) 80%);
+  --palette-grey-90: hsl(var(--base-grey) 90%);
+
+  --color-black: hsl(0deg 0% 3%);
+  --color-white: hsl(0deg 0% 99%);
+  --color-red: var(--palette-red-50);
+  --color-orange: var(--palette-orange-50);
+  --color-yellow: var(--palette-yellow-50);
+  --color-dark-blue: var(--palette-dark-blue-50);
+
+  /* gradient colors */
+
+  /* generated using https://www.joshwcomeau.com/css/make-beautiful-gradients/ */
+
+  --gradient-red-blue-y: linear-gradient(
+    to top,
+    hsl(0deg 85% 60%) 0%,
+    hsl(349deg 75% 55%) 11%,
+    hsl(341deg 63% 50%) 22%,
+    hsl(333deg 61% 46%) 33%,
+    hsl(324deg 54% 41%) 44%,
+    hsl(313deg 45% 37%) 56%,
+    hsl(294deg 37% 33%) 67%,
+    hsl(272deg 35% 32%) 78%,
+    hsl(250deg 33% 30%) 89%,
+    hsl(229deg 40% 25%) 100%
+  );
+
+  --gradient-red-blue-x: linear-gradient(
+    to right,
+    hsl(0deg 85% 60%) 0%,
+    hsl(349deg 75% 55%) 11%,
+    hsl(341deg 63% 50%) 22%,
+    hsl(333deg 61% 46%) 33%,
+    hsl(324deg 54% 41%) 44%,
+    hsl(313deg 45% 37%) 56%,
+    hsl(294deg 37% 33%) 67%,
+    hsl(272deg 35% 32%) 78%,
+    hsl(250deg 33% 30%) 89%,
+    hsl(229deg 40% 25%) 100%
+  );
+
+  --gradient-blue-dark-blue-y: linear-gradient(
+    to top,
+    hsl(258deg 100% 50%) 0%,
+    hsl(255deg 93% 47%) 11%,
+    hsl(251deg 87% 44%) 22%,
+    hsl(248deg 80% 42%) 33%,
+    hsl(245deg 74% 39%) 44%,
+    hsl(241deg 66% 36%) 56%,
+    hsl(238deg 60% 33%) 67%,
+    hsl(235deg 54% 30%) 78%,
+    hsl(232deg 46% 28%) 89%,
+    hsl(228deg 40% 25%) 100%
+  );
+
+  --gradient-blue-dark-blue-x: linear-gradient(
+    to right,
+    hsl(258deg 100% 50%) 0%,
+    hsl(255deg 93% 47%) 11%,
+    hsl(251deg 87% 44%) 22%,
+    hsl(248deg 80% 42%) 33%,
+    hsl(245deg 74% 39%) 44%,
+    hsl(241deg 66% 36%) 56%,
+    hsl(238deg 60% 33%) 67%,
+    hsl(235deg 54% 30%) 78%,
+    hsl(232deg 46% 28%) 89%,
+    hsl(228deg 40% 25%) 100%
+  );
+
+  --gradient-yellow-white-x: linear-gradient(
+    to right,
+    hsl(50deg 90% 53%) 0%,
+    hsl(50deg 90% 58%) 11%,
+    hsl(50deg 90% 64%) 22%,
+    hsl(50deg 90% 69%) 33%,
+    hsl(50deg 90% 74%) 44%,
+    hsl(50deg 91% 79%) 56%,
+    hsl(50deg 90% 84%) 67%,
+    hsl(50deg 89% 89%) 78%,
+    hsl(50deg 92% 95%) 89%,
+    hsl(0deg 0% 100%) 100%
+  );
+
+  /* $gradient-red-blue: hsl(0deg 85% 60%) 0%, hsl(349deg 75% 55%) 11%,
+    hsl(341deg 63% 50%) 22%, hsl(333deg 61% 46%) 33%, hsl(324deg 54% 41%) 44%,
+    hsl(313deg 45% 37%) 56%, hsl(294deg 37% 33%) 67%, hsl(272deg 35% 32%) 78%,
+    hsl(250deg 33% 30%) 89%, hsl(229deg 40% 25%) 100%;
+
+  @include create-gradient-properties("red-blue", $gradient-red-blue);
+
+  $gradient-blue-black: hsl(258deg 100% 50%) 0%, rgb(75 11 224) 21%,
+    hsl(258deg 85% 41%) 30%, hsl(258deg 80% 36%) 39%, hsl(258deg 75% 30%) 46%,
+    hsl(259deg 69% 25%) 54%, hsl(260deg 63% 19%) 61%, hsl(262deg 55% 14%) 69%,
+    hsl(273deg 53% 8%) 79%, hsl(0deg 0% 0%) 100%;
+
+  @include create-gradient-properties("blue-black", $gradient-blue-black);
+
+  $gradient-blue-yellow: hsl(228deg 40% 25%) 0%, hsl(209deg 45% 28%) 21%,
+    hsl(189deg 51% 31%) 30%, hsl(168deg 57% 34%) 39%, hsl(149deg 62% 37%) 46%,
+    hsl(129deg 68% 40%) 54%, hsl(110deg 73% 44%) 61%, hsl(90deg 79% 47%) 69%,
+    hsl(70deg 84% 50%) 79%, hsl(50deg 90% 53%) 100%;
+
+  @include create-gradient-properties("blue-yellow", $gradient-blue-yellow);
+
+  $gradient-blue-dark-blue: hsl(258deg 100% 50%) 0%, hsl(255deg 93% 47%) 11%,
+    hsl(251deg 87% 44%) 22%, hsl(248deg 80% 42%) 33%, hsl(245deg 74% 39%) 44%,
+    hsl(241deg 66% 36%) 56%, hsl(238deg 60% 33%) 67%, hsl(235deg 54% 30%) 78%,
+    hsl(232deg 46% 28%) 89%, hsl(228deg 40% 25%) 100%;
+
+  @include create-gradient-properties(
+    "blue-dark-blue",
+    $gradient-blue-dark-blue
+  );
+
+  $gradient-yellow-white: hsl(50deg 90% 53%) 0%, hsl(50deg 90% 58%) 11%,
+    hsl(50deg 90% 64%) 22%, hsl(50deg 90% 69%) 33%, hsl(50deg 90% 74%) 44%,
+    hsl(50deg 91% 79%) 56%, hsl(50deg 90% 84%) 67%, hsl(50deg 89% 89%) 78%,
+    hsl(50deg 92% 95%) 89%, hsl(0deg 0% 100%) 100%;
+
+  @include create-gradient-properties("yellow-white", $gradient-yellow-white);
+
+  $gradient-red: hsl(0deg 85% 48%) 0%, hsl(1deg 80% 51%) 10%,
+    hsl(1deg 81% 53%) 20%, hsl(1deg 82% 56%) 30%, hsl(0deg 84% 58%) 40%,
+    hsl(0deg 85% 60%) 50%, hsl(0deg 85% 61%) 60%, hsl(0deg 85% 63%) 70%,
+    hsl(0deg 85% 64%) 80%, hsl(0deg 85% 66%) 90%, hsl(0deg 85% 67%) 100%;
+
+  @include create-gradient-properties("red", $gradient-red); */
+
+  /* spacing and sizing */
+  --base-size: 20px;
+  --container-max-width: 1120px;
+  --gutter: 1rem;
+  --grid-gap: 1.25rem;
+
+  /* type sizing */
+  --text-small: clamp(0.89rem, 0.12vw + 0.86rem, 0.94rem);
+  --text-body-size: clamp(1rem, 0.25vw + 0.94rem, 1.11rem);
+  --heading-6: clamp(1.13rem, 0.42vw + 1.03rem, 1.31rem);
+  --heading-5: clamp(1.27rem, 0.63vw + 1.12rem, 1.55rem);
+  --heading-4: clamp(1.42rem, 0.9vw + 1.22rem, 1.83rem);
+  --heading-3: clamp(1.6rem, 1.24vw + 1.33rem, 2.15rem);
+  --heading-2: clamp(1.8rem, 1.66vw + 1.43rem, 2.54rem);
+  --heading-1: clamp(2.03rem, 2.19vw + 1.54rem, 3rem);
+  --heading-hero: clamp(2.03rem, 2.5vw + 2rem, 4rem);
+  --heading-line-height: 1.3;
+  --heading-margin-block-end: 1rem;
+  --heading-margin-block-start: 0;
+  --heading-weight: 500;
+
+  /* fonts */
+  --font-fallback: -apple-system, blinkmacsystemfont, segoe ui, helvetica, arial,
+    sans-serif, apple color emoji, segoe ui emoji;
+  --font-body: "Josefin Slab", var(--font-fallback);
+  --font-heading: "Josefin Sans", var(--font-fallback);
+  --font-code: "JetBrains Mono", "IBM Plex Mono", consolas, "Andale Mono WT",
+    "Andale Mono", "Lucida Console", "Lucida Sans Typewriter",
+    "DejaVu Sans Mono", "Bitstream Vera Sans Mono", "Liberation Mono",
+    "Nimbus Mono L", monaco, "Courier New", courier, monospace;
+
+  /* property values for colours, and based on theme */
+  color-scheme: light;
+
+  --theme-divider: var(--palette-grey-60);
+  --theme-text: var(--color-black);
+  --theme-bg: var(--color-white);
+  --theme-code-text: var(--palette-grey-90);
+  --theme-code-bg: var(--palette-grey-90);
+  --theme-link: var(--palette-red-50);
+  --theme-heading: var(--color-dark-blue);
+  --theme-text-muted: var(--palette-grey-20);
+
+  --theme-scrollbar-track: var(--color-bg);
+  --theme-scrollbar-track-border: var(--palette-grey-70);
+  --theme-scrollbar-thumb: var(--color-red);
+
+  --component-header: var(--color-red);
+  --component-hero: var(--gradient-red-blue-y);
+  --component-metadata-gradient: var(--gradient-red-blue-x);
+  --component-heading-gradient: var(--gradient-red-blue-x);
+  --component-infobox-border: var(--color-black);
+  --component-infobox-shadow: var(--color-orange);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    color-scheme: dark;
+
+    --theme-divider: var(--palette-grey-90);
+    --theme-text: var(--color-white);
+    --theme-text-muted: var(--palette-grey-80);
+    --theme-bg: var(--palette-dark-blue-20);
+    --theme-code-text: var(--palette-grey-90);
+    --theme-code-bg: var(--palette-grey-20);
+    --theme-link: var(--color-yellow);
+    --theme-heading: var(--palette-dark-blue-100);
+
+    --theme-scrollbar-track-border: var(--palette-grey-40);
+    --theme-scrollbar-thumb: var(--color-yellow);
+
+    --component-header: var(--color-dark-blue);
+    --component-hero: var(--gradient-blue-dark-blue-y);
+    --component-metadata-gradient: var(--gradient-blue-dark-blue-x);
+    --component-heading-gradient: var(--gradient-yellow-white-x);
+    --component-infobox-border: var(--color-white);
+    --component-infobox-shadow: var(--color-yellow);
+  }
+}
