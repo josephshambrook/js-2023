@@ -5,7 +5,6 @@
     LS_SPOTIFY_TRACKS_CACHE_LIMIT,
     LS_SPOTIFY_TRACKS_KEY,
   } from "@src/constants";
-  import SpotifyStyles from "@styles/components/Spotify.module.scss";
 
   const fetchTracks = async (): Promise<TracksResponse[]> => {
     const ls = localStorage || window.localStorage;
@@ -56,10 +55,10 @@
 {#await tracks}
   <p>Loading</p>
 {:then tracks}
-  <ul class={SpotifyStyles["list"]}>
+  <ul class="list">
     {#each tracks as track}
-      <li class={SpotifyStyles["track"]}>
-        <div class={SpotifyStyles["track-name"]}>
+      <li class="track">
+        <div class="track-name">
           <a
             href={track.href}
             title={`Open "${track.name}" on Spotify`}
@@ -72,3 +71,24 @@
     {/each}
   </ul>
 {/await}
+
+<style>
+.list {
+  list-style: none;
+  padding-inline-start: 0;
+}
+
+.list > .track:not(:last-of-type) {
+  /* TODO: extract this border gradient to a mixin */
+  border-block-end: 2px solid;
+  border-image-slice: 1;
+  border-image-source: var(--component-metadata-gradient);
+  margin-block-end: 0.5rem;
+  padding-block-end: 0.6rem;
+}
+
+.track-name {
+  font-weight: bold;
+}
+
+</style>

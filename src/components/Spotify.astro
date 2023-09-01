@@ -1,8 +1,14 @@
 ---
 import SpotifyList from "./SpotifyList.svelte";
-import SpotifyStyles from "@styles/components/Spotify.module.scss";
 ---
 
-<h2 class={SpotifyStyles["spotify-title"]}>Recent top tunes</h2>
+<h2 class="spotify-title">Recent top tunes</h2>
 
 <SpotifyList client:load />
+
+<style>
+  .spotify-title {
+    font-size: var(--heading-6);
+    line-height: var(--heading-line-height);
+  }
+</style>
