@@ -38,18 +38,22 @@ export const hardware: HardwareItem[] = [
   },
   {
     name: "iPhone 14 Pro",
-    description: `My current phone. I used Android phones out of spite after Apple <a href="https://www.engadget.com/2016-09-07-courage-is-not-how-you-sell-iphones.html" target="_blank" rel="noopener noreferrer">"courageously"</a> removed the headphone jack, but Apple managed to lure me back a couple of years ago. I love the dynamic island on this one, and the apps are still better.`,
+    description: `My current phone. I used Android phones out of spite after Apple <a href="https://www.engadget.com/2016-09-07-courage-is-not-how-you-sell-iphones.html" target="_blank" rel="noopener noreferrer">"courageously"</a> removed the headphone jack, but Apple managed to lure me back a couple of years ago. I love the Dynamic Island (despite the name), and the apps are still overall better on iOS.`,
   },
   {
     name: "Bose QuietComfort 35 II",
     link: generateAmazonAssociatesLink("B0756CYWWD"),
     description:
-      "I don't even remember when I bought these, but it was a long time ago now and they're still going strong. I replaced the cushions a little while ago, and they're as good as new.",
+      "I don't even remember when I bought these, but it was a long time ago now and they were a worthy investment. I have only needed to replace the cushions a couple of times, and the sound is as good as ever.",
   },
   {
     name: "Under Armour Storm Recruit backpack",
     description:
       "Another piece of kit I've had for years and still going strong. I've used this for daily commutes, every trip I've been on, carrying tons of gear, and it's still in great condition. Not available anymore as far as I can see, but Under Armour outdid themselves with this one.",
+  },
+  {
+    name: "Apple Watch SE",
+    description: `One of things that lured me back to iOS was the rubbish selection of smartwatches for Android phones at the time, meaning I was constantly longing for the Apple Watch. I have a fairly basic model at the mo, but it's been an overall great piece of tech. However, nothing will beat the <a href="https://www.kickstarter.com/projects/getpebble/pebble-time-awesome-smartwatch-no-compromises">Pebble Time</a>, ever.`,
   },
 ];
 
@@ -57,13 +61,12 @@ export const softwareMac: SoftwareMacItem[] = [
   {
     name: "Visual Studio Code",
     link: "https://code.visualstudio.com/",
-    description: `I don't think there's a single developer left out there who hasn't at least tried VS Code. I used to be all-in with Sublime Text, but VS Code won me over eventually. My current theme of choice is <a href="https://marketplace.visualstudio.com/items?itemName=wesbos.theme-cobalt2" target="_blank" rel="noopener noreferrer">Cobalt2</a> by Wes Bos.`,
+    description: `I don't think there's a single developer left out there who hasn't at least tried VS Code. I used to be all-in with Sublime Text, but former colleagues talked me round to switching and I haven't looked back. My current theme of choice is <a href="https://marketplace.visualstudio.com/items?itemName=wesbos.theme-cobalt2" target="_blank" rel="noopener noreferrer">Cobalt2</a> by Wes Bos.`,
   },
   {
     name: "Hyper",
     link: "https://hyper.is/",
-    description:
-      "Hyper has some really nice extensions and theming options, and it's pretty easy to use out of the box. I've tried others like iTerm and Warp, and Hyper still wins it for me.",
+    description: `I tend to flip between this and <a href="https://iterm2.com/">iTerm 2</a>, but Hyper has some really nice extensions and theming options that keep dragging me back.`,
   },
   {
     name: "Arc",
@@ -86,7 +89,7 @@ export const softwareMac: SoftwareMacItem[] = [
     name: "YNAB (You Need A Budget)",
     link: "https://www.youneedabudget.com/",
     description:
-      "I've budgeted money since my very first job as a spotty teenager, and YNAB has been my choice since around 2016. I love the philosophy behind it, and it's helped us plan everything from a wedding, holidays, a baby, a mortgage deposit, the lot.",
+      "I've budgeted money since my very first job as a acne-ridden teenager, and YNAB has been my choice since around 2016. I love the philosophy behind it, and it's helped us plan everything from a wedding, holidays, starting a family, a mortgage deposit, the lot.",
   },
   {
     name: "Amphetamine",
@@ -125,6 +128,11 @@ export const softwarePhone: SoftwarePhoneItem[] = [
       "I still use RSS feeds! Reeder has been my favourite iOS app since Google Reader got cut.",
   },
   {
+    name: "Fantastical",
+    link: "https://flexibits.com/fantastical/",
+    description: "Great calendar app across all of my Apple devices.",
+  },
+  {
     name: "Duolingo",
     link: "https://www.duolingo.com/",
     description:
@@ -133,12 +141,8 @@ export const softwarePhone: SoftwarePhoneItem[] = [
   {
     name: "Spotify",
     link: "https://www.spotify.com/",
-    description: "I still prefer Spotify to Apple Music.",
-  },
-  {
-    name: "Apollo",
-    link: "https://apps.apple.com/us/app/apollo-for-reddit/id979274575",
-    description: "The best way to browse Reddit on iOS and iPadOS.",
+    description:
+      "Still preferred to Apple Music despite the needless iOS limitations.",
   },
   {
     name: "Strava",
