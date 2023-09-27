@@ -75,14 +75,16 @@ h6,
 
 small,
 .text-small {
-  font-size: var(--text-small-size);
+  font-size: var(--text-small);
 }
 
 code {
   background-color: var(--theme-code-bg);
   border-radius: 5px;
   font-family: var(--font-code);
-  font-feature-settings: "liga" on, "calt" on;
+  font-feature-settings:
+    "liga" on,
+    "calt" on;
   font-weight: 400;
   font-size: calc(var(--text-body-size) - 20%);
   max-width: 100%;

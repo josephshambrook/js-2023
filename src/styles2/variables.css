@@ -1,22 +1,5 @@
 :root {
   /*
-   * media query sizes, enabled by postcss-custom-media
-   * example of use: `@media (--bp-sm) {}`
-   */
-
-  /* 34rem */
-  @custom-media --bp-xs (544px);
-
-  /* 48rem */
-  @custom-media --bp-sm (768px);
-
-  /* 62rem */
-  @custom-media --bp-md (992px);
-
-  /* 75rem */
-  @custom-media --bp-lg (1200px);
-
-  /*
    * colour palette (dark to light)
    * with help from https://colordesigner.io/
    */
@@ -159,51 +142,6 @@
     hsl(50deg 92% 95%) 89%,
     hsl(0deg 0% 100%) 100%
   );
-
-  /* $gradient-red-blue: hsl(0deg 85% 60%) 0%, hsl(349deg 75% 55%) 11%,
-    hsl(341deg 63% 50%) 22%, hsl(333deg 61% 46%) 33%, hsl(324deg 54% 41%) 44%,
-    hsl(313deg 45% 37%) 56%, hsl(294deg 37% 33%) 67%, hsl(272deg 35% 32%) 78%,
-    hsl(250deg 33% 30%) 89%, hsl(229deg 40% 25%) 100%;
-
-  @include create-gradient-properties("red-blue", $gradient-red-blue);
-
-  $gradient-blue-black: hsl(258deg 100% 50%) 0%, rgb(75 11 224) 21%,
-    hsl(258deg 85% 41%) 30%, hsl(258deg 80% 36%) 39%, hsl(258deg 75% 30%) 46%,
-    hsl(259deg 69% 25%) 54%, hsl(260deg 63% 19%) 61%, hsl(262deg 55% 14%) 69%,
-    hsl(273deg 53% 8%) 79%, hsl(0deg 0% 0%) 100%;
-
-  @include create-gradient-properties("blue-black", $gradient-blue-black);
-
-  $gradient-blue-yellow: hsl(228deg 40% 25%) 0%, hsl(209deg 45% 28%) 21%,
-    hsl(189deg 51% 31%) 30%, hsl(168deg 57% 34%) 39%, hsl(149deg 62% 37%) 46%,
-    hsl(129deg 68% 40%) 54%, hsl(110deg 73% 44%) 61%, hsl(90deg 79% 47%) 69%,
-    hsl(70deg 84% 50%) 79%, hsl(50deg 90% 53%) 100%;
-
-  @include create-gradient-properties("blue-yellow", $gradient-blue-yellow);
-
-  $gradient-blue-dark-blue: hsl(258deg 100% 50%) 0%, hsl(255deg 93% 47%) 11%,
-    hsl(251deg 87% 44%) 22%, hsl(248deg 80% 42%) 33%, hsl(245deg 74% 39%) 44%,
-    hsl(241deg 66% 36%) 56%, hsl(238deg 60% 33%) 67%, hsl(235deg 54% 30%) 78%,
-    hsl(232deg 46% 28%) 89%, hsl(228deg 40% 25%) 100%;
-
-  @include create-gradient-properties(
-    "blue-dark-blue",
-    $gradient-blue-dark-blue
-  );
-
-  $gradient-yellow-white: hsl(50deg 90% 53%) 0%, hsl(50deg 90% 58%) 11%,
-    hsl(50deg 90% 64%) 22%, hsl(50deg 90% 69%) 33%, hsl(50deg 90% 74%) 44%,
-    hsl(50deg 91% 79%) 56%, hsl(50deg 90% 84%) 67%, hsl(50deg 89% 89%) 78%,
-    hsl(50deg 92% 95%) 89%, hsl(0deg 0% 100%) 100%;
-
-  @include create-gradient-properties("yellow-white", $gradient-yellow-white);
-
-  $gradient-red: hsl(0deg 85% 48%) 0%, hsl(1deg 80% 51%) 10%,
-    hsl(1deg 81% 53%) 20%, hsl(1deg 82% 56%) 30%, hsl(0deg 84% 58%) 40%,
-    hsl(0deg 85% 60%) 50%, hsl(0deg 85% 61%) 60%, hsl(0deg 85% 63%) 70%,
-    hsl(0deg 85% 64%) 80%, hsl(0deg 85% 66%) 90%, hsl(0deg 85% 67%) 100%;
-
-  @include create-gradient-properties("red", $gradient-red); */
 
   /* spacing and sizing */
   --base-size: 20px;

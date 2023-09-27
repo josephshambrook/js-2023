@@ -75,7 +75,7 @@
 
   small,
   .text-small {
-    font-size: var(--text-small-size);
+    font-size: var(--text-small);
   }
 
   code {
