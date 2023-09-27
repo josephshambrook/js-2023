@@ -8,19 +8,19 @@
   }
 
   body {
-    background-color: var(--theme-bg);
-    color: var(--theme-text);
-    font-family: var(--font-body);
+    background-color: var(--js-theme-bg);
+    color: var(--js-theme-text);
+    font-family: var(--js-font-body);
     font-weight: 600;
-    font-size: var(--text-body-size);
+    font-size: var(--js-text-body-size);
     line-height: 2;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
   }
 
   ::selection {
-    color: var(--color-black);
-    background-color: var(--color-yellow);
+    color: var(--js-color-black);
+    background-color: var(--js-color-yellow);
   }
 
   p {
@@ -34,59 +34,59 @@
   h4,
   h5,
   h6 {
-    color: var(--theme-heading);
-    font-family: var(--font-heading);
+    color: var(--js-theme-heading);
+    font-family: var(--js-font-heading);
     font-weight: 500;
-    line-height: var(--heading-line-height);
-    margin-block-end: var(--heading-margin-block-end);
-    margin-block-start: var(--heading-margin-block-start);
+    line-height: var(--js-heading-line-height);
+    margin-block-end: var(--js-heading-margin-block-end);
+    margin-block-start: var(--js-heading-margin-block-start);
     text-transform: uppercase;
   }
 
   h1,
   .h1 {
-    font-size: var(--heading-1);
+    font-size: var(--js-heading-1);
   }
 
   h2,
   .h2 {
-    font-size: var(--heading-2);
+    font-size: var(--js-heading-2);
   }
 
   h3,
   .h3 {
-    font-size: var(--heading-3);
+    font-size: var(--js-heading-3);
   }
 
   h4,
   .h4 {
-    font-size: var(--heading-4);
+    font-size: var(--js-heading-4);
   }
 
   h5,
   .h5 {
-    font-size: var(--heading-5);
+    font-size: var(--js-heading-5);
   }
 
   h6,
   .h6 {
-    font-size: var(--heading-6);
+    font-size: var(--js-heading-6);
   }
 
   small,
   .text-small {
-    font-size: var(--text-small);
+    font-size: var(--js-text-small);
   }
 
   code {
-    background-color: var(--theme-code-bg);
+    background-color: var(--js-theme-code-bg);
     border-radius: 5px;
-    font-family: var(--font-code);
+    font-family: var(--js-font-code);
     font-feature-settings:
       "liga" on,
       "calt" on;
     font-weight: 400;
-    font-size: calc(var(--text-body-size) - 20%);
+    font-size: calc(var(--js-text-body-size) - 20%);
     max-width: 100%;
     padding: 0.1rem 0.25rem;
     text-rendering: optimizelegibility;
@@ -108,7 +108,7 @@
   }
 
   a {
-    color: var(--theme-link);
+    color: var(--js-theme-link);
     font-weight: 700;
     text-decoration: none;
   }
@@ -120,11 +120,11 @@
   }
 
   a :where(h1, h2, h3, h4, h5, h6) {
-    color: var(--theme-link);
+    color: var(--js-theme-link);
   }
 
   blockquote {
-    border-left: 4px solid var(--theme-divider);
+    border-left: 4px solid var(--js-theme-divider);
     padding: 0 0 0 1rem;
     margin: 0 0 1rem;
   }

@@ -82,7 +82,7 @@
   /* TODO: extract this border gradient to a mixin */
   border-block-end: 2px solid;
   border-image-slice: 1;
-  border-image-source: var(--component-metadata-gradient);
+  border-image-source: var(--js-component-metadata-gradient);
   margin-block-end: 0.5rem;
   padding-block-end: 0.6rem;
 }

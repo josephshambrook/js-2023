@@ -96,8 +96,8 @@ const daughterAge = calculateAge(daughterBirthday);
             >
           </li>
           <li>
-            SSG frameworks, such as <strong>Astro</strong> (which this very website
-            uses!)
+            SSG frameworks, such as <strong>Astro</strong> (which this very
+            website uses!)
           </li>
           <li>
             Other popular frameworks, such as <strong>Svelte</strong> and <strong
@@ -135,6 +135,7 @@ const daughterAge = calculateAge(daughterBirthday);
         <ul>
           <li>
             Unit testing, particularly with <strong>Jest</strong> and tools like
+
             <strong>React Testing Library</strong> and <strong>Enzyme</strong>
           </li>
           <li>
@@ -185,10 +186,10 @@ const daughterAge = calculateAge(daughterBirthday);
   @import "../styles/base/mixins";
 
   .title {
-    font-size: var(--heading-hero);
+    font-size: var(--js-heading-hero);
 
     // make margin equal on both sides
-    margin-block-start: var(--heading-margin-block-end);
+    margin-block-start: var(--js-heading-margin-block-end);
   }
 
   .rounded-img {
@@ -220,12 +221,12 @@ const daughterAge = calculateAge(daughterBirthday);
   }
 
   .text-gradient {
-    background: var(--component-heading-gradient);
+    background: var(--js-component-heading-gradient);
     background-clip: text;
     -webkit-text-fill-color: transparent;
   }
 
   section:not(:first-of-type) {
-    --heading-margin-block-start: 4rem;
+    --js-heading-margin-block-start: 4rem;
   }
 </style>

@@ -1,6 +1,6 @@
 /*
  * media query sizes, enabled by postcss-custom-media
- * example of use: `@media (--bp-sm) {}`
+ * example of use: `@media (--js-bp-sm) {}`
  * imported into each file automatically via postcss-config
 */
 
@@ -8,22 +8,22 @@
  * translates to 34rem
  * replaces the SCSS `@include screen-xs-up`
 */
-@custom-media --bp-xs (min-width: 544px);
+@custom-media --js-bp-xs (min-width: 544px);
 
 /*
  * translates to 48rem
  * replaces the SCSS `@include screen-sm-up`
 */
-@custom-media --bp-sm (min-width: 768px);
+@custom-media --js-bp-sm (min-width: 768px);
 
 /*
  * translates to 62rem
  * replaces the SCSS `@include screen-md-up`
 */
-@custom-media --bp-md (min-width: 992px);
+@custom-media --js-bp-md (min-width: 992px);
 
 /*
  * translates to 75rem
  * replaces the SCSS `@include screen-lg-up`
 */
-@custom-media --bp-lg (min-width: 1200px);
+@custom-media --js-bp-lg (min-width: 1200px);

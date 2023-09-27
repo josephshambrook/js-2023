@@ -1,16 +1,9 @@
 <script lang="ts">
-  // dependencies
-  import cns from "classnames";
-
   //types
   import type { FooterSection } from "../types";
 
   // data
   import { SOCIAL_LINKS } from "src/constants";
-
-  // styles
-  // import layoutStyles from "@styles/layouts/layout.module.scss";
-  // import footerStyles from "@styles/components/Footer.module.scss";
 
   // js
   const sections: FooterSection[] = [
@@ -79,9 +72,9 @@
 
 <style lang="postcss">
 .footer {
-  background-color: var(--color-dark-blue);
-  color: var(--color-white);
-  font-family: var(--font-heading);
+  background-color: var(--js-color-dark-blue);
+  color: var(--js-color-white);
+  font-family: var(--js-font-heading);
   margin-block-start: 2rem;
   padding-block-end: 5rem;
   padding-block-start: 2.58rem;
@@ -93,20 +86,20 @@
 }
 
 .intro {
-  font-size: var(--text-small);
+  font-size: var(--js-text-small);
 }
 
 .section-intro {
   grid-column: 1 / -1;
 
-  @media (--bp-lg) {
+  @media (--js-bp-lg) {
     grid-column: initial;
   }
 }
 
 .section-heading {
-  color: var(--color-yellow);
-  font-size: var(--heading-6);
+  color: var(--js-color-yellow);
+  font-size: var(--js-heading-6);
   margin-block-end: 1.3rem;
   margin-block-start: 0;
   text-transform: uppercase;
@@ -118,8 +111,8 @@
 }
 
 .section-link {
-  color: var(--color-white);
-  font-size: var(--text-small);
+  color: var(--js-color-white);
+  font-size: var(--js-text-small);
   font-weight: normal;
   text-decoration: none;
 }
