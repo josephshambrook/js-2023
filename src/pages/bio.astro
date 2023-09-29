@@ -136,6 +136,7 @@ const daughterAge = calculateAge(daughterBirthday);
           <li>
             Unit testing, particularly with <strong>Jest</strong> and tools like
 
+
             <strong>React Testing Library</strong> and <strong>Enzyme</strong>
           </li>
           <li>
@@ -182,13 +183,11 @@ const daughterAge = calculateAge(daughterBirthday);
   <div slot="aside"></div>
 </MainLayout>
 
-<style lang="scss">
-  @import "../styles/base/mixins";
-
+<style lang="postcss">
   .title {
     font-size: var(--js-heading-hero);
 
-    // make margin equal on both sides
+    /* make margin equal on both sides */
     margin-block-start: var(--js-heading-margin-block-end);
   }
 
@@ -207,7 +206,7 @@ const daughterAge = calculateAge(daughterBirthday);
     }
   }
 
-  @include screen-md-up {
+  @media(--js-bp-md) {
     .intro {
       align-items: center;
       display: flex;

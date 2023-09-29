@@ -205,8 +205,6 @@ const { isTransparent = false, hasWaves = true } = Astro.props;
   align-items: center;
   display: flex;
   flex: 1;
-
-  /* flex-direction: column; */
   flex-wrap: wrap;
   gap: 1rem;
   justify-content: space-evenly;
@@ -240,7 +238,7 @@ const { isTransparent = false, hasWaves = true } = Astro.props;
   }
 }
 
-// Button for toggling the navbar when in its collapsed state
+/* Button for toggling the navbar when in its collapsed state */
 .navbar-toggler {
   padding: 1rem;
   font-size: 1rem;
@@ -260,8 +258,10 @@ const { isTransparent = false, hasWaves = true } = Astro.props;
   }
 }
 
-// Keep as a separate element so folks can easily override it with another icon
-// or image file as needed.
+/*
+ * Keep as a separate element so folks can easily override it with another icon
+ * or image file as needed.
+ */
 .navbar-toggler-icon {
   display: inline-block;
   width: 1.5em;

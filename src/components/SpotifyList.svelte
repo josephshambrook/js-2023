@@ -72,14 +72,13 @@
   </ul>
 {/await}
 
-<style>
+<style lang="postcss">
 .list {
   list-style: none;
   padding-inline-start: 0;
 }
 
 .list > .track:not(:last-of-type) {
-  /* TODO: extract this border gradient to a mixin */
   border-block-end: 2px solid;
   border-image-slice: 1;
   border-image-source: var(--js-component-metadata-gradient);
