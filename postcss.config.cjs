@@ -4,7 +4,7 @@ const config = {
     "postcss-import": {},
     autoprefixer: {},
     "@csstools/postcss-global-data": {
-      files: ["./src/styles2/media.css"],
+      files: ["./src/styles/media.css"],
     },
     "postcss-custom-media": {},
     "postcss-nesting": {},

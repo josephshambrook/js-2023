@@ -29,7 +29,6 @@
       "@layouts/*": ["src/layouts/*"],
       "@pages/*": ["src/pages/*"],
       "@styles/*": ["src/styles/*"],
-      "@styles2/*": ["src/styles2/*"],
       "@utils/*": ["src/utils/*"]
     }
   }
