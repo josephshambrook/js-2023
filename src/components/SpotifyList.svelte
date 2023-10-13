@@ -73,22 +73,20 @@
 {/await}
 
 <style lang="postcss">
-  @layer components {
-    .list {
-      list-style: none;
-      padding-inline-start: 0;
-    }
+  .list {
+    list-style: none;
+    padding-inline-start: 0;
+  }
 
-    .list > .track:not(:last-of-type) {
-      border-block-end: 2px solid;
-      border-image-slice: 1;
-      border-image-source: var(--js-component-metadata-gradient);
-      margin-block-end: 0.5rem;
-      padding-block-end: 0.6rem;
-    }
+  .list > .track:not(:last-of-type) {
+    border-block-end: 2px solid;
+    border-image-slice: 1;
+    border-image-source: var(--js-component-metadata-gradient);
+    margin-block-end: 0.5rem;
+    padding-block-end: 0.6rem;
+  }
 
-    .track-name {
-      font-weight: bold;
-    }
+  .track-name {
+    font-weight: bold;
   }
 </style>

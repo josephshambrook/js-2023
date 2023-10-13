@@ -5,49 +5,45 @@
         Hey <span class="wave">👋</span>
       </p>
       <p>
-        I'm Joseph Shambrook, a front&#8209;end developer living in
-        Edinburgh, UK, focused on creating
-        great websites and coaching others.
+        I'm Joseph Shambrook, a front&#8209;end developer living in Edinburgh,
+        UK, focused on creating great websites and coaching others.
       </p>
       <p></p>
     </h1>
   </div>
 </section>
-
+;
 
 <style lang="postcss">
-  @layer components {
-    .hero {
-      padding-block-end: 2rem;
+  .hero {
+    padding-block-end: 2rem;
 
-      @media (--js-bp-lg) {
-        padding-block-end: 5rem;
-      }
-
-      p {
-        margin-block: 0;
-      }
+    @media (--js-bp-lg) {
+      padding-block-end: 5rem;
     }
 
-    .title {
-      color: var(--js-color-white);
-      font-size: var(--js-heading-hero);
-      font-weight: 700;
-      line-height: 1.4;
-      text-transform: none;
+    p {
+      margin-block: 0;
     }
+  }
 
-    .wave {
-      display: inline-block;
-      transform-origin: bottom right;
+  .title {
+    color: var(--js-color-white);
+    font-size: var(--js-heading-hero);
+    font-weight: 700;
+    line-height: 1.4;
+    text-transform: none;
+  }
 
-      @media (prefers-reduced-motion: no-preference) {
-        animation: wave 750ms ease-in-out;
-        animation-iteration-count: 2;
-        animation-delay: 1s;
-      }
+  .wave {
+    display: inline-block;
+    transform-origin: bottom right;
+
+    @media (prefers-reduced-motion: no-preference) {
+      animation: wave 750ms ease-in-out;
+      animation-iteration-count: 2;
+      animation-delay: 1s;
     }
-
   }
 
   @keyframes wave {
@@ -55,4 +51,4 @@
       transform: rotate(30deg);
     }
   }
-</style>;
+</style>

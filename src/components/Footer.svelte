@@ -46,9 +46,7 @@
           alt="Joseph Shambrook logo"
         />
       </a>
-      <p class="intro">
-        A front-end developer, living in Edinburgh, UK.
-      </p>
+      <p class="intro">A front-end developer, living in Edinburgh, UK.</p>
     </section>
     {#each sections as section}
       <section class="section">
@@ -61,7 +59,8 @@
                 class="section-link"
                 target={link.external ? "_blank" : null}
                 rel={link.external ? "noopener noreferrer" : null}
-                >{link.text}</a>
+                >{link.text}</a
+              >
             </li>
           {/each}
         </ul>
@@ -71,7 +70,6 @@
 </footer>
 
 <style lang="postcss">
-@layer components {
   .footer {
     background-color: var(--js-color-dark-blue);
     color: var(--js-color-white);
@@ -117,6 +115,4 @@
     font-weight: normal;
     text-decoration: none;
   }
-}
-
 </style>

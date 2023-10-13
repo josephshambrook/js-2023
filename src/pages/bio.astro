@@ -184,50 +184,48 @@ const daughterAge = calculateAge(daughterBirthday);
 </MainLayout>
 
 <style lang="postcss">
-  @layer components {
-    .title {
-      font-size: var(--js-heading-hero);
+  .title {
+    font-size: var(--js-heading-hero);
 
-      /* make margin equal on both sides */
-      margin-block-start: var(--js-heading-margin-block-end);
+    /* make margin equal on both sides */
+    margin-block-start: var(--js-heading-margin-block-end);
+  }
+
+  .rounded-img {
+    border-radius: 50%;
+  }
+
+  .intro {
+    align-items: center;
+    display: flex;
+    flex-wrap: wrap-reverse;
+    gap: 1rem;
+
+    > .title {
+      flex: 1;
     }
+  }
 
-    .rounded-img {
-      border-radius: 50%;
-    }
-
+  @media(--js-bp-md) {
     .intro {
       align-items: center;
       display: flex;
-      flex-wrap: wrap-reverse;
-      gap: 1rem;
+      min-height: 230px;
+      margin-block-end: 2rem;
 
       > .title {
-        flex: 1;
+        margin-bottom: 0;
       }
     }
+  }
 
-    @media(--js-bp-md) {
-      .intro {
-        align-items: center;
-        display: flex;
-        min-height: 230px;
-        margin-block-end: 2rem;
+  .text-gradient {
+    background: var(--js-component-heading-gradient);
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
 
-        > .title {
-          margin-bottom: 0;
-        }
-      }
-    }
-
-    .text-gradient {
-      background: var(--js-component-heading-gradient);
-      background-clip: text;
-      -webkit-text-fill-color: transparent;
-    }
-
-    section:not(:first-of-type) {
-      --js-heading-margin-block-start: 4rem;
-    }
+  section:not(:first-of-type) {
+    --js-heading-margin-block-start: 4rem;
   }
 </style>
