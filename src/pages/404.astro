@@ -23,11 +23,13 @@ let permalink = "https://josephshambrook.dev/bio";
 </MainLayout>
 
 <style lang="postcss">
-  .title {
-    font-size: var(--js-heading-hero);
+  @layer components {
+    .title {
+      font-size: var(--js-heading-hero);
 
-    /* make margin equal on both sides */
-    margin-block-start: var(--js-heading-margin-block-end);
-    margin-block-end: 0;
+      /* make margin equal on both sides */
+      margin-block-start: var(--js-heading-margin-block-end);
+      margin-block-end: 0;
+    }
   }
 </style>

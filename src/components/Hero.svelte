@@ -16,40 +16,43 @@
 
 
 <style lang="postcss">
-.hero {
-  padding-block-end: 2rem;
+  @layer components {
+    .hero {
+      padding-block-end: 2rem;
 
-  @media (--js-bp-lg) {
-    padding-block-end: 5rem;
+      @media (--js-bp-lg) {
+        padding-block-end: 5rem;
+      }
+
+      p {
+        margin-block: 0;
+      }
+    }
+
+    .title {
+      color: var(--js-color-white);
+      font-size: var(--js-heading-hero);
+      font-weight: 700;
+      line-height: 1.4;
+      text-transform: none;
+    }
+
+    .wave {
+      display: inline-block;
+      transform-origin: bottom right;
+
+      @media (prefers-reduced-motion: no-preference) {
+        animation: wave 750ms ease-in-out;
+        animation-iteration-count: 2;
+        animation-delay: 1s;
+      }
+    }
+
   }
 
-  p {
-    margin-block: 0;
+  @keyframes wave {
+    50% {
+      transform: rotate(30deg);
+    }
   }
-}
-
-.title {
-  color: var(--js-color-white);
-  font-size: var(--js-heading-hero);
-  font-weight: 700;
-  line-height: 1.4;
-  text-transform: none;
-}
-
-.wave {
-  display: inline-block;
-  transform-origin: bottom right;
-
-  @media (prefers-reduced-motion: no-preference) {
-    animation: wave 750ms ease-in-out;
-    animation-iteration-count: 2;
-    animation-delay: 1s;
-  }
-}
-
-@keyframes wave {
-  50% {
-    transform: rotate(30deg);
-  }
-}
 </style>;

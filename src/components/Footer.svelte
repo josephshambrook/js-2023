@@ -71,50 +71,52 @@
 </footer>
 
 <style lang="postcss">
-.footer {
-  background-color: var(--js-color-dark-blue);
-  color: var(--js-color-white);
-  font-family: var(--js-font-heading);
-  margin-block-start: 2rem;
-  padding-block-end: 5rem;
-  padding-block-start: 2.58rem;
-}
-
-.logo {
-  max-width: 4rem;
-  width: 100%;
-}
-
-.intro {
-  font-size: var(--js-text-small);
-}
-
-.section-intro {
-  grid-column: 1 / -1;
-
-  @media (--js-bp-lg) {
-    grid-column: initial;
+@layer components {
+  .footer {
+    background-color: var(--js-color-dark-blue);
+    color: var(--js-color-white);
+    font-family: var(--js-font-heading);
+    margin-block-start: 2rem;
+    padding-block-end: 5rem;
+    padding-block-start: 2.58rem;
   }
-}
 
-.section-heading {
-  color: var(--js-color-yellow);
-  font-size: var(--js-heading-6);
-  margin-block-end: 1.3rem;
-  margin-block-start: 0;
-  text-transform: uppercase;
-}
+  .logo {
+    max-width: 4rem;
+    width: 100%;
+  }
 
-.section-list {
-  list-style-type: none;
-  padding-inline-start: 0;
-}
+  .intro {
+    font-size: var(--js-text-small);
+  }
 
-.section-link {
-  color: var(--js-color-white);
-  font-size: var(--js-text-small);
-  font-weight: normal;
-  text-decoration: none;
+  .section-intro {
+    grid-column: 1 / -1;
+
+    @media (--js-bp-lg) {
+      grid-column: initial;
+    }
+  }
+
+  .section-heading {
+    color: var(--js-color-yellow);
+    font-size: var(--js-heading-6);
+    margin-block-end: 1.3rem;
+    margin-block-start: 0;
+    text-transform: uppercase;
+  }
+
+  .section-list {
+    list-style-type: none;
+    padding-inline-start: 0;
+  }
+
+  .section-link {
+    color: var(--js-color-white);
+    font-size: var(--js-text-small);
+    font-weight: normal;
+    text-decoration: none;
+  }
 }
 
 </style>

@@ -78,65 +78,192 @@ const { isTransparent = false, hasWaves = true } = Astro.props;
 </header>
 
 <style lang="postcss">
-.sr-only {
-  height: 1px;
-  overflow: hidden;
-  position: absolute;
-  width: 1px;
-}
-
-.skip-link {
-  background: var(--js-component-header);
-  color: #fff;
-  padding: 4px;
-  position: absolute;
-  transform: translateY(-100%);
-  z-index: 10;
-
-  @media (prefers-reduced-motion: no-preference) {
-    transition: transform 0.2s;
+@layer components {
+  .sr-only {
+    height: 1px;
+    overflow: hidden;
+    position: absolute;
+    width: 1px;
   }
 
-  &:focus {
-    transform: translateY(0);
-  }
-}
-
-.header {
-  --header-text-color: var(--js-color-white);
-
-  background-color: var(--js-component-header);
-  font-family: var(--js-font-heading);
-  font-size: 1.2rem;
-  line-height: 1;
-  margin-block-end: 2rem;
-  position: relative;
-  z-index: 50;
-}
-
-.waves {
-  height: 40px;
-
-  /* Fix for safari gap */
-  margin-bottom: -8px;
-  min-height: 40px;
-  position: relative;
-  width: 100%;
-
-  @media (--js-bp-md) {
-    height: 15vh;
-    min-height: 100px;
-    max-height: 150px;
-  }
-
-  .layers > use {
-    fill: var(--js-theme-bg);
+  .skip-link {
+    background: var(--js-component-header);
+    color: #fff;
+    padding: 4px;
+    position: absolute;
+    transform: translateY(-100%);
+    z-index: 10;
 
     @media (prefers-reduced-motion: no-preference) {
-      animation: move-forever 50s cubic-bezier(0.55, 0.5, 0.45, 0.5) infinite;
-      animation-delay: -8s;
+      transition: transform 0.2s;
+    }
+
+    &:focus {
+      transform: translateY(0);
     }
   }
+
+  .header {
+    --header-text-color: var(--js-color-white);
+
+    background-color: var(--js-component-header);
+    font-family: var(--js-font-heading);
+    font-size: 1.2rem;
+    line-height: 1;
+    margin-block-end: 2rem;
+    position: relative;
+    z-index: 50;
+  }
+
+  .waves {
+    height: 40px;
+
+    /* Fix for safari gap */
+    margin-bottom: -8px;
+    min-height: 40px;
+    position: relative;
+    width: 100%;
+
+    @media (--js-bp-md) {
+      height: 15vh;
+      min-height: 100px;
+      max-height: 150px;
+    }
+
+    .layers > use {
+      fill: var(--js-theme-bg);
+
+      @media (prefers-reduced-motion: no-preference) {
+        animation: move-forever 50s cubic-bezier(0.55, 0.5, 0.45, 0.5) infinite;
+        animation-delay: -8s;
+      }
+    }
+  }
+
+  .is-transparent {
+    background: transparent;
+
+    &::after {
+      all: initial;
+    }
+  }
+
+  .wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding-block-end: 1rem;
+    padding-block-start: 1rem;
+    position: relative;
+    width: 100%;
+
+    @media (--js-bp-sm) {
+      flex-flow: row nowrap;
+      justify-content: space-between;
+      padding-block-end: 3rem;
+      padding-block-start: 3rem;
+    }
+  }
+
+  .nav {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    margin-block-start: 1rem;
+
+    @media (--js-bp-sm) {
+      margin-block-start: 0;
+    }
+  }
+
+  .logo-link {
+    flex: 1;
+    flex-basis: 100%;
+    text-align: center;
+
+    @media (--js-bp-sm) {
+      flex: none;
+      flex-basis: auto;
+    }
+  }
+
+  .logo-img {
+    height: auto;
+    max-width: 6rem;
+  }
+
+  .links-wrap {
+    align-items: center;
+    display: flex;
+    flex: 1;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: space-evenly;
+
+    @media (--js-bp-sm) {
+      align-items: center;
+      flex-direction: row;
+      gap: 2rem;
+      justify-content: flex-end;
+      margin-block-start: 0;
+      padding-inline-start: 1.25rem;
+    }
+
+    > a {
+      color: var(--header-text-color);
+      font-weight: 500;
+      text-decoration: none;
+      text-transform: uppercase;
+
+      &:hover {
+        text-decoration: underline;
+      }
+
+      &.active {
+        color: var(--js-color-yellow);
+      }
+
+      svg {
+        width: 1.5rem;
+      }
+    }
+  }
+
+  /* Button for toggling the navbar when in its collapsed state */
+  .navbar-toggler {
+    padding: 1rem;
+    font-size: 1rem;
+    line-height: 1;
+    color: var(--js-color-white);
+    background-color: transparent;
+    border: 1px solid transparent;
+    border-radius: 0.25rem;
+
+    &:hover {
+      text-decoration: none;
+    }
+
+    &:focus {
+      text-decoration: none;
+      outline: 0;
+    }
+  }
+
+  /*
+  * Keep as a separate element so folks can easily override it with another icon
+  * or image file as needed.
+  */
+  .navbar-toggler-icon {
+    display: inline-block;
+    width: 1.5em;
+    height: 1.5em;
+    vertical-align: middle;
+    background-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'><path stroke='#fff' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/></svg>");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100%;
+  }
+
 }
 
 @keyframes move-forever {
@@ -148,129 +275,4 @@ const { isTransparent = false, hasWaves = true } = Astro.props;
     transform: translate3d(85px, 0, 0);
   }
 }
-
-.is-transparent {
-  background: transparent;
-
-  &::after {
-    all: initial;
-  }
-}
-
-.wrapper {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  padding-block-end: 1rem;
-  padding-block-start: 1rem;
-  position: relative;
-  width: 100%;
-
-  @media (--js-bp-sm) {
-    flex-flow: row nowrap;
-    justify-content: space-between;
-    padding-block-end: 3rem;
-    padding-block-start: 3rem;
-  }
-}
-
-.nav {
-  align-items: center;
-  display: flex;
-  justify-content: space-between;
-  margin-block-start: 1rem;
-
-  @media (--js-bp-sm) {
-    margin-block-start: 0;
-  }
-}
-
-.logo-link {
-  flex: 1;
-  flex-basis: 100%;
-  text-align: center;
-
-  @media (--js-bp-sm) {
-    flex: none;
-    flex-basis: auto;
-  }
-}
-
-.logo-img {
-  height: auto;
-  max-width: 6rem;
-}
-
-.links-wrap {
-  align-items: center;
-  display: flex;
-  flex: 1;
-  flex-wrap: wrap;
-  gap: 1rem;
-  justify-content: space-evenly;
-
-  @media (--js-bp-sm) {
-    align-items: center;
-    flex-direction: row;
-    gap: 2rem;
-    justify-content: flex-end;
-    margin-block-start: 0;
-    padding-inline-start: 1.25rem;
-  }
-
-  > a {
-    color: var(--header-text-color);
-    font-weight: 500;
-    text-decoration: none;
-    text-transform: uppercase;
-
-    &:hover {
-      text-decoration: underline;
-    }
-
-    &.active {
-      color: var(--js-color-yellow);
-    }
-
-    svg {
-      width: 1.5rem;
-    }
-  }
-}
-
-/* Button for toggling the navbar when in its collapsed state */
-.navbar-toggler {
-  padding: 1rem;
-  font-size: 1rem;
-  line-height: 1;
-  color: var(--js-color-white);
-  background-color: transparent;
-  border: 1px solid transparent;
-  border-radius: 0.25rem;
-
-  &:hover {
-    text-decoration: none;
-  }
-
-  &:focus {
-    text-decoration: none;
-    outline: 0;
-  }
-}
-
-/*
- * Keep as a separate element so folks can easily override it with another icon
- * or image file as needed.
- */
-.navbar-toggler-icon {
-  display: inline-block;
-  width: 1.5em;
-  height: 1.5em;
-  vertical-align: middle;
-  background-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'><path stroke='#fff' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/></svg>");
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: 100%;
-}
-
 </style>

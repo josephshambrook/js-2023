@@ -28,9 +28,11 @@ import Base from "./Base.astro";
 </Base>
 
 <style lang="postcss">
-  .gradient-bkg {
-    background-image: var(--js-component-hero);
-    color: white;
-    margin-block-end: 3rem;
+  @layer components {
+    .gradient-bkg {
+      background-image: var(--js-component-hero);
+      color: white;
+      margin-block-end: 3rem;
+    }
   }
 </style>

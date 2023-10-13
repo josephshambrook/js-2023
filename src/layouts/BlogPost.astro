@@ -63,15 +63,17 @@ const {
 </Base>
 
 <style lang="postcss">
-  .header {
-    margin-block-end: 2rem;
+  @layer components {
+    .header {
+      margin-block-end: 2rem;
 
-    @media (--js-bp-md) {
-      margin-block-end: 4rem;
+      @media (--js-bp-md) {
+        margin-block-end: 4rem;
+      }
     }
-  }
 
-  .title {
-    margin-block-start: 0;
+    .title {
+      margin-block-start: 0;
+    }
   }
 </style>

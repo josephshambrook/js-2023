@@ -17,8 +17,7 @@
     "postcss",
     "html",
     "vue",
-    "svelte",
-    "astro"
+    "svelte"
   ],
   "files.associations": {
     "*.mdx": "markdown"

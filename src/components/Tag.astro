@@ -1,12 +1,14 @@
 <li class="tag"><slot /></li>
 
 <style lang="postcss">
-  .tag {
-    background-color: var(--js-color-yellow);
-    border-radius: 4px;
-    color: var(--js-color-dark-blue);
-    font-size: var(--js-text-small);
-    list-style-type: none;
-    padding-inline: 0.6rem;
+  @layer components {
+    .tag {
+      background-color: var(--js-color-yellow);
+      border-radius: 4px;
+      color: var(--js-color-dark-blue);
+      font-size: var(--js-text-small);
+      list-style-type: none;
+      padding-inline: 0.6rem;
+    }
   }
 </style>

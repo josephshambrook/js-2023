@@ -184,48 +184,50 @@ const daughterAge = calculateAge(daughterBirthday);
 </MainLayout>
 
 <style lang="postcss">
-  .title {
-    font-size: var(--js-heading-hero);
+  @layer components {
+    .title {
+      font-size: var(--js-heading-hero);
 
-    /* make margin equal on both sides */
-    margin-block-start: var(--js-heading-margin-block-end);
-  }
-
-  .rounded-img {
-    border-radius: 50%;
-  }
-
-  .intro {
-    align-items: center;
-    display: flex;
-    flex-wrap: wrap-reverse;
-    gap: 1rem;
-
-    > .title {
-      flex: 1;
+      /* make margin equal on both sides */
+      margin-block-start: var(--js-heading-margin-block-end);
     }
-  }
 
-  @media(--js-bp-md) {
+    .rounded-img {
+      border-radius: 50%;
+    }
+
     .intro {
       align-items: center;
       display: flex;
-      min-height: 230px;
-      margin-block-end: 2rem;
+      flex-wrap: wrap-reverse;
+      gap: 1rem;
 
       > .title {
-        margin-bottom: 0;
+        flex: 1;
       }
     }
-  }
 
-  .text-gradient {
-    background: var(--js-component-heading-gradient);
-    background-clip: text;
-    -webkit-text-fill-color: transparent;
-  }
+    @media(--js-bp-md) {
+      .intro {
+        align-items: center;
+        display: flex;
+        min-height: 230px;
+        margin-block-end: 2rem;
 
-  section:not(:first-of-type) {
-    --js-heading-margin-block-start: 4rem;
+        > .title {
+          margin-bottom: 0;
+        }
+      }
+    }
+
+    .text-gradient {
+      background: var(--js-component-heading-gradient);
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    section:not(:first-of-type) {
+      --js-heading-margin-block-start: 4rem;
+    }
   }
 </style>

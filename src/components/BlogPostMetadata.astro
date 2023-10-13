@@ -30,28 +30,30 @@ const prettyPublishDate = formatDate(publishDate);
 </div>
 
 <style lang="postcss">
-  .metadata-row {
-    border-block-start: 5px solid;
-    border-image-slice: 1;
-    border-image-source: var(--js-component-metadata-gradient);
-    justify-content: space-between;
-    display: flex;
-    flex-wrap: wrap;
-    margin-block-start: 0.5rem;
-    padding-block-start: 0.6rem;
-  }
+  @layer layout {
+    .metadata-row {
+      border-block-start: 5px solid;
+      border-image-slice: 1;
+      border-image-source: var(--js-component-metadata-gradient);
+      justify-content: space-between;
+      display: flex;
+      flex-wrap: wrap;
+      margin-block-start: 0.5rem;
+      padding-block-start: 0.6rem;
+    }
 
-  .publish-date {
-    color: var(--js-theme-text-muted);
-    margin: 0;
-    margin-inline-end: 1rem;
-  }
+    .publish-date {
+      color: var(--js-theme-text-muted);
+      margin: 0;
+      margin-inline-end: 1rem;
+    }
 
-  .tags {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 0.5rem;
-    margin: 0;
-    padding: 0;
+    .tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      margin: 0;
+      padding: 0;
+    }
   }
 </style>
