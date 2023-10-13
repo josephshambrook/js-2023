@@ -30,10 +30,8 @@ const { headings } = Astro.props;
   )
 }
 
-<style lang="scss">
-  @import "../styles/base/mixins";
-
-  @include screen-md-up {
+<style lang="css">
+  @media (--js-bp-md) {
     nav {
       max-height: calc(100vh - 4rem);
       overflow-y: auto;
@@ -43,11 +41,11 @@ const { headings } = Astro.props;
   }
 
   .title {
-    font-size: var(--text-body-size);
+    font-size: var(--js-text-body-size);
   }
 
   ul {
-    font-size: var(--text-small);
+    font-size: var(--js-text-small);
     list-style-type: none;
     padding-inline-start: 0;
   }

@@ -1,11 +1,4 @@
 ---
-// dependencies
-import cns from "classnames";
-
-// styles
-import layoutStyles from "@styles/layouts/layout.module.scss";
-import BlogPostStyles from "@styles/components/BlogPost.module.scss";
-
 // components
 import Base from "./Base.astro";
 import Header from "../components/Header.astro";
@@ -33,8 +26,8 @@ const {
   <Header />
 
   <article>
-    <header class={cns(layoutStyles.container, BlogPostStyles.header)}>
-      <h1 class={BlogPostStyles.title}>{title}</h1>
+    <header class="container header">
+      <h1 class="title">{title}</h1>
 
       <BlogPostMetadata publishDate={publishDate} tags={tags} />
 
@@ -52,13 +45,13 @@ const {
       }
     </header>
 
-    <div class={cns(layoutStyles.container, layoutStyles["grid-12"])}>
-      <aside class={layoutStyles.aside}>
+    <div class="container grid-12">
+      <aside class="aside">
         <slot name="aside">
           <TableOfContents headings={headings} />
         </slot>
       </aside>
-      <main class={layoutStyles.main} id="main">
+      <main class="main" id="main">
         <BlogPostContent {title} {heroImage} {publishDate} {alt} {tags}>
           <slot />
         </BlogPostContent>
@@ -68,3 +61,19 @@ const {
 
   <Footer />
 </Base>
+
+<style lang="postcss">
+  @layer components {
+    .header {
+      margin-block-end: 2rem;
+
+      @media (--js-bp-md) {
+        margin-block-end: 4rem;
+      }
+    }
+
+    .title {
+      margin-block-start: 0;
+    }
+  }
+</style>

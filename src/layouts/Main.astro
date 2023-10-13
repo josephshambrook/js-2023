@@ -1,10 +1,4 @@
 ---
-// dependencies
-import cns from "classnames";
-
-// styles
-import layoutStyles from "@styles/layouts/layout.module.scss";
-
 // components
 import Base from "./Base.astro";
 import Header from "../components/Header.astro";
@@ -32,18 +26,18 @@ const { Content: ShortBio } = await shortBioEntry.render();
 >
   <Header />
 
-  <div class={cns(layoutStyles.container, layoutStyles["grid-12"])}>
-    <header class={layoutStyles["grid-span-cols-12"]}>
+  <div class="container grid-12">
+    <header class="grid-span-cols-12">
       <slot name="content-header" />
     </header>
 
-    <aside class={layoutStyles.aside}>
+    <aside class="aside">
       <slot name="aside">
         <ShortBio />
       </slot>
     </aside>
 
-    <main class={layoutStyles.main} id="main">
+    <main class="main" id="main">
       <slot name="main">
         <h1>H1 - Heading 1</h1>
         <h2>H2 - Heading 2</h2>

@@ -30,7 +30,7 @@ allPosts = allPosts
   .sort(
     (a, b) =>
       new Date(b.data.publishDate).valueOf() -
-      new Date(a.data.publishDate).valueOf()
+      new Date(a.data.publishDate).valueOf(),
   );
 ---
 
@@ -44,8 +44,10 @@ allPosts = allPosts
   </div>
 </BlogPostsLayout>
 
-<style>
-  .latest {
-    margin-block-end: 1.6rem;
+<style lang="postcss">
+  @layer components {
+    .latest {
+      margin-block-end: 1.6rem;
+    }
   }
 </style>

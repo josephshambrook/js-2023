@@ -1,14 +1,8 @@
 ---
-// dependencies
-import cns from "classnames";
-
-// styles
-import layoutStyles from "@styles/layouts/layout.module.scss";
-
 // components
 import Header from "@components/Header.astro";
 import Footer from "@components/Footer.svelte";
-import Hero from "@components/Hero";
+import Hero from "@components/Hero.svelte";
 
 // content
 import Base from "./Base.astro";
@@ -20,12 +14,12 @@ import Base from "./Base.astro";
     <Hero />
   </div>
 
-  <div class={cns(layoutStyles.container, layoutStyles["grid-12"])}>
-    <main class={cns(layoutStyles.main)} id="main">
+  <div class="container grid-12">
+    <main class="main" id="main">
       <slot name="main" />
     </main>
 
-    <aside class={cns(layoutStyles.aside, "stack")}>
+    <aside class="aside stack">
       <slot name="aside" />
     </aside>
   </div>
@@ -33,10 +27,12 @@ import Base from "./Base.astro";
   <Footer />
 </Base>
 
-<style>
-  .gradient-bkg {
-    background-image: var(--component-hero);
-    color: white;
-    margin-block-end: 3rem;
+<style lang="postcss">
+  @layer components {
+    .gradient-bkg {
+      background-image: var(--js-component-hero);
+      color: white;
+      margin-block-end: 3rem;
+    }
   }
 </style>

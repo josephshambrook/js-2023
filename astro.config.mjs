@@ -4,7 +4,6 @@ import { defineConfig } from "astro/config";
 import mdx from "@astrojs/mdx";
 import image from "@astrojs/image";
 import react from "@astrojs/react";
-import preact from "@astrojs/preact";
 import svelte from "@astrojs/svelte";
 import sitemap from "@astrojs/sitemap";
 
@@ -15,7 +14,7 @@ import rehypeAutolinkHeadings from "rehype-autolink-headings";
 // https://astro.build/config
 export default defineConfig({
   site: "https://www.josephshambrook.dev",
-  integrations: [mdx(), image(), react(), preact(), svelte(), sitemap()],
+  integrations: [mdx(), image(), react(), svelte(), sitemap()],
   markdown: {
     rehypePlugins: [
       // create an ID attribute for each heading found
