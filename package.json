@@ -3,7 +3,7 @@
   "version": "1.0.3",
   "private": true,
   "engines": {
-    "node": "^18.16.0"
+    "node": "^20.9.0"
   },
   "scripts": {
     "start": "astro dev",
@@ -46,8 +46,8 @@
     "typescript": "^5.2.2"
   },
   "devDependencies": {
-    "@commitlint/cli": "^17.7.2",
-    "@commitlint/config-conventional": "^17.7.0",
+    "@commitlint/cli": "^18.2.0",
+    "@commitlint/config-conventional": "^18.1.0",
     "@csstools/postcss-global-data": "^2.1.0",
     "@semantic-release/changelog": "^6.0.3",
     "@semantic-release/git": "^10.0.1",
@@ -60,11 +60,11 @@
     "prettier": "3.0.3",
     "prettier-plugin-astro": "^0.12.1",
     "prettier-plugin-svelte": "^3.0.3",
-    "semantic-release": "^21.0.1",
+    "semantic-release": "^22.0.5",
     "stylelint": "^15.11.0",
     "stylelint-config-html": "^1.1.0",
-    "stylelint-config-standard": "^33.0.0",
-    "stylelint-config-standard-scss": "^9.0.0",
+    "stylelint-config-standard": "^34.0.0",
+    "stylelint-config-standard-scss": "^11.0.0",
     "stylelint-prettier": "^4.0.2"
   }
 }
