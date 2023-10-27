@@ -14,7 +14,7 @@
     // Enable stricter transpilation for better output.
     "isolatedModules": true,
     // Add type definitions for our Vite runtime and Astro images
-    "types": ["vite/client", "@astrojs/image/client"],
+    "types": ["vite/client", "astro/client"],
     // allow jsx when checking types
     "jsx": "react-jsx",
     // skip type checking of all declaration files
