@@ -1,7 +1,10 @@
 ---
 // dependencies
-import "@styles/global.css";
+import { ViewTransitions } from "astro:transitions";
 import { SITE_METADATA } from "@src/constants";
+
+// css
+import "@styles/global.css";
 
 //types
 import type { SiteMetadata } from "@src/types";
@@ -62,8 +65,4 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site);
   href="https://cdn.jsdelivr.net/npm/prism-themes@1.9.0/themes/prism-lucario.css"
 />
 
-<script
-  src="https://cdn.usefathom.com/script.js"
-  data-site="FQIBIAJX"
-  defer
-  is:inline></script>
+<ViewTransitions />
