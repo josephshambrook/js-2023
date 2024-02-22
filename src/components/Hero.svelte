@@ -12,7 +12,6 @@
     </h1>
   </div>
 </section>
-;
 
 <style lang="postcss">
   .hero {
